@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Drishta runs gatherings and retreats built on metacognition: learning to witness your own mind. Witness, Reflect, Understand, Grow.">
+<meta property="og:title" content="Drishta">
+<meta property="og:description" content="Gatherings and retreats built on metacognition. Witness, Reflect, Understand, Grow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drishta.unfoldedfuture.com/">
+<meta property="og:image" content="https://drishta.unfoldedfuture.com/assets/share.jpg">
+<link rel="canonical" href="https://drishta.unfoldedfuture.com/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>body{margin:0}img{max-width:100%}</style>
+<title>Drishta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
+<style>
+/* Layout: the emblem's gold vertical axis becomes the page's spine; every section hangs off it as a node. Green opens and closes the page, cream holds the reading. */
+:root{
+  --deep:#2f4230; --deep-2:#1e2a20; --on-deep:#faf7ee; --on-deep-soft:#c9d0c0;
+  --bg:#fbfaf5; --surface:#f2ede0; --fg:#1f2a21; --muted:#55604f;
+  --gold:#c49852; --gold-text:#876628; --line:#ddd5c0; --niche:#fdfcf7;
+  --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --body:"Poppins","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --rail:clamp(26px,7vw,104px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --deep:#2b3d2c; --deep-2:#131a14; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --deep:#2b3d2c; --deep-2:#131a14; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;font-size:1rem;line-height:1.75}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+.label{font-size:.72rem;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-text)}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
+
+/* ---------- header + hero (green) ---------- */
+.top{background:radial-gradient(120% 90% at 50% 30%,var(--deep) 0%,var(--deep-2) 100%);color:var(--on-deep)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:22px}
+.nav img{display:block;width:150px;height:auto}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:.72rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--on-deep-soft)}
+.nav ul a:hover{color:var(--on-deep)}
+.btn{display:inline-block;font-family:var(--body);font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border-radius:999px;border:1px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:#1e2a20}
+.btn-gold:hover{background:transparent;color:var(--on-deep)}
+.btn-line{background:transparent;color:var(--on-deep)}
+.btn-line:hover{background:var(--gold);color:#1e2a20}
+.nav .btn{padding:10px 20px;white-space:nowrap}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(32px,6vw,88px);padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,104px)}
+.hero .label{color:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.1rem);margin-block:22px 26px;letter-spacing:-.005em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{max-width:34em;color:var(--on-deep-soft);font-size:1.04rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.niche{justify-self:center;width:min(100%,360px);aspect-ratio:720/1045;border-radius:999px;background:var(--niche);overflow:hidden;
+  box-shadow:0 0 0 9px var(--deep),0 0 0 10px var(--gold),0 34px 60px -18px rgba(0,0,0,.55),inset 0 6px 22px rgba(60,50,20,.16)}
+.niche img{display:block;width:100%;height:100%;object-fit:cover}
+.words{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;list-style:none;margin:0;padding:22px 0 26px;border-top:1px solid rgba(196,152,82,.28);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--on-deep-soft)}
+.words li+li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:18px;vertical-align:middle}
+
+/* ---------- spine ---------- */
+.spine{position:relative;padding-left:var(--rail)}
+.spine::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),var(--gold)) no-repeat;opacity:.55}
+.sec{position:relative;padding-block:clamp(56px,8vw,104px)}
+.sec+.sec{border-top:1px solid var(--line)}
+.sec>.label{position:relative;display:block;margin-bottom:22px}
+.sec>.label::before{content:"";position:absolute;left:calc(-1*var(--rail) - 4px);top:.42em;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--bg)}
+.sec h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:18em}
+.lede{max-width:40em;margin-top:22px;color:var(--muted);font-size:1.02rem}
+.lede+.lede{margin-top:16px}
+
+/* name */
+.name{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);align-items:start}
+.name .word{font-family:var(--display);font-style:italic;font-size:clamp(3rem,8vw,6rem);line-height:1;color:var(--gold-text)}
+.name .gloss{margin-top:12px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* four movements */
+.moves{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:48px;list-style:none;padding:0;border-top:1px solid var(--gold)}
+.moves li{position:relative;padding:30px 24px 0 0}
+.moves li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.moves h3{font-size:2rem;margin-bottom:10px}
+.moves p{color:var(--muted);font-size:.93rem;line-height:1.7}
+
+/* programmes */
+.feature{margin-top:44px;background:var(--surface);padding:clamp(26px,4vw,48px);border-radius:3px}
+.feature h3{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.feature>p{max-width:42em;margin-top:14px;color:var(--muted)}
+.modules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;list-style:none;margin:32px 0 0;padding:0}
+.modules li{border-top:1px solid var(--gold);padding-top:14px}
+.modules span{display:block;font-family:var(--display);font-size:1.55rem;line-height:1.15}
+.modules small{display:block;margin-top:6px;font-size:.8rem;line-height:1.55;color:var(--muted)}
+.formats{margin-top:28px;font-size:.86rem;color:var(--muted)}
+.formats b{font-weight:500;color:var(--fg)}
+.rows{margin-top:8px}
+.row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px 40px;padding-block:26px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.row h3{font-size:1.7rem}
+.row p{color:var(--muted);font-size:.95rem}
+
+/* gathering */
+.gather{background:radial-gradient(120% 120% at 20% 0%,var(--deep) 0%,var(--deep-2) 100%);color:var(--on-deep);padding:clamp(30px,5vw,64px);border-radius:3px;margin-top:8px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px 48px;align-items:end}
+.gather .label{color:var(--gold)}
+.gather h2{margin-top:16px}
+.gather p{color:var(--on-deep-soft);margin-top:18px;max-width:34em}
+.when{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.15}
+.when small{display:block;font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.mail{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.mail code{font-family:var(--body);font-size:.95rem;user-select:all;border-bottom:1px solid var(--gold);padding-bottom:2px;overflow-wrap:anywhere}
+.mail .btn{padding:9px 18px}
+
+/* community */
+.quote{font-family:var(--display);font-style:italic;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;color:var(--fg)}
+.quote span{color:var(--gold-text)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,72px);margin-top:40px}
+.two h3{font-size:1.8rem;margin-bottom:10px}
+.two p{color:var(--muted)}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,72px);margin-top:44px}
+.person{display:grid;grid-template-columns:auto minmax(0,1fr);gap:22px;align-items:start}
+.mono{width:74px;aspect-ratio:720/1045;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--gold-text)}
+.person h3{font-size:1.9rem}
+.person .label{display:block;margin-block:6px 12px}
+.person p{color:var(--muted);font-size:.93rem}
+
+/* footer */
+footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;padding-block:56px 40px}
+.foot img{display:block;width:210px;height:auto;margin-bottom:14px}
+.foot .label{color:var(--on-deep-soft);letter-spacing:.28em}
+.foot address{font-style:normal;font-size:.88rem;line-height:1.9;text-align:right}
+.foot address a{text-decoration-color:var(--gold);text-underline-offset:4px}
+
+@media (max-width:860px){
+  .nav ul{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .niche{width:min(72%,280px);order:-1}
+  .name,.row,.gather,.two,.people{grid-template-columns:minmax(0,1fr)}
+  .moves{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px;border-top:0}
+  .moves li{border-top:1px solid var(--gold)}
+  .modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot address{text-align:left}
+}
+@media (max-width:460px){
+  .nav img{width:118px}
+  .nav .btn{padding:9px 14px;letter-spacing:.14em;font-size:.66rem}
+  .moves,.modules{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+
+<header class="top" id="home">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="#home"><img src="assets/wordmark-light.png" alt="Drishta" width="831" height="131"></a>
+      <ul>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#people">People</a></li>
+      </ul>
+      <a class="btn btn-line" href="#gathering">Join us</a>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <span class="label">Programmes built on metacognition</span>
+        <h1>Learn to witness <em>your own mind.</em></h1>
+        <p>Drishta runs gatherings and retreats that teach one skill: noticing how you think and feel while it is happening. From there you can steady yourself, understand more, and come back to yourself, to other people and to nature.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#gathering">Join the first gathering</a>
+          <a class="btn btn-line" href="#approach">How it works</a>
+        </div>
+      </div>
+      <div class="niche"><img src="assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045"></div>
+    </div>
+
+    <ul class="words" aria-label="Witness, Reflect, Understand, Grow">
+      <li>Witness</li><li>Reflect</li><li>Understand</li><li>Grow</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="spine">
+
+    <section class="sec" id="name">
+      <span class="label">The name</span>
+      <div class="name">
+        <div>
+          <div class="word">draṣṭā</div>
+          <div class="gloss">Sanskrit · the seer, the one who witnesses</div>
+        </div>
+        <div>
+          <h2>The part of you that watches.</h2>
+          <p class="lede">In Patañjali's Yoga Sūtra, the draṣṭā is the seer: the one who watches thought and feeling without being carried off by them. Drishta takes its name from that word.</p>
+          <p class="lede">Most of us are never given the time, or the language, to observe our own inner world. We react first and understand later, if at all. Our work is to make that observing a skill you can practise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="approach">
+      <span class="label">The approach</span>
+      <h2>Four movements, practised in order.</h2>
+      <p class="lede">Metacognition means thinking about your own thinking. Every Drishta programme walks through the same four movements, using conversation, making, time outdoors and quiet.</p>
+      <ol class="moves">
+        <li><h3>Witness</h3><p>Notice what is happening in your mind and body as it happens, without rushing to fix it.</p></li>
+        <li><h3>Reflect</h3><p>Step back and ask where a thought or reaction came from, and what it wants from you.</p></li>
+        <li><h3>Understand</h3><p>See the patterns in yourself, in the people around you, and in the systems you live inside.</p></li>
+        <li><h3>Grow</h3><p>Choose your response, and carry it into your work, your relationships and your community.</p></li>
+      </ol>
+    </section>
+
+    <section class="sec" id="programmes">
+      <span class="label">Programmes</span>
+      <h2>Interactive, creative, and held in small groups.</h2>
+
+      <div class="feature">
+        <span class="label">Flagship</span>
+        <h3>The Human Curriculum</h3>
+        <p>Five modules on being fully human again. Nothing to memorise and no lectures. You work through each module with your own experience as the material.</p>
+        <ul class="modules">
+          <li><span>To See</span><small>Attention, and what it lands on.</small></li>
+          <li><span>To Feel</span><small>Emotion as information.</small></li>
+          <li><span>To Realise</span><small>Patterns, beliefs and where they began.</small></li>
+          <li><span>To Connect</span><small>Empathy, respect and other people.</small></li>
+          <li><span>To Live</span><small>Bringing it home.</small></li>
+        </ul>
+        <p class="formats"><b>Two formats.</b> In the city: two sessions of three hours. In residence: four days and three nights.</p>
+      </div>
+
+      <div class="rows">
+        <div class="row"><h3>Drishta in Residence</h3><p>Retreats hosted with partner spaces, close to nature. The first is being planned with a property in the Himalayas or South India.</p></div>
+        <div class="row"><h3>Drishta Labs</h3><p>The research behind the practice: our framework for empathic detachment and emotional regulation, and the tools we use to measure change.</p></div>
+        <div class="row"><h3>Voices at Drishta</h3><p>Conversations and lived experience, shared by people in the community.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="gathering">
+      <span class="label">Coming up</span>
+      <div class="gather">
+        <div>
+          <span class="label">The first gathering</span>
+          <h2>Come and practise with us.</h2>
+          <p>Our first gathering is at the end of October 2026. It is the first of a few planned events, and a retreat follows. Write to us and we will send the date, the place and how to take part.</p>
+          <div class="mail">
+            <code id="addr">adutta03@unfoldedfuture.com</code>
+            <button class="btn btn-line" id="copy" type="button">Copy address</button>
+          </div>
+        </div>
+        <div class="when"><small>When</small>Late October 2026<br>Details to be announced</div>
+      </div>
+    </section>
+
+    <section class="sec" id="community">
+      <span class="label">What we run on</span>
+      <p class="quote">Currency is <span>community.</span></p>
+      <div class="two">
+        <div>
+          <h3>Social capital first</h3>
+          <p>Drishta grows through the people who take part and stay in touch. What we build is measured in relationships, trust and shared practice.</p>
+        </div>
+        <div>
+          <h3>Think Studio</h3>
+          <p>Think Studio is Drishta's design practice. It takes on design projects for organisations, and what it earns keeps Drishta running.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="people">
+      <span class="label">People</span>
+      <h2>Founded by two designers and researchers.</h2>
+      <div class="people">
+        <div class="person">
+          <div class="mono" aria-hidden="true">AD</div>
+          <div>
+            <h3>Akanshya Dutta</h3>
+            <span class="label">Founder</span>
+            <p>Independent researcher and consultant, and visiting faculty in the Department of Design at Delhi Technological University. Previously worked in policy monitoring and evaluation at the Chief Minister's Secretariat, Assam.</p>
+          </div>
+        </div>
+        <div class="person">
+          <div class="mono" aria-hidden="true">PD</div>
+          <div>
+            <h3>Dr. Partha Pratim Das</h3>
+            <span class="label">Co-founder</span>
+            <p>Assistant Professor in the Department of Design at Delhi Technological University. M.Des in Product Design and a PhD in systems design for sustainable rural sanitation, both from IIT Delhi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <img src="assets/wordmark-light.png" alt="Drishta" width="831" height="131">
+      <span class="label">Witness · Reflect · Understand · Grow</span>
+    </div>
+    <address>
+      An Unfolded Future initiative<br>
+      Delhi · Assam<br>
+      <a href="mailto:adutta03@unfoldedfuture.com">adutta03@unfoldedfuture.com</a>
+    </address>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copy'),a=document.getElementById('addr');
+  b.addEventListener('click',function(){
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(a.textContent).then(done,sel)}catch(e){sel()}
+  });
+})();
+</script>
+</html>
