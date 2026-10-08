@@ -186,7 +186,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 .score-svg .soft{fill:var(--gold);opacity:.35}
 #community{position:relative}
 #community>*:not(.net){position:relative;z-index:1}
-.net{position:absolute;right:-24%;top:0;width:min(40%,400px);height:auto;z-index:0;opacity:.15;pointer-events:none;
+.net{position:absolute;right:-6%;top:0;width:min(40%,400px);height:auto;z-index:0;opacity:.15;pointer-events:none;
   -webkit-mask-image:linear-gradient(to left,#000 40%,transparent);mask-image:linear-gradient(to left,#000 40%,transparent)}
 .net .ln,.net .ring{fill:none;stroke:var(--fg);stroke-width:1}
 .net .dot{fill:var(--fg)}
@@ -194,7 +194,32 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 @media (max-width:860px){
   .niche-wrap{order:-1;width:min(72%,280px)}
   .glyph{width:220%;opacity:.32}
-  .net{display:none}
+}
+/* more restrained line-art: name, programme panel, gathering, footer */
+.deco{position:absolute;pointer-events:none;z-index:0;height:auto}
+.deco .ln,.deco .ring{fill:none;stroke-width:1}
+.deco .dash{stroke-dasharray:2 7}
+#name .name{position:relative}
+#name .name>*:not(.deco){position:relative;z-index:1}
+.d-eye{left:-70px;top:-90px;width:360px;opacity:.2}
+.d-eye .ln,.d-eye .ring{stroke:var(--gold)}.d-eye .dot,.d-eye .acc{fill:var(--gold)}
+.feature{position:relative;overflow:hidden}
+.feature>*:not(.deco){position:relative;z-index:1}
+.d-arcs{right:-70px;top:-40px;width:min(440px,60%);opacity:.32}
+.d-arcs .ln,.d-arcs .ring{stroke:var(--gold-text)}.d-arcs .fill,.d-arcs .acc{fill:var(--gold-text)}
+.gather{position:relative;overflow:hidden}
+.gather>*:not(.deco){position:relative;z-index:1}
+.d-stars{right:-30px;top:-10px;width:min(520px,70%);opacity:.38}
+.d-stars .ln,.d-stars .ring{stroke:var(--gold)}.d-stars .dot,.d-stars .acc{fill:var(--gold)}
+.d-stars .acc{opacity:.6}
+footer{position:relative;overflow:hidden}
+.d-foot{position:relative;display:block;width:100%;height:44px;opacity:.45}
+.d-foot .ln,.d-foot .ring{stroke:var(--gold)}.d-foot .dot,.d-foot .acc{fill:var(--gold)}
+@media (max-width:860px){
+  .d-eye{width:260px;left:-50px;top:-70px;opacity:.16}
+  .d-arcs{width:300px;right:-90px;top:-50px;opacity:.25}
+  .d-stars{width:120%;right:-40%;top:auto;bottom:-30px;opacity:.3}
+  .net{display:block;position:absolute;width:60%;right:0;top:auto;bottom:0;opacity:.1}
 }
 </style>
 
@@ -235,7 +260,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 
     <section class="sec" id="name">
       <span class="label">The name</span>
-      <div class="name">
+      <div class="name"><svg class="deco d-eye" viewBox="0 0 400 400"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="ln" cx="200" cy="200" r="150"/><circle class="ln" cx="200" cy="200" r="110"/><circle class="ln" cx="200" cy="200" r="70"/><circle class="ln dash" cx="200" cy="200" r="185"/><path class="ln" d="M200 0V400M10 200H390"/><path class="ln" d="M50 200 Q200 90 350 200 Q200 310 50 200Z"/><circle class="acc" cx="200" cy="200" r="10"/><circle class="dot" cx="385" cy="200" r="2.5"/><circle class="dot" cx="360.2" cy="292.5" r="2.5"/><circle class="dot" cx="292.5" cy="360.2" r="2.5"/><circle class="dot" cx="200" cy="385" r="2.5"/><circle class="dot" cx="107.5" cy="360.2" r="2.5"/><circle class="dot" cx="39.8" cy="292.5" r="2.5"/><circle class="dot" cx="15" cy="200" r="2.5"/><circle class="dot" cx="39.8" cy="107.5" r="2.5"/><circle class="dot" cx="107.5" cy="39.8" r="2.5"/><circle class="dot" cx="200" cy="15" r="2.5"/><circle class="dot" cx="292.5" cy="39.8" r="2.5"/><circle class="dot" cx="360.2" cy="107.5" r="2.5"/><path class="ln" d="M310 90 l40 -40 M350 50 l-12 0 M350 50 l0 12"/></svg>
         <div>
           <div class="word">draṣṭā</div>
           <div class="gloss">Sanskrit · the seer, the one who witnesses</div>
@@ -265,7 +290,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
       <span class="label">Programmes</span>
       <h2>Experiential, small-group programmes.</h2>
 
-      <div class="feature">
+      <div class="feature"><svg class="deco d-arcs" viewBox="0 0 440 280"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M90 90 A130 130 0 0 0 350 90"/><path class="ln" d="M130 90 A90 90 0 0 0 310 90"/><path class="ln dash" d="M50 90 A170 170 0 0 0 390 90"/><path class="ln" d="M230 98 l40 60"/><path class="ln" d="M242 98 l36 54"/><path class="ln" d="M254 98 l32 48"/><path class="ln" d="M266 98 l28 42"/><path class="ln" d="M278 98 l24 36"/><path class="ln" d="M290 98 l20 30"/><path class="ln" d="M20 90H420"/><circle class="ring" cx="40" cy="114" r="3"/><circle class="ring" cx="56" cy="114" r="3"/><circle class="ring" cx="72" cy="114" r="3"/><circle class="ring" cx="88" cy="114" r="3"/><circle class="ring" cx="104" cy="114" r="3"/><circle class="ring" cx="120" cy="114" r="3"/><circle class="acc" cx="220" cy="90" r="7"/><path class="ln" d="M220 90V240"/><path class="fill" d="M214 240L220 254L226 240Z"/></svg>
         <span class="label">Flagship</span>
         <h3>The Human Curriculum</h3>
         <p>Five experiential modules on being fully human. No lectures, no memorisation: your own experience is the material.</p>
@@ -288,7 +313,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 
     <section class="sec" id="gathering">
       <span class="label">Coming up</span>
-      <div class="gather">
+      <div class="gather"><svg class="deco d-stars" viewBox="0 0 500 320"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M30.8 264L35.8 80.7"/><path class="ln" d="M35.8 80.7L42.8 150.4"/><path class="ln" d="M236.4 89L269.3 180.7"/><path class="ln" d="M301.7 55.5L304.1 227.7"/><path class="ln" d="M355.6 278.3L366.9 64.7"/><circle class="ring" cx="30.8" cy="264" r="5"/><circle class="dot" cx="30.8" cy="264" r="2.2"/><circle class="dot" cx="35.8" cy="80.7" r="1.6"/><circle class="ring" cx="42.8" cy="150.4" r="5"/><circle class="dot" cx="42.8" cy="150.4" r="2.2"/><circle class="dot" cx="153" cy="276.6" r="3"/><circle class="dot" cx="236.4" cy="89" r="3"/><circle class="dot" cx="269.3" cy="180.7" r="2.2"/><circle class="ring" cx="301.7" cy="55.5" r="5"/><circle class="dot" cx="301.7" cy="55.5" r="2.2"/><circle class="dot" cx="304.1" cy="227.7" r="2.2"/><circle class="dot" cx="355.6" cy="278.3" r="1.6"/><circle class="dot" cx="366.9" cy="64.7" r="3"/><circle class="ring" cx="379.9" cy="283.9" r="5"/><circle class="dot" cx="379.9" cy="283.9" r="2.2"/><circle class="dot" cx="380.7" cy="58.9" r="1.6"/><circle class="dot" cx="426.4" cy="51.7" r="2.2"/><circle class="dot" cx="445.1" cy="201.7" r="1.6"/><circle class="ln dash" cx="360" cy="150" r="110"/><circle class="acc" cx="360" cy="150" r="14"/></svg>
         <div>
           <span class="label">The first gathering</span>
           <h2>Register your interest.</h2>
@@ -343,6 +368,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 </main>
 
 <footer>
+  <svg class="deco d-foot" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M0 30H1200"/><circle class="dot" cx="556.3" cy="21.3" r="3.2"/><circle class="dot" cx="17.6" cy="39.6" r="1.8"/><circle class="ring" cx="404.1" cy="30" r="4"/><path class="ln" d="M869.3 23.2V51.2"/><path class="ln" d="M508.7 10.7V38.1"/><circle class="ring" cx="1038.6" cy="30" r="4"/><circle class="dot" cx="923.6" cy="35.9" r="1.8"/><path class="ln" d="M1094.4 13.1V48.7"/><circle class="ring" cx="1059.7" cy="30" r="4"/><path class="ln" d="M477.9 10.6V47.3"/><circle class="dot" cx="16.2" cy="39.5" r="2.5"/><path class="ln" d="M174.2 20.3V49.6"/><path class="ln" d="M1147.5 20.7V39.2"/><path class="ln" d="M1015.6 22.5V38.1"/><circle class="dot" cx="1092.8" cy="31.8" r="3.2"/><circle class="dot" cx="1096.7" cy="27.6" r="3.2"/><circle class="ring" cx="912.6" cy="30" r="4"/><circle class="dot" cx="213.6" cy="41" r="1.8"/><circle class="dot" cx="328.6" cy="38.4" r="3.2"/><circle class="ring" cx="326.6" cy="30" r="4"/><circle class="ring" cx="153.2" cy="30" r="4"/><circle class="dot" cx="200.9" cy="35.7" r="3.2"/><circle class="dot" cx="626" cy="34.5" r="2.5"/><circle class="ring" cx="139.8" cy="30" r="6"/><circle class="dot" cx="542.5" cy="41.7" r="3.2"/><circle class="dot" cx="889.9" cy="32.6" r="1.8"/><path class="ln" d="M521.6 16.2V41.2"/><circle class="dot" cx="114.8" cy="20.5" r="1.8"/><circle class="ring" cx="40" cy="30" r="6"/><circle class="ring" cx="596.9" cy="30" r="4"/><path class="ln" d="M677.9 19.1V37.5"/><circle class="dot" cx="907.7" cy="40.9" r="3.2"/><circle class="dot" cx="445.8" cy="22.1" r="2.5"/><circle class="ring" cx="44.7" cy="30" r="4"/><path class="ln" d="M320.3 11.7V38.4"/><circle class="dot" cx="67.6" cy="36.9" r="2.5"/><circle class="ring" cx="731.6" cy="30" r="6"/><circle class="dot" cx="346.3" cy="24.7" r="1.8"/><path class="ln" d="M892 11.7V42.7"/><circle class="dot" cx="178.2" cy="37.1" r="3.2"/><circle class="acc" cx="300" cy="30" r="9"/><circle class="acc" cx="820" cy="30" r="9"/></svg>
   <div class="wrap foot">
     <div>
       <img src="assets/wordmark-light.png" alt="Drishta" width="831" height="131">
