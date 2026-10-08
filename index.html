@@ -15,14 +15,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>body{margin:0}img{max-width:100%}</style>
 <title>Drishta</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
 <style>
 /* Layout: the emblem's gold vertical axis becomes the page's spine; every section hangs off it as a node. Green opens and closes the page, cream holds the reading. */
 :root{
   --deep:#2f4230; --deep-2:#1e2a20; --on-deep:#faf7ee; --on-deep-soft:#c9d0c0;
   --bg:#fbfaf5; --surface:#f2ede0; --fg:#1f2a21; --muted:#55604f;
   --gold:#c49852; --gold-text:#876628; --line:#ddd5c0; --niche:#fdfcf7;
-  --display:"Raleway","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
   --body:"Poppins","Avenir Next","Segoe UI",system-ui,sans-serif;
   --rail:clamp(26px,7vw,104px);
 }
@@ -38,7 +38,7 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:1.0625rem;line-height:1.75}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
-h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.12;font-variant-numeric:lining-nums;margin:0;text-wrap:balance}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance}
 p{margin:0}
 .label{font-size:.75rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
 .wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
@@ -59,8 +59,8 @@ p{margin:0}
 
 .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(32px,6vw,88px);padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,104px)}
 .hero .label{color:var(--gold)}
-.hero h1{font-size:clamp(2.3rem,5.2vw,4.1rem);margin-block:22px 26px;letter-spacing:-.02em;line-height:1.1}
-.hero h1 em{font-family:"Cormorant Garamond","Iowan Old Style",Georgia,serif;font-style:italic;font-weight:300;font-size:1.18em;letter-spacing:0;line-height:1;color:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.1rem);margin-block:22px 26px;letter-spacing:-.005em}
+.hero h1 em{font-style:italic;color:var(--gold)}
 .hero p{max-width:32em;color:var(--on-deep-soft);font-size:clamp(1.05rem,1.4vw,1.15rem);font-weight:300}
 .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .niche{justify-self:center;width:min(100%,360px);aspect-ratio:720/1045;border-radius:999px;background:var(--niche);overflow:hidden;
@@ -76,29 +76,29 @@ p{margin:0}
 .sec+.sec{border-top:1px solid var(--line)}
 .sec>.label{position:relative;display:block;margin-bottom:22px}
 .sec>.label::before{content:"";position:absolute;left:calc(-1*var(--rail) - 4px);top:.42em;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--bg)}
-.sec h2{font-size:clamp(1.7rem,3.5vw,2.6rem);max-width:20em;letter-spacing:-.01em}
+.sec h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:18em}
 .lede{max-width:38em;margin-top:22px;color:var(--muted);font-size:1.06rem}
 .lede+.lede{margin-top:16px}
 
 /* name */
 .name{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);align-items:start}
-.name .word{font-family:var(--display);font-weight:300;font-style:italic;font-size:clamp(2.6rem,6.4vw,4.6rem);line-height:1;color:var(--gold-text)}
+.name .word{font-family:var(--display);font-style:italic;font-size:clamp(3rem,8vw,6rem);line-height:1;color:var(--gold-text)}
 .name .gloss{margin-top:12px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* four movements */
 .moves{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:48px;list-style:none;padding:0;border-top:1px solid var(--gold)}
 .moves li{position:relative;padding:30px 24px 0 0}
 .moves li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold)}
-.moves h3{font-size:1.6rem;margin-bottom:10px}
+.moves h3{font-size:2rem;margin-bottom:10px}
 .moves p{color:var(--muted);font-size:1rem;line-height:1.65}
 
 /* programmes */
 .feature{margin-top:44px;background:var(--surface);padding:clamp(26px,4vw,48px);border-radius:3px}
-.feature h3{font-size:clamp(1.5rem,2.8vw,2rem)}
+.feature h3{font-size:clamp(1.8rem,3.4vw,2.5rem)}
 .feature>p{max-width:42em;margin-top:14px;color:var(--muted)}
 .modules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;list-style:none;margin:32px 0 0;padding:0}
 .modules li{border-top:1px solid var(--gold);padding-top:14px}
-.modules span{display:block;font-family:var(--display);font-weight:400;font-size:1.25rem;line-height:1.2}
+.modules span{display:block;font-family:var(--display);font-size:1.55rem;line-height:1.15}
 .modules small{display:block;margin-top:6px;font-size:.9rem;line-height:1.5;color:var(--muted)}
 .formats{margin-top:28px;font-size:.95rem;color:var(--muted)}
 .formats b{font-weight:500;color:var(--fg)}
@@ -109,7 +109,7 @@ p{margin:0}
 .seed b{display:block;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-bottom:4px}
 .kw{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .kw li{font-size:.82rem;letter-spacing:.03em;padding:5px 12px;border:1px solid var(--gold);border-radius:999px;color:var(--fg)}
-.row h3{font-size:1.4rem}
+.row h3{font-size:1.7rem}
 .row p{color:var(--muted);font-size:1rem}
 
 /* gathering */
@@ -117,17 +117,17 @@ p{margin:0}
 .gather .label{color:var(--gold)}
 .gather h2{margin-top:16px}
 .gather p{color:var(--on-deep-soft);margin-top:18px;max-width:34em}
-.when{font-family:var(--display);font-weight:300;font-size:clamp(1.45rem,2.4vw,1.8rem);line-height:1.25}
+.when{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.15}
 .when small{display:block;font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
 .mail{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .mail code{font-family:var(--body);font-size:.95rem;user-select:all;border-bottom:1px solid var(--gold);padding-bottom:2px;overflow-wrap:anywhere}
 .mail .btn{padding:9px 18px}
 
 /* community */
-.quote{font-family:var(--display);font-weight:300;font-style:italic;font-size:clamp(2.2rem,5.4vw,4rem);line-height:1.08;letter-spacing:-.01em;color:var(--fg)}
+.quote{font-family:var(--display);font-style:italic;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;color:var(--fg)}
 .quote span{color:var(--gold-text)}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,72px);margin-top:40px}
-.two h3{font-size:1.45rem;margin-bottom:10px}
+.two h3{font-size:1.8rem;margin-bottom:10px}
 .two p{color:var(--muted)}
 
 /* people */
@@ -138,7 +138,7 @@ p{margin:0}
 .creds li{font-size:.95rem;color:var(--muted);padding-left:14px;position:relative}
 .creds li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .mono{width:74px;aspect-ratio:720/1045;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--gold-text)}
-.person h3{font-size:clamp(1.4rem,2.2vw,1.7rem)}
+.person h3{font-size:clamp(1.6rem,2.6vw,2rem)}
 .person .label{display:block;margin-block:6px 12px}
 .person p{color:var(--muted);font-size:.93rem}
 
@@ -227,8 +227,6 @@ footer{position:relative;overflow:hidden}
 .g-o{fill:none;stroke:var(--fg);stroke-width:1.1}
 .g-dot,.g-f{fill:var(--fg)}
 .g-acc{fill:var(--gold)}
-.sk{font-family:var(--display);font-style:italic}
-.when,.quote,.modules span{font-variant-numeric:lining-nums}
 </style>
 
 <header class="top" id="home">
@@ -275,7 +273,7 @@ footer{position:relative;overflow:hidden}
         </div>
         <div>
           <h2>The part of you that watches.</h2>
-          <p class="lede">In Patañjali's Yoga Sūtra, the <span class="sk">draṣṭā</span> is the seer: the one who watches thought and feeling without being carried off by them. Drishta takes its name from that word.</p>
+          <p class="lede">In Patañjali's Yoga Sūtra, the draṣṭā is the seer: the one who watches thought and feeling without being carried off by them. Drishta takes its name from that word.</p>
           <p class="lede">Most people are never given the time or the language to observe their inner world. Drishta makes that observation a learnable, measurable skill.</p>
         </div>
       </div>
