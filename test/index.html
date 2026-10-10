@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Drishta runs gatherings and retreats built on metacognition: learning to witness your own mind. Witness, Reflect, Understand, Grow.">
+<meta property="og:title" content="Drishta">
+<meta property="og:description" content="Gatherings and retreats built on metacognition. Witness, Reflect, Understand, Grow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drishta.unfoldedfuture.com/">
+<meta property="og:image" content="https://drishta.unfoldedfuture.com/assets/share.jpg">
+<link rel="canonical" href="https://drishta.unfoldedfuture.com/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>body{margin:0}img{max-width:100%}</style>
+<title>Drishta</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
+<style>
+/* Layout: the emblem's gold vertical axis becomes the page's spine; every section hangs off it as a node. Green opens and closes the page, cream holds the reading. */
+:root{
+  --deep:#2f4230; --deep-2:#1e2a20; --on-deep:#faf7ee; --on-deep-soft:#c9d0c0;
+  --bg:#fbfaf5; --surface:#f2ede0; --fg:#1f2a21; --muted:#55604f;
+  --gold:#c49852; --gold-text:#876628; --line:#ddd5c0; --niche:#fdfcf7;
+  --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --body:"Poppins","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --rail:clamp(26px,7vw,104px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --deep:#2b3d2c; --deep-2:#131a14; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --deep:#2b3d2c; --deep-2:#131a14; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:1.0625rem;line-height:1.75}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+.label{font-size:.75rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-text)}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:20px}
+
+/* ---------- header + hero (green) ---------- */
+.top{background:radial-gradient(120% 90% at 50% 30%,var(--deep) 0%,var(--deep-2) 100%);color:var(--on-deep)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:22px}
+.nav img{display:block;width:150px;height:auto}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+.nav ul a{font-size:.72rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--on-deep-soft)}
+.nav ul a:hover{color:var(--on-deep)}
+.btn{display:inline-block;font-family:var(--body);font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:14px 26px;border-radius:999px;border:1px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn-gold{background:var(--gold);color:#1e2a20}
+.btn-gold:hover{background:transparent;color:var(--on-deep)}
+.btn-line{background:transparent;color:var(--on-deep)}
+.btn-line:hover{background:var(--gold);color:#1e2a20}
+.nav .btn{padding:10px 20px;white-space:nowrap}
+
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:clamp(32px,6vw,88px);padding-block:clamp(40px,7vw,88px) clamp(56px,8vw,104px)}
+.hero .label{color:var(--gold)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5.1rem);margin-block:22px 26px;letter-spacing:-.005em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{max-width:32em;color:var(--on-deep-soft);font-size:clamp(1.05rem,1.4vw,1.15rem);font-weight:300}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.niche{justify-self:center;width:min(100%,360px);aspect-ratio:720/1045;border-radius:999px;background:var(--niche);overflow:hidden;
+  box-shadow:0 0 0 9px var(--deep),0 0 0 10px var(--gold),0 34px 60px -18px rgba(0,0,0,.55),inset 0 6px 22px rgba(60,50,20,.16)}
+.niche img{display:block;width:100%;height:100%;object-fit:cover}
+.words{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;list-style:none;margin:0;padding:22px 0 26px;border-top:1px solid rgba(196,152,82,.28);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--on-deep-soft)}
+.words li+li::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-right:18px;vertical-align:middle}
+@media (max-width:560px){.words{flex-wrap:nowrap;gap:0 9px;font-size:.62rem;letter-spacing:.14em;padding:20px 0 24px}.words li{white-space:nowrap}.words li+li::before{width:4px;height:4px;margin-right:9px}}
+
+/* ---------- spine ---------- */
+.spine{position:relative;padding-left:var(--rail)}
+.spine::before{content:"";position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),var(--gold)) no-repeat;opacity:.55}
+.sec{position:relative;padding-block:clamp(56px,8vw,104px)}
+.sec+.sec{border-top:1px solid var(--line)}
+.sec>.label{position:relative;display:block;margin-bottom:22px}
+.sec>.label::before{content:"";position:absolute;left:calc(-1*var(--rail) - 4px);top:.42em;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px var(--bg)}
+.sec h2{font-size:clamp(2rem,4.4vw,3.3rem);max-width:18em}
+.lede{max-width:38em;margin-top:22px;color:var(--muted);font-size:1.06rem}
+.lede+.lede{margin-top:16px}
+
+/* name */
+.name{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);align-items:start}
+.name .word{font-family:var(--display);font-style:italic;font-size:clamp(3rem,8vw,6rem);line-height:1;color:var(--gold-text)}
+.name .gloss{margin-top:12px;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* four movements */
+.moves{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:48px;list-style:none;padding:0;border-top:1px solid var(--gold)}
+.moves li{position:relative;padding:30px 24px 0 0}
+.moves li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.moves h3{font-size:2rem;margin-bottom:10px}
+.moves p{color:var(--muted);font-size:1rem;line-height:1.65}
+
+/* programmes */
+.feature{margin-top:44px;background:var(--surface);padding:clamp(26px,4vw,48px);border-radius:3px}
+.feature h3{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.feature>p{max-width:42em;margin-top:14px;color:var(--muted)}
+.modules{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;list-style:none;margin:32px 0 0;padding:0}
+.modules li{border-top:1px solid var(--gold);padding-top:14px}
+.modules span{display:block;font-family:var(--display);font-size:1.55rem;line-height:1.15}
+.modules small{display:block;margin-top:6px;font-size:.9rem;line-height:1.5;color:var(--muted)}
+.formats{margin-top:28px;font-size:.95rem;color:var(--muted)}
+.formats b{font-weight:500;color:var(--fg)}
+.rows{margin-top:8px}
+.row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px 40px;padding-block:26px;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0;padding-bottom:0}
+.seed{margin-top:14px;padding-left:14px;border-left:2px solid var(--gold);font-size:.95rem}
+.seed b{display:block;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-bottom:4px}
+.kw{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.kw li{font-size:.82rem;letter-spacing:.03em;padding:5px 12px;border:1px solid var(--gold);border-radius:999px;color:var(--fg)}
+.row h3{font-size:1.7rem}
+.row p{color:var(--muted);font-size:1rem}
+
+/* gathering */
+.gather{background:radial-gradient(120% 120% at 20% 0%,var(--deep) 0%,var(--deep-2) 100%);color:var(--on-deep);padding:clamp(30px,5vw,64px);border-radius:3px;margin-top:8px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px 48px;align-items:end}
+.gather .label{color:var(--gold)}
+.gather h2{margin-top:16px}
+.gather p{color:var(--on-deep-soft);margin-top:18px;max-width:34em}
+.when{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.15}
+.when small{display:block;font-family:var(--body);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.mail{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.mail code{font-family:var(--body);font-size:.95rem;user-select:all;border-bottom:1px solid var(--gold);padding-bottom:2px;overflow-wrap:anywhere}
+.mail .btn{padding:9px 18px}
+
+/* community */
+.quote{font-family:var(--display);font-style:italic;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.02;color:var(--fg)}
+.quote span{color:var(--gold-text)}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,5vw,72px);margin-top:40px}
+.two h3{font-size:1.8rem;margin-bottom:10px}
+.two p{color:var(--muted)}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,72px);margin-top:44px}
+.person{border-top:1px solid var(--gold);padding-top:22px}
+.ptitle{color:var(--fg)!important;font-size:1rem!important;margin-bottom:14px}
+.creds{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:6px}
+.creds li{font-size:.95rem;color:var(--muted);padding-left:14px;position:relative}
+.creds li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.mono{width:74px;aspect-ratio:720/1045;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;color:var(--gold-text)}
+.person h3{font-size:clamp(1.6rem,2.6vw,2rem)}
+.person .label{display:block;margin-block:6px 12px}
+.person p{color:var(--muted);font-size:.93rem}
+
+/* footer */
+footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px;padding-block:56px 40px}
+.foot img{display:block;width:210px;height:auto;margin-bottom:14px}
+.foot .label{color:var(--on-deep-soft);letter-spacing:.28em}
+.foot address{font-style:normal;font-size:.88rem;line-height:1.9;text-align:right}
+.foot address a{text-decoration-color:var(--gold);text-underline-offset:4px}
+
+@media (max-width:860px){
+  .nav ul{display:none}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .name,.row,.gather,.two,.people{grid-template-columns:minmax(0,1fr)}
+  .moves{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:34px;border-top:0}
+  .moves li{border-top:1px solid var(--gold)}
+  .modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .foot address{text-align:left}
+}
+@media (max-width:460px){
+  .nav img{width:118px}
+  .nav .btn{padding:9px 14px;letter-spacing:.14em;font-size:.66rem}
+  .moves,.modules{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+/* background line-art: three restrained moments (hero, score divider, community) */
+.top{position:relative;overflow:hidden}
+.niche-wrap{position:relative;justify-self:center;width:min(100%,360px)}
+.niche-wrap .niche{position:relative;z-index:1;width:100%}
+.glyph{position:absolute;left:50%;top:50%;width:200%;height:auto;transform:translate(-50%,-50%);z-index:0;opacity:.42;pointer-events:none;
+  -webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent 100%);mask-image:radial-gradient(closest-side,#000 55%,transparent 100%)}
+.glyph .ln,.glyph .ring{fill:none;stroke:var(--gold);stroke-width:1.1}
+.glyph .dash{stroke-dasharray:2 7}
+.glyph .dot,.glyph .fill{fill:var(--gold)}
+.glyph .acc{fill:var(--gold);opacity:.9}
+.score{margin-top:clamp(40px,6vw,72px);height:clamp(84px,11vw,140px);opacity:.75}
+.score-svg{display:block;width:100%;height:100%}
+.score-svg .ln{fill:none;stroke:var(--muted);stroke-width:1;opacity:.55}
+.score-svg .thin{opacity:.3}
+.score-svg .ring{fill:none;stroke:var(--fg);stroke-width:1;opacity:.55}
+.score-svg .dot{fill:var(--fg);opacity:.75}
+.score-svg .fill{fill:var(--deep)}
+.score-svg .acc{fill:var(--gold)}
+.score-svg .soft{fill:var(--gold);opacity:.35}
+#community{position:relative}
+#community>*:not(.net){position:relative;z-index:1}
+.net{position:absolute;right:-6%;top:0;width:min(40%,400px);height:auto;z-index:0;opacity:.15;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to left,#000 40%,transparent);mask-image:linear-gradient(to left,#000 40%,transparent)}
+.net .ln,.net .ring{fill:none;stroke:var(--fg);stroke-width:1}
+.net .dot{fill:var(--fg)}
+.net .acc{fill:var(--gold)}
+@media (max-width:860px){
+  .niche-wrap{order:-1;width:min(72%,280px)}
+  .glyph{width:220%;opacity:.32}
+}
+/* more restrained line-art: name, programme panel, gathering, footer */
+.deco{position:absolute;pointer-events:none;z-index:0;height:auto}
+.deco .ln,.deco .ring{fill:none;stroke-width:1}
+.deco .dash{stroke-dasharray:2 7}
+#name .name{position:relative}
+#name .name>*:not(.deco){position:relative;z-index:1}
+.d-eye{left:-70px;top:-90px;width:360px;opacity:.2}
+.d-eye .ln,.d-eye .ring{stroke:var(--gold)}.d-eye .dot,.d-eye .acc{fill:var(--gold)}
+.feature{position:relative;overflow:hidden}
+.feature>*:not(.deco){position:relative;z-index:1}
+.d-arcs{right:-70px;top:-40px;width:min(440px,60%);opacity:.32}
+.d-arcs .ln,.d-arcs .ring{stroke:var(--gold-text)}.d-arcs .fill,.d-arcs .acc{fill:var(--gold-text)}
+.gather{position:relative;overflow:hidden}
+.gather>*:not(.deco){position:relative;z-index:1}
+.d-stars{right:-30px;top:-10px;width:min(520px,70%);opacity:.38}
+.d-stars .ln,.d-stars .ring{stroke:var(--gold)}.d-stars .dot,.d-stars .acc{fill:var(--gold)}
+.d-stars .acc{opacity:.6}
+footer{position:relative;overflow:hidden}
+.d-foot{position:relative;display:block;width:100%;height:44px;opacity:.45}
+.d-foot .ln,.d-foot .ring{stroke:var(--gold)}.d-foot .dot,.d-foot .acc{fill:var(--gold)}
+@media (max-width:860px){
+  .d-eye{width:260px;left:-50px;top:-70px;opacity:.16}
+  .d-arcs{width:300px;right:-90px;top:-50px;opacity:.25}
+  .d-stars{width:120%;right:-40%;top:auto;bottom:-30px;opacity:.3}
+  .net{display:block;position:absolute;width:60%;right:0;top:auto;bottom:0;opacity:.1}
+}
+/* movement glyphs */
+.gl{display:block;width:30px;height:60px;margin-bottom:12px}
+.g-ln{fill:none;stroke:var(--fg);stroke-width:1.2}
+.g-o{fill:none;stroke:var(--fg);stroke-width:1.1}
+.g-dot,.g-f{fill:var(--fg)}
+.g-acc{fill:var(--gold)}
+</style>
+
+<div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">view live site</a></div>
+<header class="top" id="home">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a href="#home"><img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131"></a>
+      <ul>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#programmes">Programmes</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#people">People</a></li>
+      </ul>
+      <a class="btn btn-line" href="#gathering">Join us</a>
+    </nav>
+
+    <div class="hero">
+      <div>
+        <span class="label">Metacognition-led journeys</span>
+        <h1>Learn to witness <em>your own mind.</em></h1>
+        <p>Immersive gatherings and retreats built on metacognition: the practised ability to observe your thoughts and emotions as they arise, and to respond with clarity. Reconnect with yourself, with others and with nature.</p>
+        <div class="cta">
+          <a class="btn btn-gold" href="#gathering">Join the first gathering</a>
+
+        </div>
+      </div>
+      <div class="niche-wrap"><svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 620 620" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M310 30V590"/><circle class="dot" cx="310" cy="70" r="4"/><circle class="dot" cx="310" cy="150" r="4"/><circle class="dot" cx="310" cy="250" r="3"/><circle class="dot" cx="310" cy="330" r="4"/><circle class="dot" cx="310" cy="410" r="6"/><circle class="dot" cx="310" cy="520" r="3"/><circle class="acc" cx="310" cy="110" r="16"/><circle class="ln" cx="240" cy="250" r="118"/><path class="ln" d="M330 470 A190 190 0 0 0 490 210"/><path class="ln dash" d="M80 380 A230 230 0 0 1 370 90"/><circle class="ln" cx="460" cy="160" r="42"/><circle class="ring" cx="460" cy="160" r="14"/><path class="ln" d="M160 60V150"/><path class="ln" d="M167 60V168"/><path class="ln" d="M174 60V186"/><path class="ln" d="M181 60V204"/><path class="ln" d="M530 300V380"/><path class="ln" d="M537 300V366"/><path class="ln" d="M544 300V352"/><path class="ln" d="M60 420H560"/><circle class="ring" cx="70" cy="440" r="3.5"/><circle class="ring" cx="86" cy="440" r="3.5"/><circle class="ring" cx="102" cy="440" r="3.5"/><circle class="ring" cx="118" cy="440" r="3.5"/><circle class="ring" cx="134" cy="440" r="3.5"/><circle class="ring" cx="150" cy="440" r="3.5"/><circle class="ring" cx="166" cy="440" r="3.5"/><path class="ln" d="M60 452H190"/><path class="ln" d="M110 560V470"/><path class="fill" d="M104 470 L110 458 L116 470 Z"/><path class="ln" d="M430 600V490"/><path class="fill" d="M424 490 L430 478 L436 490 Z"/><path class="ln" d="M540 250V310"/><path class="fill" d="M534 310 L540 322 L546 310 Z"/><path class="ln" d="M50 200 l40 -34 l4 40 Z"/><path class="ln" d="M350 560 l70 -14 v14 Z"/><path class="ln" d="M310 360 q-30 -10 -38 -40 q28 4 38 40 M310 340 q26 -8 32 -34 q-24 4 -32 34"/><circle class="dot" cx="274.2" cy="77.7" r="5"/><circle class="dot" cx="269.2" cy="486.5" r="2.5"/><circle class="dot" cx="380.5" cy="354.8" r="5"/><circle class="dot" cx="356.2" cy="66.8" r="2.5"/><circle class="ring" cx="340.6" cy="111.9" r="2.5"/><circle class="dot" cx="342.5" cy="408.3" r="5"/><circle class="dot" cx="348.5" cy="141.5" r="5"/><path class="ln" d="M416.5 344.8H432.5 M419.5 350.8H429.5"/><path class="ln" d="M440 470H510V540H550"/><circle class="dot" cx="550" cy="540" r="3.5"/></svg><div class="niche"><img src="../assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045"></div></div>
+    </div>
+
+    <ul class="words" aria-label="Witness, Reflect, Understand, Grow">
+      <li>Witness</li><li>Reflect</li><li>Understand</li><li>Grow</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="spine">
+
+    <section class="sec" id="name">
+      <span class="label">The name</span>
+      <div class="name"><svg class="deco d-eye" viewBox="0 0 400 400"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="ln" cx="200" cy="200" r="150"/><circle class="ln" cx="200" cy="200" r="110"/><circle class="ln" cx="200" cy="200" r="70"/><circle class="ln dash" cx="200" cy="200" r="185"/><path class="ln" d="M200 0V400M10 200H390"/><path class="ln" d="M50 200 Q200 90 350 200 Q200 310 50 200Z"/><circle class="acc" cx="200" cy="200" r="10"/><circle class="dot" cx="385" cy="200" r="2.5"/><circle class="dot" cx="360.2" cy="292.5" r="2.5"/><circle class="dot" cx="292.5" cy="360.2" r="2.5"/><circle class="dot" cx="200" cy="385" r="2.5"/><circle class="dot" cx="107.5" cy="360.2" r="2.5"/><circle class="dot" cx="39.8" cy="292.5" r="2.5"/><circle class="dot" cx="15" cy="200" r="2.5"/><circle class="dot" cx="39.8" cy="107.5" r="2.5"/><circle class="dot" cx="107.5" cy="39.8" r="2.5"/><circle class="dot" cx="200" cy="15" r="2.5"/><circle class="dot" cx="292.5" cy="39.8" r="2.5"/><circle class="dot" cx="360.2" cy="107.5" r="2.5"/><path class="ln" d="M310 90 l40 -40 M350 50 l-12 0 M350 50 l0 12"/></svg>
+        <div>
+          <div class="word">draṣṭā</div>
+          <div class="gloss">Sanskrit · the seer, the one who witnesses</div>
+        </div>
+        <div>
+          <h2>The part of you that watches.</h2>
+          <p class="lede">In Patañjali's Yoga Sūtra, the draṣṭā is the seer: the one who watches thought and feeling without being carried off by them. Drishta takes its name from that word.</p>
+          <p class="lede">Most people are never given the time or the language to observe their inner world. Drishta makes that observation a learnable, measurable skill.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="approach">
+      <span class="label">The approach</span>
+      <h2>Four movements, practised in order.</h2>
+      <p class="lede">Metacognition is the capacity to think about one's own thinking. Every Drishta programme follows four movements, delivered through dialogue, making, time in nature and silence.</p>
+      <ol class="moves">
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M6 40Q24 22 42 40Q24 58 6 40Z"/><circle class="g-acc" cx="24" cy="40" r="5"/><circle class="g-o" cx="24" cy="12" r="3"/><path class="g-ln" d="M18 76h12M20 82h8"/></svg><h3>Witness</h3><p>Observe thought, emotion and sensation as they arise, without reacting.</p></li>
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><circle class="g-ln" cx="24" cy="42" r="14"/><path class="g-ln" d="M10 42a14 14 0 0 1 14-14"/><path class="g-f" d="M21 25l6 3-6 3z"/><circle class="g-acc" cx="24" cy="42" r="4"/><circle class="g-o" cx="24" cy="74" r="3"/><circle class="g-o" cx="24" cy="84" r="2"/></svg><h3>Reflect</h3><p>Examine where a reaction comes from and what it signals.</p></li>
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M8 58L24 26L40 58Z"/><circle class="g-dot" cx="8" cy="58" r="2.5"/><circle class="g-dot" cx="40" cy="58" r="2.5"/><circle class="g-acc" cx="24" cy="26" r="4"/><path class="g-ln" d="M14 70H34"/></svg><h3>Understand</h3><p>Recognise patterns in yourself, in others and in the systems you live within.</p></li>
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M24 52q-14-4-16-18q14 2 16 18M24 44q12-4 14-16q-12 2-14 16"/><path class="g-f" d="M19 10l5-8 5 8z"/><path class="g-ln" d="M14 88q10-8 20 0"/><circle class="g-acc" cx="24" cy="64" r="4"/></svg><h3>Grow</h3><p>Choose a considered response and carry it into work, relationships and community.</p></li>
+      </ol>
+      <div class="score" aria-hidden="true"><svg class="score-svg" aria-hidden="true" focusable="false" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M0 82.5H1200"/><path class="ln" d="M60 96.5H960"/><path class="ln" d="M300 60.5H1140"/><path class="ln thin" d="M296 44V107.7"/><path class="ln thin" d="M720.5 49.1V91.1"/><path class="ln thin" d="M35.3 62.3V101.6"/><path class="ln thin" d="M291.8 72.2V113.1"/><path class="ln thin" d="M990.3 39.8V122.3"/><path class="ln thin" d="M194.7 49.7V134.8"/><path class="ln thin" d="M626.9 56.3V124.1"/><path class="ln thin" d="M94.3 57.4V119.7"/><path class="ln thin" d="M369.5 11.9V134.7"/><path class="ln thin" d="M568.4 54.9V135.4"/><path class="ln thin" d="M848.4 67.6V109"/><path class="ln thin" d="M949.1 37.8V138.5"/><path class="ln thin" d="M1039.5 16.1V94.9"/><path class="ln thin" d="M271.7 70.3V111.3"/><path class="ln thin" d="M746.9 28.8V115.1"/><path class="ln thin" d="M467.6 31.9V119.4"/><path class="ln thin" d="M697.7 66.5V124.7"/><path class="ln thin" d="M1097.6 63.5V141.5"/><path class="ln thin" d="M798.7 20.2V134.4"/><path class="ln thin" d="M1139 66.5V118.5"/><path class="ln thin" d="M848 23.2V132.8"/><path class="ln thin" d="M685.3 27.8V91"/><path class="ln thin" d="M1010.6 71.9V92.3"/><path class="ln thin" d="M948.7 35.7V95.7"/><path class="ln thin" d="M360.9 58V135.1"/><path class="ln thin" d="M71.3 48.4V89.9"/><circle class="fill" cx="163" cy="75.8" r="22"/><circle class="soft" cx="241.4" cy="120.9" r="3.5"/><circle class="dot" cx="269.6" cy="63.8" r="2.5"/><circle class="ring" cx="173.9" cy="40.2" r="7"/><circle class="dot" cx="100" cy="59.9" r="5"/><circle class="acc" cx="105.3" cy="119" r="7"/><circle class="soft" cx="140.5" cy="81.7" r="2.5"/><circle class="soft" cx="178.8" cy="117.5" r="5"/><circle class="acc" cx="446" cy="82" r="30"/><circle class="dot" cx="387" cy="63.1" r="5"/><circle class="acc" cx="461.6" cy="38.5" r="5"/><circle class="ring" cx="334.8" cy="89.8" r="2.5"/><circle class="dot" cx="482" cy="65.8" r="5"/><circle class="acc" cx="476.1" cy="61.2" r="2.5"/><circle class="dot" cx="471.5" cy="118.7" r="5"/><circle class="soft" cx="390.3" cy="76.3" r="5"/><circle class="soft" cx="731" cy="73.5" r="26"/><circle class="dot" cx="811.9" cy="109.2" r="5"/><circle class="dot" cx="819" cy="46.4" r="3.5"/><circle class="dot" cx="704.4" cy="56.4" r="3.5"/><circle class="dot" cx="708.7" cy="95.1" r="2.5"/><circle class="ring" cx="774.2" cy="118.2" r="7"/><circle class="dot" cx="824.3" cy="119.2" r="5"/><circle class="soft" cx="808.1" cy="56" r="7"/><circle class="acc" cx="1036" cy="83.1" r="40"/><circle class="dot" cx="938.1" cy="118.9" r="3.5"/><circle class="dot" cx="1137.3" cy="66.4" r="5"/><circle class="soft" cx="1071.5" cy="73.3" r="5"/><circle class="dot" cx="1041.5" cy="91.4" r="7"/><circle class="acc" cx="1066.4" cy="40.5" r="3.5"/><circle class="soft" cx="977.9" cy="78.1" r="7"/><circle class="ring" cx="1064.1" cy="121.3" r="2.5"/><rect class="fill" x="560" y="79.5" width="90" height="6"/><rect class="fill" x="880" y="79.5" width="140" height="6"/><circle class="ring" cx="40" cy="136" r="3"/><circle class="ring" cx="54" cy="136" r="3"/><circle class="ring" cx="68" cy="136" r="3"/><circle class="ring" cx="82" cy="136" r="3"/><circle class="ring" cx="96" cy="136" r="3"/><circle class="ring" cx="110" cy="136" r="3"/><circle class="ring" cx="124" cy="136" r="3"/><circle class="ring" cx="138" cy="136" r="3"/><circle class="ring" cx="152" cy="136" r="3"/><circle class="ring" cx="166" cy="136" r="3"/><path class="ln" d="M200 82.5 A60 60 0 0 1 260 22.5"/></svg></div>
+    </section>
+
+    <section class="sec" id="programmes">
+      <span class="label">Programmes</span>
+      <h2>Experiential, small-group programmes.</h2>
+
+      <div class="feature"><svg class="deco d-arcs" viewBox="0 0 440 280"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M90 90 A130 130 0 0 0 350 90"/><path class="ln" d="M130 90 A90 90 0 0 0 310 90"/><path class="ln dash" d="M50 90 A170 170 0 0 0 390 90"/><path class="ln" d="M230 98 l40 60"/><path class="ln" d="M242 98 l36 54"/><path class="ln" d="M254 98 l32 48"/><path class="ln" d="M266 98 l28 42"/><path class="ln" d="M278 98 l24 36"/><path class="ln" d="M290 98 l20 30"/><path class="ln" d="M20 90H420"/><circle class="ring" cx="40" cy="114" r="3"/><circle class="ring" cx="56" cy="114" r="3"/><circle class="ring" cx="72" cy="114" r="3"/><circle class="ring" cx="88" cy="114" r="3"/><circle class="ring" cx="104" cy="114" r="3"/><circle class="ring" cx="120" cy="114" r="3"/><circle class="acc" cx="220" cy="90" r="7"/><path class="ln" d="M220 90V240"/><path class="fill" d="M214 240L220 254L226 240Z"/></svg>
+        <span class="label">Flagship</span>
+        <h3>The Human Curriculum</h3>
+        <p>Five experiential modules on being fully human. No lectures, no memorisation: your own experience is the material.</p>
+        <ul class="modules">
+          <li><span>To See</span><small>Attention, and what it lands on.</small></li>
+          <li><span>To Feel</span><small>Emotion as information.</small></li>
+          <li><span>To Realise</span><small>Patterns, beliefs and where they began.</small></li>
+          <li><span>To Connect</span><small>Empathy, respect and other people.</small></li>
+          <li><span>To Live</span><small>Bringing it home.</small></li>
+        </ul>
+        <p class="formats"><b>Two formats.</b> City: two three-hour sessions. Residential: four days, three nights.</p>
+      </div>
+
+      <div class="rows">
+        <div class="row"><h3>Drishta in Residence</h3><p>Residential retreats with partner venues in natural settings. Inaugural retreat in development: Himalayas or South India.</p></div>
+        <div class="row"><h3>Drishta Labs</h3><div><p>Research and evaluation: the EDER framework (empathic detachment for emotional regulation) and the Metacognition Impact Framework for measuring change.</p><p class="seed"><b>Origin</b>A field-immersion assignment in Purani Dilli, where design students learned to read the old city through every sense. Published in <cite>Design for All</cite>, Vol 21 No 2 (2026).</p><ul class="kw"><li>Field immersion</li><li>Sensory observation</li><li>Reflective writing</li><li>Seeing one's own thinking</li></ul></div></div>
+        <div class="row"><h3>Voices at Drishta</h3><p>Dialogue and lived experience from the Drishta community.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="gathering">
+      <span class="label">Coming up</span>
+      <div class="gather"><svg class="deco d-stars" viewBox="0 0 500 320"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M30.8 264L35.8 80.7"/><path class="ln" d="M35.8 80.7L42.8 150.4"/><path class="ln" d="M236.4 89L269.3 180.7"/><path class="ln" d="M301.7 55.5L304.1 227.7"/><path class="ln" d="M355.6 278.3L366.9 64.7"/><circle class="ring" cx="30.8" cy="264" r="5"/><circle class="dot" cx="30.8" cy="264" r="2.2"/><circle class="dot" cx="35.8" cy="80.7" r="1.6"/><circle class="ring" cx="42.8" cy="150.4" r="5"/><circle class="dot" cx="42.8" cy="150.4" r="2.2"/><circle class="dot" cx="153" cy="276.6" r="3"/><circle class="dot" cx="236.4" cy="89" r="3"/><circle class="dot" cx="269.3" cy="180.7" r="2.2"/><circle class="ring" cx="301.7" cy="55.5" r="5"/><circle class="dot" cx="301.7" cy="55.5" r="2.2"/><circle class="dot" cx="304.1" cy="227.7" r="2.2"/><circle class="dot" cx="355.6" cy="278.3" r="1.6"/><circle class="dot" cx="366.9" cy="64.7" r="3"/><circle class="ring" cx="379.9" cy="283.9" r="5"/><circle class="dot" cx="379.9" cy="283.9" r="2.2"/><circle class="dot" cx="380.7" cy="58.9" r="1.6"/><circle class="dot" cx="426.4" cy="51.7" r="2.2"/><circle class="dot" cx="445.1" cy="201.7" r="1.6"/><circle class="ln dash" cx="360" cy="150" r="110"/><circle class="acc" cx="360" cy="150" r="14"/></svg>
+        <div>
+          <span class="label">The first gathering</span>
+          <h2>Register your interest.</h2>
+          <p>The inaugural Drishta gathering takes place in late October 2026, followed by a residential retreat. Write to us to receive dates, venue and participation details.</p>
+          <div class="mail">
+            <code id="addr">adutta03@unfoldedfuture.com</code>
+            <button class="btn btn-line" id="copy" type="button">Copy address</button>
+          </div>
+        </div>
+        <div class="when"><small>When</small>Late October 2026<br>Details to be announced</div>
+      </div>
+    </section>
+
+    <section class="sec" id="community">
+      <span class="label">What we run on</span>
+      <svg class="net" aria-hidden="true" focusable="false" viewBox="0 0 520 640" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M40 59.8V564"/><circle class="ring" cx="40" cy="116.7" r="3"/><circle class="ring" cx="40" cy="123.7" r="3"/><circle class="ring" cx="40" cy="130.7" r="3"/><circle class="ring" cx="40" cy="137.7" r="3"/><circle class="ring" cx="40" cy="144.7" r="3"/><circle class="ring" cx="40" cy="208.6" r="9"/><path class="ln" d="M33 256.6H47M33 260.6H47"/><circle class="ring" cx="40" cy="292.4" r="3"/><circle class="ring" cx="40" cy="299.4" r="3"/><circle class="ring" cx="40" cy="306.4" r="3"/><circle class="dot" cx="40" cy="352.3" r="2.5"/><circle class="ring" cx="40" cy="409.4" r="7"/><path class="ln" d="M33 477.9H47M33 481.9H47"/><circle class="ring" cx="40" cy="531.7" r="5"/><path class="ln" d="M95 16.9V485.3"/><path class="ln" d="M88 72.1H102M88 76.1H102"/><circle class="ring" cx="95" cy="132.8" r="9"/><circle class="ring" cx="95" cy="196.2" r="3"/><circle class="ring" cx="95" cy="203.2" r="3"/><circle class="ring" cx="95" cy="210.2" r="3"/><circle class="ring" cx="95" cy="217.2" r="3"/><circle class="ring" cx="95" cy="224.2" r="3"/><circle class="ring" cx="95" cy="264.5" r="5"/><circle class="ring" cx="95" cy="311.8" r="9"/><circle class="dot" cx="95" cy="381.6" r="2.5"/><circle class="ring" cx="95" cy="439.3" r="5"/><path class="ln" d="M150 13.3V564.5"/><circle class="ring" cx="150" cy="37.6" r="7"/><circle class="dot" cx="150" cy="81.8" r="2.5"/><circle class="ring" cx="150" cy="145.4" r="5"/><circle class="ring" cx="150" cy="212.3" r="7"/><circle class="ring" cx="150" cy="281.5" r="3"/><circle class="ring" cx="150" cy="288.5" r="3"/><circle class="ring" cx="150" cy="295.5" r="3"/><circle class="ring" cx="150" cy="361.3" r="9"/><circle class="ring" cx="150" cy="400.6" r="7"/><circle class="ring" cx="150" cy="429.3" r="3"/><circle class="ring" cx="150" cy="436.3" r="3"/><circle class="ring" cx="150" cy="443.3" r="3"/><circle class="dot" cx="150" cy="490.9" r="2.5"/><circle class="ring" cx="150" cy="519.4" r="3"/><circle class="ring" cx="150" cy="526.4" r="3"/><circle class="ring" cx="150" cy="533.4" r="3"/><circle class="ring" cx="150" cy="540.4" r="3"/><path class="ln" d="M205 71.5V547.1"/><circle class="dot" cx="205" cy="99.1" r="2.5"/><path class="ln" d="M198 132.7H212M198 136.7H212"/><circle class="ring" cx="205" cy="165.5" r="3"/><circle class="ring" cx="205" cy="172.5" r="3"/><circle class="ring" cx="205" cy="179.5" r="3"/><circle class="dot" cx="205" cy="221.6" r="2.5"/><path class="ln" d="M198 290.5H212M198 294.5H212"/><circle class="ring" cx="205" cy="360.4" r="5"/><circle class="dot" cx="205" cy="405" r="2.5"/><circle class="ring" cx="205" cy="459.9" r="5"/><circle class="ring" cx="205" cy="496.9" r="9"/><path class="ln" d="M260 42.6V491"/><path class="ln" d="M253 66.2H267M253 70.2H267"/><path class="ln" d="M253 104.4H267M253 108.4H267"/><circle class="ring" cx="260" cy="148" r="3"/><circle class="ring" cx="260" cy="155" r="3"/><circle class="ring" cx="260" cy="162" r="3"/><circle class="ring" cx="260" cy="169" r="3"/><circle class="ring" cx="260" cy="176" r="3"/><path class="ln" d="M253 224.3H267M253 228.3H267"/><circle class="ring" cx="260" cy="288.7" r="5"/><circle class="ring" cx="260" cy="329.8" r="9"/><circle class="ring" cx="260" cy="368.3" r="9"/><path class="ln" d="M253 422.7H267M253 426.7H267"/><path class="ln" d="M315 52.7V552.4"/><circle class="ring" cx="315" cy="75.8" r="5"/><circle class="dot" cx="315" cy="105.5" r="2.5"/><circle class="dot" cx="315" cy="143.5" r="2.5"/><circle class="dot" cx="315" cy="182.3" r="2.5"/><circle class="ring" cx="315" cy="235.3" r="5"/><circle class="dot" cx="315" cy="302.4" r="2.5"/><circle class="ring" cx="315" cy="335.7" r="3"/><circle class="ring" cx="315" cy="342.7" r="3"/><circle class="ring" cx="315" cy="349.7" r="3"/><circle class="ring" cx="315" cy="356.7" r="3"/><circle class="ring" cx="315" cy="363.7" r="3"/><path class="ln" d="M308 427.5H322M308 431.5H322"/><circle class="dot" cx="315" cy="467.2" r="2.5"/><circle class="ring" cx="315" cy="503.8" r="7"/><path class="ln" d="M370 37.4V487"/><circle class="ring" cx="370" cy="68.7" r="3"/><circle class="ring" cx="370" cy="75.7" r="3"/><circle class="ring" cx="370" cy="82.7" r="3"/><circle class="ring" cx="370" cy="128.5" r="7"/><path class="ln" d="M363 197.7H377M363 201.7H377"/><path class="ln" d="M363 254.8H377M363 258.8H377"/><circle class="ring" cx="370" cy="288.7" r="5"/><circle class="ring" cx="370" cy="336.6" r="3"/><circle class="ring" cx="370" cy="343.6" r="3"/><circle class="ring" cx="370" cy="350.6" r="3"/><circle class="ring" cx="370" cy="357.6" r="3"/><circle class="ring" cx="370" cy="433" r="9"/><circle class="ring" cx="370" cy="464.2" r="7"/><path class="ln" d="M425 119.9V491.3"/><circle class="dot" cx="425" cy="161.8" r="2.5"/><circle class="dot" cx="425" cy="227.6" r="2.5"/><circle class="dot" cx="425" cy="285.1" r="2.5"/><circle class="ring" cx="425" cy="351.6" r="3"/><circle class="ring" cx="425" cy="358.6" r="3"/><circle class="ring" cx="425" cy="365.6" r="3"/><circle class="ring" cx="425" cy="372.6" r="3"/><circle class="ring" cx="425" cy="379.6" r="3"/><circle class="ring" cx="425" cy="427.4" r="7"/><path class="ln" d="M480 13.3V555"/><path class="ln" d="M473 33.9H487M473 37.9H487"/><circle class="ring" cx="480" cy="77.8" r="5"/><path class="ln" d="M473 109.2H487M473 113.2H487"/><circle class="dot" cx="480" cy="178.9" r="2.5"/><circle class="ring" cx="480" cy="237.5" r="3"/><circle class="ring" cx="480" cy="244.5" r="3"/><circle class="ring" cx="480" cy="251.5" r="3"/><circle class="ring" cx="480" cy="258.5" r="3"/><circle class="ring" cx="480" cy="265.5" r="3"/><circle class="ring" cx="480" cy="322.7" r="3"/><circle class="ring" cx="480" cy="329.7" r="3"/><circle class="ring" cx="480" cy="336.7" r="3"/><circle class="ring" cx="480" cy="343.7" r="3"/><circle class="ring" cx="480" cy="413.9" r="9"/><path class="ln" d="M473 443.1H487M473 447.1H487"/><circle class="ring" cx="480" cy="491.3" r="9"/><circle class="dot" cx="480" cy="524.1" r="2.5"/><path class="ln" d="M425 177.7H480"/><circle class="acc" cx="452.5" cy="177.7" r="5"/><path class="ln" d="M260 125.9H315"/><path class="ln" d="M150 406.7H205"/><circle class="acc" cx="177.5" cy="406.7" r="5"/><path class="ln" d="M425 289.2H480"/><circle class="acc" cx="452.5" cy="289.2" r="5"/><path class="ln" d="M370 366.3H425"/><circle class="acc" cx="397.5" cy="366.3" r="5"/><path class="ln" d="M370 429.7H425"/><path class="ln" d="M205 464.9H260"/><circle class="acc" cx="232.5" cy="464.9" r="5"/><path class="ln" d="M315 156.6H370"/><circle class="acc" cx="342.5" cy="156.6" r="5"/><path class="ln" d="M315 445.1H370"/><path class="ln" d="M95 497H150"/><circle class="acc" cx="122.5" cy="497" r="5"/><path class="ln" d="M150 111.9H205"/><circle class="acc" cx="177.5" cy="111.9" r="5"/><path class="ln" d="M205 442.2H260"/><circle class="acc" cx="232.5" cy="442.2" r="5"/><path class="ln" d="M425 369.2H480"/><path class="ln" d="M425 207.4H480"/><path class="ln" d="M260 461.5H315"/><circle class="acc" cx="287.5" cy="461.5" r="5"/><path class="ln" d="M260 322.5H315"/><circle class="acc" cx="287.5" cy="322.5" r="5"/><ellipse class="ln" cx="40" cy="362" rx="34" ry="3"/><ellipse class="ln" cx="370" cy="280.1" rx="34" ry="3"/><ellipse class="ln" cx="40" cy="418.5" rx="34" ry="3"/><ellipse class="ln" cx="260" cy="184.5" rx="34" ry="3"/></svg>
+      <p class="quote">Currency is <span>community.</span></p>
+      <div class="two">
+        <div>
+          <h3>Social capital first</h3>
+          <p>Drishta grows through sustained participation. Value is measured in relationships, trust and shared practice.</p>
+        </div>
+        <div>
+          <h3>Think Studio</h3>
+          <p>Think Studio, the consulting arm of Unfolded Future, delivers design and capability-building engagements for organisations. Its revenue sustains Drishta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="people">
+      <span class="label">People</span>
+      <h2>Founders.</h2>
+      <div class="people">
+        <div class="person">
+          <h3>Akanshya Dutta</h3>
+          <span class="label">Founder</span>
+          <p class="ptitle">Researcher and Consultant · Visiting Faculty, Design · DTU</p>
+          <ul class="kw"><li>Policy design</li><li>Monitoring and evaluation</li><li>Data visualisation</li><li>Metacognition</li></ul>
+          <ul class="creds"><li>Data-driven governance &amp; policy monitoring · Govt of Assam, <span style="white-space:nowrap">World Bank–supported</span></li><li>Capacity building, SIPRD Assam · SDG localisation</li><li>M.Tech, Computer Science · Futures Thinking, IFTF</li></ul>
+        </div>
+        <div class="person">
+          <h3>Dr Partha Pratim Das</h3>
+          <span class="label">Co-founder</span>
+          <p class="ptitle">Assistant Professor, Design · DTU</p>
+          <ul class="kw"><li>Systems design</li><li>Interaction design</li><li>Pedagogy</li><li>Policy design</li></ul>
+          <ul class="creds"><li>PhD, Systems Design · M.Des, Product Design · IIT Delhi</li><li>Programme Lead, DTU Design Bootcamp</li><li>Guest Editor, <cite>Design for All</cite> (2026)</li></ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <svg class="deco d-foot" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M0 30H1200"/><circle class="dot" cx="556.3" cy="21.3" r="3.2"/><circle class="dot" cx="17.6" cy="39.6" r="1.8"/><circle class="ring" cx="404.1" cy="30" r="4"/><path class="ln" d="M869.3 23.2V51.2"/><path class="ln" d="M508.7 10.7V38.1"/><circle class="ring" cx="1038.6" cy="30" r="4"/><circle class="dot" cx="923.6" cy="35.9" r="1.8"/><path class="ln" d="M1094.4 13.1V48.7"/><circle class="ring" cx="1059.7" cy="30" r="4"/><path class="ln" d="M477.9 10.6V47.3"/><circle class="dot" cx="16.2" cy="39.5" r="2.5"/><path class="ln" d="M174.2 20.3V49.6"/><path class="ln" d="M1147.5 20.7V39.2"/><path class="ln" d="M1015.6 22.5V38.1"/><circle class="dot" cx="1092.8" cy="31.8" r="3.2"/><circle class="dot" cx="1096.7" cy="27.6" r="3.2"/><circle class="ring" cx="912.6" cy="30" r="4"/><circle class="dot" cx="213.6" cy="41" r="1.8"/><circle class="dot" cx="328.6" cy="38.4" r="3.2"/><circle class="ring" cx="326.6" cy="30" r="4"/><circle class="ring" cx="153.2" cy="30" r="4"/><circle class="dot" cx="200.9" cy="35.7" r="3.2"/><circle class="dot" cx="626" cy="34.5" r="2.5"/><circle class="ring" cx="139.8" cy="30" r="6"/><circle class="dot" cx="542.5" cy="41.7" r="3.2"/><circle class="dot" cx="889.9" cy="32.6" r="1.8"/><path class="ln" d="M521.6 16.2V41.2"/><circle class="dot" cx="114.8" cy="20.5" r="1.8"/><circle class="ring" cx="40" cy="30" r="6"/><circle class="ring" cx="596.9" cy="30" r="4"/><path class="ln" d="M677.9 19.1V37.5"/><circle class="dot" cx="907.7" cy="40.9" r="3.2"/><circle class="dot" cx="445.8" cy="22.1" r="2.5"/><circle class="ring" cx="44.7" cy="30" r="4"/><path class="ln" d="M320.3 11.7V38.4"/><circle class="dot" cx="67.6" cy="36.9" r="2.5"/><circle class="ring" cx="731.6" cy="30" r="6"/><circle class="dot" cx="346.3" cy="24.7" r="1.8"/><path class="ln" d="M892 11.7V42.7"/><circle class="dot" cx="178.2" cy="37.1" r="3.2"/><circle class="acc" cx="300" cy="30" r="9"/><circle class="acc" cx="820" cy="30" r="9"/></svg>
+  <div class="wrap foot">
+    <div>
+      <img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131">
+      <span class="label">Witness · Reflect · Understand · Grow</span>
+    </div>
+    <address>
+      An Unfolded Future initiative<br>
+      Delhi · Assam<br>
+      <a href="mailto:adutta03@unfoldedfuture.com">adutta03@unfoldedfuture.com</a>
+    </address>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var b=document.getElementById('copy'),a=document.getElementById('addr');
+  b.addEventListener('click',function(){
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(a);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(a.textContent).then(done,sel)}catch(e){sel()}
+  });
+})();
+</script>
+</html>
