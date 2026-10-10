@@ -230,6 +230,17 @@ footer{position:relative;overflow:hidden}
 .g-o{fill:none;stroke:var(--fg);stroke-width:1.1}
 .g-dot,.g-f{fill:var(--fg)}
 .g-acc{fill:var(--gold)}
+
+/* ---- TEST: white sheen over the dark green ---- */
+body{--a:0;--ap:0%}
+body.sh1{--a:.06;--ap:6%} body.sh2{--a:.11;--ap:11%} body.sh3{--a:.17;--ap:17%}
+body[class*="sh"] .top{background:radial-gradient(90% 60% at 50% 0%,rgba(240,248,236,calc(var(--a)*.6)) 0%,transparent 70%),linear-gradient(rgba(228,242,222,var(--a)),rgba(228,242,222,var(--a))),radial-gradient(120% 90% at 50% 30%,var(--deep) 0%,var(--deep-2) 100%)}
+body[class*="sh"] .gather{background:linear-gradient(rgba(228,242,222,var(--a)),rgba(228,242,222,var(--a))),radial-gradient(120% 120% at 20% 0%,var(--deep) 0%,var(--deep-2) 100%)}
+body[class*="sh"] footer{background:linear-gradient(rgba(228,242,222,var(--a)),rgba(228,242,222,var(--a))),var(--deep-2)}
+body[class*="sh"] .niche{box-shadow:0 0 0 9px color-mix(in srgb,var(--deep),#e4f2de var(--ap)),0 0 0 10px var(--gold),0 34px 60px -18px rgba(0,0,0,.4),inset 0 6px 22px rgba(60,50,20,.16)}
+.shsw{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:200;display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(250,247,238,.95);box-shadow:0 8px 24px rgba(0,0,0,.25);font:500 12px/1 Poppins,system-ui,sans-serif}
+.shsw button{border:0;background:transparent;color:#1e2a20;padding:9px 12px;border-radius:999px;cursor:pointer;font:inherit;white-space:nowrap}
+.shsw button[aria-pressed="true"]{background:#2f4230;color:#faf7ee}
 </style>
 
 <div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">view live site</a></div>
@@ -402,4 +413,6 @@ footer{position:relative;overflow:hidden}
   });
 })();
 </script>
+<div class="shsw" role="group" aria-label="Green tone"><button data-c="">Current</button><button data-c="sh1">Soft</button><button data-c="sh2">Pastel</button><button data-c="sh3">Misty</button></div>
+<script>(function(){var b=document.querySelectorAll('.shsw button');function set(c){document.body.classList.remove('sh1','sh2','sh3');if(c)document.body.classList.add(c);b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.c===c)})}b.forEach(function(x){x.onclick=function(){set(x.dataset.c)}});set('sh2')})();</script>
 </html>
