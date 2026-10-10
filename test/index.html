@@ -21,7 +21,7 @@
 <style>
 /* Layout: the emblem's gold vertical axis becomes the page's spine; every section hangs off it as a node. Green opens and closes the page, cream holds the reading. */
 :root{
-  --deep:#405a41; --deep-2:#2f4232; --on-deep:#faf7ee; --on-deep-soft:#c9d0c0;
+  --deep:#3f4f37; --deep-2:#2b3626; --on-deep:#faf7ee; --on-deep-soft:#c9d0c0;
   --bg:#fbfaf5; --surface:#f2ede0; --fg:#1f2a21; --muted:#55604f;
   --gold:#c49852; --gold-text:#876628; --line:#ddd5c0; --niche:#fdfcf7;
   --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
@@ -29,10 +29,10 @@
   --rail:clamp(26px,7vw,104px);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --deep:#3c553d; --deep-2:#243226; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --deep:#3b4934; --deep-2:#1f261b; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
   --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --deep:#3c553d; --deep-2:#243226; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
+  --deep:#3b4934; --deep-2:#1f261b; --bg:#161e17; --surface:#1f2a20; --fg:#f1ede1; --muted:#a9b3a2;
   --gold-text:#d3ad6c; --line:#34432f; color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -238,8 +238,8 @@ body.sh1{--a:.08} body.sh2{--a:.13} body.sh3{--a:.19}
 .sheet-dark{position:relative;isolation:isolate;overflow:hidden;border-radius:6px;
   padding:clamp(8px,2vw,24px) clamp(20px,3.4vw,48px) 0;margin:clamp(8px,1.5vw,16px) calc(-1*clamp(0px,4vw,72px)) clamp(56px,7vw,96px);
   background:
-    radial-gradient(70% 55% at 18% 0%,rgba(246,251,242,calc(var(--a)*.9)) 0%,transparent 70%),
-    linear-gradient(172deg,rgba(240,248,236,calc(var(--a)*1.45)) 0%,rgba(230,243,224,var(--a)) 38%,rgba(226,240,220,calc(var(--a)*.72)) 100%);
+    radial-gradient(70% 55% at 18% 0%,rgba(247,249,240,calc(var(--a)*.9)) 0%,transparent 70%),
+    linear-gradient(172deg,rgba(242,245,234,calc(var(--a)*1.45)) 0%,rgba(234,239,222,var(--a)) 38%,rgba(230,236,218,calc(var(--a)*.72)) 100%);
   -webkit-backdrop-filter:blur(2px) saturate(1.08);backdrop-filter:blur(2px) saturate(1.08);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,calc(var(--a)*1.6)),
@@ -263,15 +263,15 @@ body{background:var(--deep-2) linear-gradient(180deg,var(--deep) 0%,color-mix(in
 .top,footer{background:transparent!important}
 main.wrap{position:relative;max-width:1180px;border-radius:6px;
   padding:clamp(12px,3vw,40px) clamp(18px,4vw,56px) clamp(24px,4vw,56px);margin:clamp(-4px,0vw,0px) auto clamp(36px,5vw,64px);
-  background:linear-gradient(176deg,#fefdf8 0%,#fbfaf4 35%,#f6f4ea 100%);
+  background:linear-gradient(176deg,rgba(254,253,248,.9) 0%,rgba(251,250,244,.85) 35%,rgba(246,244,234,.8) 100%);-webkit-backdrop-filter:blur(8px) saturate(1.05);backdrop-filter:blur(8px) saturate(1.05);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.9),
     inset 0 -1px 0 rgba(120,100,60,.14),
     0 2px 3px rgba(0,0,0,.18),
     0 16px 30px -16px rgba(0,0,0,.42),
     0 56px 90px -44px rgba(0,0,0,.6)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(228,242,222,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}}
-:root[data-theme="dark"] main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(228,242,222,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(232,238,220,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}}
+:root[data-theme="dark"] main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(232,238,220,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}
 main .deco{-webkit-mask-image:radial-gradient(closest-side,#000 60%,transparent 100%);mask-image:radial-gradient(closest-side,#000 60%,transparent 100%)}
 main.wrap{margin-top:0}
 
@@ -281,7 +281,7 @@ main.wrap{margin-top:0}
 /* footer paper */
 footer .foot{position:relative;border-radius:6px;margin-block:clamp(10px,2vw,22px) clamp(18px,3vw,32px);padding:clamp(28px,4vw,44px) clamp(20px,4.5vw,56px)}
 body[class*="sh"] footer .foot{
-  background:linear-gradient(172deg,rgba(240,248,236,calc(var(--a)*1.3)) 0%,rgba(228,242,222,calc(var(--a)*.8)) 100%);
+  background:linear-gradient(172deg,rgba(242,245,234,calc(var(--a)*1.3)) 0%,rgba(232,238,220,calc(var(--a)*.8)) 100%);
   box-shadow:inset 0 1px 0 rgba(255,255,255,calc(var(--a)*1.5)),inset 0 -1px 0 rgba(0,0,0,.2),0 2px 3px rgba(0,0,0,.18),0 24px 44px -24px rgba(0,0,0,.6)}
 @media (max-width:860px){.sheet-dark{margin-inline:-6px} main.wrap{margin-inline:10px;padding-inline:16px} footer .foot{margin-inline:10px}}
 .shsw{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:200;display:flex;gap:4px;padding:5px;border-radius:999px;background:rgba(250,247,238,.95);box-shadow:0 8px 24px rgba(0,0,0,.25);font:500 12px/1 Poppins,system-ui,sans-serif}
@@ -462,5 +462,5 @@ body[class*="sh"] footer .foot{
 })();
 </script>
 <div class="shsw" role="group" aria-label="Green tone"><button data-c="">Current</button><button data-c="sh1">Soft</button><button data-c="sh2">Pastel</button><button data-c="sh3">Misty</button></div>
-<script>(function(){var b=document.querySelectorAll('.shsw button');function set(c){document.body.classList.remove('sh1','sh2','sh3');if(c)document.body.classList.add(c);b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.c===c)})}b.forEach(function(x){x.onclick=function(){set(x.dataset.c)}});set('sh2')})();</script>
+<script>(function(){var b=document.querySelectorAll('.shsw button');function set(c){document.body.classList.remove('sh1','sh2','sh3');if(c)document.body.classList.add(c);b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.c===c)})}b.forEach(function(x){x.onclick=function(){set(x.dataset.c)}});set('sh3')})();</script>
 </html>
