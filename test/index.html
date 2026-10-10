@@ -236,7 +236,7 @@ body{--a:0}
 body.sh1{--a:.08} body.sh2{--a:.13} body.sh3{--a:.19}
 /* dark translucent sheet (hero, footer) */
 .sheet-dark{position:relative;isolation:isolate;overflow:hidden;border-radius:6px;
-  padding:clamp(8px,2vw,24px) clamp(20px,3.4vw,48px) 0;margin:clamp(8px,1.5vw,16px) calc(-1*clamp(0px,4vw,72px)) clamp(28px,4vw,52px);
+  padding:clamp(8px,2vw,24px) clamp(20px,3.4vw,48px) 0;margin:clamp(8px,1.5vw,16px) calc(-1*clamp(0px,4vw,72px)) clamp(56px,7vw,96px);
   background:
     radial-gradient(70% 55% at 18% 0%,rgba(246,251,242,calc(var(--a)*.9)) 0%,transparent 70%),
     linear-gradient(172deg,rgba(240,248,236,calc(var(--a)*1.45)) 0%,rgba(230,243,224,var(--a)) 38%,rgba(226,240,220,calc(var(--a)*.72)) 100%);
@@ -258,20 +258,22 @@ body:not([class*="sh"]) .sheet-dark{background:none;box-shadow:none;-webkit-back
 /* arch floats on the paper */
 .niche{box-shadow:0 2px 4px rgba(0,0,0,.18),0 18px 34px -16px rgba(0,0,0,.5),0 40px 70px -30px rgba(0,0,0,.55),inset 0 6px 22px rgba(60,50,20,.16)!important}
 
-/* light sheet: one continuous paper for the main content */
+/* whole page sits on one continuous green; main content is a paper sheet on it */
+body{background:var(--deep-2) linear-gradient(180deg,var(--deep) 0%,color-mix(in srgb,var(--deep) 55%,var(--deep-2)) 45%,var(--deep-2) 100%) no-repeat}
+.top,footer{background:transparent!important}
 main.wrap{position:relative;max-width:1180px;border-radius:6px;
   padding:clamp(12px,3vw,40px) clamp(18px,4vw,56px) clamp(24px,4vw,56px);margin:clamp(-4px,0vw,0px) auto clamp(36px,5vw,64px);
-  background:linear-gradient(180deg,rgba(255,255,255,.78) 0%,rgba(255,255,255,.58) 30%,rgba(255,255,255,.5) 100%);
+  background:linear-gradient(176deg,#fefdf8 0%,#fbfaf4 35%,#f6f4ea 100%);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.95),
-    inset 0 -1px 0 rgba(120,100,60,.10),
-    0 1px 2px rgba(60,50,20,.08),
-    0 14px 28px -16px rgba(60,50,20,.18),
-    0 48px 80px -40px rgba(60,50,20,.28)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) main.wrap{background:linear-gradient(180deg,rgba(236,246,230,.075),rgba(228,242,222,.045));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}}
-:root[data-theme="dark"] main.wrap{background:linear-gradient(180deg,rgba(236,246,230,.075),rgba(228,242,222,.045));box-shadow:inset 0 1px 0 rgba(255,255,255,.1),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}
+    inset 0 1px 0 rgba(255,255,255,.9),
+    inset 0 -1px 0 rgba(120,100,60,.14),
+    0 2px 3px rgba(0,0,0,.18),
+    0 16px 30px -16px rgba(0,0,0,.42),
+    0 56px 90px -44px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(228,242,222,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}}
+:root[data-theme="dark"] main.wrap{background:linear-gradient(176deg,rgba(236,246,230,.085),rgba(228,242,222,.05));box-shadow:inset 0 1px 0 rgba(255,255,255,.12),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 3px rgba(0,0,0,.25),0 30px 60px -30px rgba(0,0,0,.6)}
 main .deco{-webkit-mask-image:radial-gradient(closest-side,#000 60%,transparent 100%);mask-image:radial-gradient(closest-side,#000 60%,transparent 100%)}
-main.wrap{margin-top:clamp(28px,4vw,56px)}
+main.wrap{margin-top:0}
 
 /* gathering card: lifted */
 .gather{box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -1px 0 rgba(0,0,0,.25),0 2px 4px rgba(0,0,0,.14),0 18px 34px -18px rgba(0,0,0,.4),0 46px 80px -40px rgba(0,0,0,.45);border-radius:6px}
