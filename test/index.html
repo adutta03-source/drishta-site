@@ -66,9 +66,9 @@ p{margin:0}
 /* hero: the emblem, set into the morning light like the reference's logo over its image */
 .hero{position:relative;overflow:hidden;text-align:center;padding:96px 20px 150px;color:var(--ink);
   background:radial-gradient(40% 36% at 50% 26%,rgba(233,201,120,.32),transparent 70%),linear-gradient(180deg,var(--hero-a) 0%,var(--hero-b) 55%,var(--bg-a) 100%)}
-.emblem{display:block;margin:0 auto;height:min(52vh,440px);width:auto;aspect-ratio:720/1045;mix-blend-mode:multiply;
-  -webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent);mask-image:radial-gradient(closest-side,#000 82%,transparent)}
-.hero .name{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4.6vw,3.3rem);letter-spacing:.34em;margin:6px 0 0 .34em;line-height:1}
+.emblem-frame{display:block;margin:6px auto 0;height:min(48vh,400px);width:auto;aspect-ratio:720/1045;border-radius:999px;overflow:hidden;background:#fdfcf7;box-shadow:0 0 0 8px var(--hero-b),0 0 0 9px var(--gold),0 30px 60px -24px rgba(20,35,24,.45)}
+.emblem{display:block;width:100%;height:100%;object-fit:cover}
+.hero .name{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4.6vw,3.3rem);letter-spacing:.34em;margin:34px 0 0 .34em;line-height:1}
 .hero .label{margin-top:12px}
 .hero h1{font-size:clamp(2rem,4.6vw,3.4rem);margin-top:34px}
 .hero h1 em{color:var(--gold-text);font-style:italic}
@@ -216,8 +216,6 @@ footer .wm{color:var(--on-dark)}
 .foot .words{display:block;margin-top:10px;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase}
 .foot address{font-style:normal;font-size:.88rem;line-height:1.9;text-align:right}
 
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .emblem{mix-blend-mode:normal;-webkit-mask-image:radial-gradient(closest-side,#000 58%,transparent);mask-image:radial-gradient(closest-side,#000 58%,transparent)}}
-:root[data-theme="dark"] .emblem{mix-blend-mode:normal;-webkit-mask-image:radial-gradient(closest-side,#000 58%,transparent);mask-image:radial-gradient(closest-side,#000 58%,transparent)}
 
 @media (max-width:860px){
   .bar ul{display:none}
@@ -228,7 +226,7 @@ footer .wm{color:var(--on-dark)}
   .flow li:not(:last-child)::after{content:"↓";right:auto;left:26px;top:auto;bottom:-24px}
   .foot address{text-align:left}
   .birds.b2{display:none}
-  .emblem{height:min(46vh,360px)}
+  .emblem-frame{height:min(44vh,340px)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lf{transition:none}}
 </style>
@@ -243,7 +241,9 @@ footer .wm{color:var(--on-dark)}
   </div></nav>
   <svg class="birds" viewBox="0 0 200 60" aria-hidden="true" focusable="false"><path d="M10 30q10-10 20 0q10-10 20 0"/><path d="M70 14q7-7 14 0q7-7 14 0"/><path d="M120 36q6-6 12 0q6-6 12 0"/><path d="M160 20q5-5 10 0q5-5 10 0"/></svg>
   <svg class="birds b2" viewBox="0 0 200 60" aria-hidden="true" focusable="false"><path d="M10 30q10-10 20 0q10-10 20 0"/><path d="M70 14q7-7 14 0q7-7 14 0"/><path d="M120 36q6-6 12 0q6-6 12 0"/><path d="M160 20q5-5 10 0q5-5 10 0"/></svg>
+  <div class="emblem-frame">
   <img class="emblem" src="../assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045">
+  </div>
   <p class="name">DRISHTA</p>
   <span class="label">Metacognition-led journeys</span>
   <h1>Learn to witness <em>your own mind.</em></h1>
