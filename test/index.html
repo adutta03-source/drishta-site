@@ -11,26 +11,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
 <style>
+/* Four greens only: mist, sage, moss, forest. Plus off-white and a little gold. */
 :root{
-  --g1:#e4ebd7; --g2:#d2dfc0; --g3:#b6c99e; --g4:#8faa79; --g5:#5f7f51; --g6:#3d5c3d; --g7:#24402c; --g8:#15291b;
-  --ink:#18261b; --muted:#465643; --line:rgba(36,64,44,.22);
-  --gold:#cfa24a; --gold-text:#7c5a1c; --on-dark:#f2f0e4; --on-dark-soft:#c9d4bf; --pill:#eef3e5;
-  --tile-a:#d3e1bd; --tile-b:#1f3a27;
+  --mist:#e3eAd8; --sage:#9fb58b; --moss:#5f7d51; --forest:#23402c; --night:#172b1d;
+  --bg-a:#e3ead8; --bg-b:#cfdcbf;
+  --ink:#1b2a1e; --muted:#4a5a46; --line:rgba(35,64,44,.22);
+  --gold:#cfa24a; --gold-text:#7c5a1c; --on-dark:#f3f1e5; --on-dark-soft:#cbd6c0; --pill:#eef2e6;
+  --hero-a:#f4f2e5; --hero-b:#dfe8d2;
   --display:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
   --body:"Poppins","Avenir Next","Segoe UI",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --g1:#132219; --g2:#182a1e; --g3:#1e3324; --g4:#2a4430; --g5:#3c5c3f; --g6:#4f7350;
-  --ink:#ebefe1; --muted:#b3bfa9; --line:rgba(207,162,74,.22); --gold-text:#dcb35c; --pill:#1c2f21;
-  --tile-a:#8fab7c; --tile-b:#2b4a31; color-scheme:dark}}
+  --bg-a:#172a1d; --bg-b:#1e3525; --ink:#ecf0e3; --muted:#b4c0aa; --line:rgba(207,162,74,.25); --gold-text:#dcb35c; --pill:#1c3022;
+  --hero-a:#2c4632; --hero-b:#1f3727; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --g1:#132219; --g2:#182a1e; --g3:#1e3324; --g4:#2a4430; --g5:#3c5c3f; --g6:#4f7350;
-  --ink:#ebefe1; --muted:#b3bfa9; --line:rgba(207,162,74,.22); --gold-text:#dcb35c; --pill:#1c2f21;
-  --tile-a:#8fab7c; --tile-b:#2b4a31; color-scheme:dark}
+  --bg-a:#172a1d; --bg-b:#1e3525; --ink:#ecf0e3; --muted:#b4c0aa; --line:rgba(207,162,74,.25); --gold-text:#dcb35c; --pill:#1c3022;
+  --hero-a:#2c4632; --hero-b:#1f3727; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--g1);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.75;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg-a);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.75;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 h1,h2,h3{font-family:var(--display);font-weight:300;line-height:1.08;margin:0;text-wrap:balance}
@@ -41,104 +41,130 @@ p{margin:0}
 .sec{padding-block:clamp(72px,10vw,120px)}
 .sec h2,.h2{font-size:clamp(2.1rem,4.4vw,3.4rem)}
 .intro{max-width:40em;margin:16px auto 0;color:var(--muted)}
-.dmd{display:block;width:44px;height:44px;margin:0 auto 14px;fill:none;stroke:var(--gold-text);stroke-width:1.2}
 
 /* four-petal mark */
-.flower .petals path,.fl .petals path{fill:var(--on-dark);stroke:var(--gold);stroke-width:1.1}
+.flower .petals path,.fl .petals path{fill:#f6f3e6;stroke:var(--gold);stroke-width:1.1}
 .flower .stamens path,.fl .stamens path{stroke:var(--gold);stroke-width:.9;fill:none}
 .flower .stamens circle,.fl .stamens circle{fill:var(--gold)}
 .flower .pistil,.fl .pistil{fill:#b9842f}
+.ic-fl path{fill:none;stroke:currentColor;stroke-width:9}
 
 /* top bar */
 .bar{position:absolute;inset:0 0 auto;z-index:5}
 .bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:22px}
-.wm{font-family:var(--display);font-weight:300;font-size:1.45rem;letter-spacing:.3em;text-decoration:none;color:var(--on-dark)}
+.wm{font-family:var(--display);font-weight:400;font-size:1.35rem;letter-spacing:.3em;text-decoration:none;color:var(--ink)}
 .bar ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
-.bar ul a{text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-soft)}
-.bar ul a:hover{color:var(--on-dark)}
+.bar ul a{text-decoration:none;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.bar ul a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;font-family:var(--body);font-size:.74rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:13px 24px;border:1px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
 .btn-gold{background:var(--gold);color:#18261b}
-.btn-gold:hover{background:transparent;color:var(--on-dark)}
-.btn-line{background:transparent;color:var(--on-dark)}
+.btn-gold:hover{background:transparent;color:var(--ink)}
+.btn-line{background:transparent;color:var(--ink)}
 .btn-line:hover{background:var(--gold);color:#18261b}
 .bar .btn{padding:10px 18px}
 
-/* hero: dawn light over forest and river */
-.hero{position:relative;overflow:hidden;min-height:min(92vh,760px);display:grid;place-items:center;text-align:center;padding:120px 20px 150px;color:var(--on-dark);
-  background:radial-gradient(55% 45% at 50% 30%,rgba(232,206,140,.30),transparent 70%),linear-gradient(180deg,#6f8f5f 0%,#45663f 45%,#2a4730 80%,#1d3524 100%)}
-.hero .flower{width:clamp(76px,10vw,108px);height:auto;margin:0 auto 22px;display:block}
-.hero .label{color:#efd69a;margin-bottom:18px}
-.hero h1{font-size:clamp(2.6rem,6.6vw,5rem)}
-.hero h1 em{color:#e9c675;font-style:italic}
-.hero .lead{max-width:34em;margin:22px auto 0;color:var(--on-dark-soft);font-weight:300;font-size:clamp(1rem,1.5vw,1.12rem)}
-.hero .cta{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.birds{position:absolute;top:22%;left:10%;width:min(220px,30vw);fill:none;stroke:var(--on-dark-soft);stroke-width:1.3;opacity:.5}
-.birds.b2{left:auto;right:8%;top:32%;width:min(150px,22vw);transform:scaleX(-1)}
-.river{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.4}
+/* hero: the emblem, set into the morning light like the reference's logo over its image */
+.hero{position:relative;overflow:hidden;text-align:center;padding:96px 20px 150px;color:var(--ink);
+  background:radial-gradient(40% 36% at 50% 26%,rgba(233,201,120,.32),transparent 70%),linear-gradient(180deg,var(--hero-a) 0%,var(--hero-b) 55%,var(--bg-a) 100%)}
+.emblem{display:block;margin:0 auto;height:min(52vh,440px);width:auto;aspect-ratio:720/1045;mix-blend-mode:multiply;
+  -webkit-mask-image:radial-gradient(closest-side,#000 82%,transparent);mask-image:radial-gradient(closest-side,#000 82%,transparent)}
+.hero .name{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4.6vw,3.3rem);letter-spacing:.34em;margin:6px 0 0 .34em;line-height:1}
+.hero .label{margin-top:12px}
+.hero h1{font-size:clamp(2rem,4.6vw,3.4rem);margin-top:34px}
+.hero h1 em{color:var(--gold-text);font-style:italic}
+.hero .cta{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.chev{display:block;width:30px;height:30px;margin:38px auto 0;fill:none;stroke:var(--gold-text);stroke-width:1.2}
+.birds{position:absolute;top:24%;left:9%;width:min(200px,26vw);fill:none;stroke:var(--moss);stroke-width:1.3;opacity:.45}
+.birds.b2{left:auto;right:8%;top:36%;width:min(140px,20vw);transform:scaleX(-1)}
+.river{position:absolute;left:0;right:0;bottom:0;width:100%;height:120px;fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.45}
 .river .r2{opacity:.6} .river .r3{opacity:.35}
 
-/* drasta */
-.drasta-sec{background:var(--g2)}
-.drasta{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px);align-items:center}
-.arch{justify-self:center;width:min(100%,300px);aspect-ratio:720/1045;border-radius:999px;overflow:hidden;background:#fdfcf7;box-shadow:0 0 0 8px var(--g2),0 0 0 9px var(--gold),0 30px 60px -24px rgba(20,35,24,.45)}
-.arch img{width:100%;height:100%;object-fit:cover;display:block}
+/* the name + the mark */
+.drasta-sec{background:var(--bg-a)}
+.drasta{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.moves{width:min(100%,460px);height:auto;justify-self:center}
+.m-d{fill:var(--forest);stroke:var(--gold);stroke-width:1}
+.m-d2{fill:none;stroke:var(--gold);stroke-width:.8;opacity:.45}
+.m-ax{stroke:var(--gold);stroke-width:1}
+.m-dot{fill:var(--gold)} .m-sun{fill:var(--gold);opacity:.85}
+.m-w{font-family:var(--display);font-style:italic;font-size:27px;fill:var(--on-dark)}
 .word{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(3.4rem,7vw,5.2rem);color:var(--gold-text);line-height:1}
 .gloss{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:10px 0 26px}
 .drasta p{color:var(--muted)} .drasta p+p{margin-top:16px} .drasta h2{margin-bottom:18px}
+.drasta .note{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.95rem}
 
-/* mosaic (reference layout: straight diamonds) */
-.grove{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--g3) 0%,var(--g2) 100%);padding-block:clamp(72px,9vw,110px) clamp(48px,6vw,80px)}
-.grove .head{text-align:center;margin-bottom:clamp(20px,3vw,36px)}
-.hint{margin-top:12px;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.mosaic-wrap{--s:clamp(70px,calc((100vw - 40px)/9.9),118px);position:relative;height:calc(var(--s)*7*1.4142 + 24px);display:grid;place-items:center}
-.mosaic{display:grid;grid-template-columns:repeat(7,var(--s));grid-template-rows:repeat(7,var(--s));gap:4px;transform:rotate(45deg);list-style:none;margin:0;padding:0}
-.tile{position:relative;perspective:1000px}
-.tile.deco{background:color-mix(in oklab,var(--tile-a),var(--tile-b) calc(var(--t)*100%))}
-.tile.deco:nth-child(4n){filter:brightness(1.05)} .tile.deco:nth-child(5n){filter:brightness(.95)}
+/* ===== What we do: reference composition =====
+   Large painted diamonds (sky, hills, river) sit edge to edge with no gaps;
+   small solid diamonds carry the information and turn over on tap. */
+.grove{--s:clamp(170px,calc(100vw/6.6),228px);position:relative;overflow:hidden;background:var(--bg-a)}
+.grove::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background:repeating-linear-gradient(45deg,transparent 0 calc(var(--s)*1.4142 - 1px),var(--line) 0 calc(var(--s)*1.4142)),repeating-linear-gradient(-45deg,transparent 0 calc(var(--s)*1.4142 - 1px),var(--line) 0 calc(var(--s)*1.4142))}
+.mosaic-wrap{position:relative;height:calc(var(--s)*7.0711);margin-top:calc(var(--s)*-.62);display:grid;place-items:center}
+.mosaic{position:relative;display:grid;grid-template-columns:repeat(5,var(--s));grid-template-rows:repeat(5,var(--s));gap:0;transform:rotate(45deg);list-style:none;margin:0;padding:0}
+.scene{position:relative;overflow:hidden;z-index:0}
+.scene-in{position:absolute;left:50%;top:50%;width:calc((var(--w) + var(--h))*var(--s)/1.4142 + 2px);aspect-ratio:1;transform:translate(-50%,-50%) rotate(-45deg)}
+.scene-in svg{display:block;width:100%;height:100%}
+.head-tile{position:relative;z-index:1;background:var(--forest);color:var(--on-dark);display:grid;place-items:center}
+.head-tile .in{transform:rotate(-45deg);width:62%;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding-top:12%}
+.head-tile .h2{font-size:calc(var(--s)*.2)}
+.head-tile p{font-size:max(12px,calc(var(--s)*.06));color:var(--on-dark-soft);line-height:1.6}
+.head-tile .hint{font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:#e3c47c}
+.dmd{width:44px;height:44px;fill:none;stroke:var(--gold);stroke-width:1.2}
+.dmd .ic-fl path{stroke:var(--gold)}
+.tile.info{position:relative;z-index:2;perspective:1000px}
 .lf{all:unset;position:absolute;inset:0;cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .lf:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 .lf[aria-pressed="true"]{transform:rotate3d(1,1,0,180deg)}
 .lf .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:grid;place-items:center;overflow:hidden}
-.lf .back{transform:rotate3d(1,1,0,180deg);background:#15291b;color:var(--on-dark);box-shadow:inset 0 0 0 1px rgba(207,162,74,.5)}
-.lf .in{transform:rotate(-45deg);width:66%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px}
-.ic{width:34px;height:34px;fill:none;stroke:currentColor;stroke-width:1.2;opacity:.9}
-.lf-title{font-family:var(--display);font-weight:400;font-size:clamp(1.1rem,1.9vw,1.55rem);line-height:1.05}
-.lf-title.sm{font-size:clamp(.95rem,1.5vw,1.15rem);color:var(--gold)}
-.rule{width:34px;height:1px;background:currentColor;opacity:.6}
-.lf-sub{font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85;line-height:1.5}
-.more{margin-top:4px;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid currentColor;padding:3px 9px;opacity:.85}
-.lf-body{font-size:clamp(.66rem,1vw,.76rem);line-height:1.5;color:var(--on-dark-soft)}
-.lf-link{font-size:.66rem;color:var(--gold);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
-.tone-sage .front{background:#a9c08f;color:#18261b}
-.tone-moss .front{background:#5f7f51;color:#f2f0e4}
-.tone-jade .front{background:#47705a;color:#f2f0e4}
-.tone-deep .front{background:#2a4a31;color:#f2f0e4}
-.tone-olive .front{background:#6f7f3c;color:#f2f0e4}
-.tone-deep .front .lf-title{color:#e9cf8f}
+.lf .back{transform:rotate3d(1,1,0,180deg);background:var(--night);color:var(--on-dark)}
+.lf .in{transform:rotate(-45deg);width:74%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:calc(var(--s)*.03)}
+.ic{width:calc(var(--s)*.15);height:calc(var(--s)*.15);fill:none;stroke:currentColor;stroke-width:1.2;opacity:.9}
+.lf-title{font-family:var(--display);font-weight:400;font-size:max(16px,calc(var(--s)*.1));line-height:1.05}
+.lf-title.sm{font-size:max(15px,calc(var(--s)*.085));color:var(--gold)}
+.rule{width:34px;height:1px;background:currentColor;opacity:.55}
+.lf-sub{font-size:max(9.5px,calc(var(--s)*.044));letter-spacing:.12em;text-transform:uppercase;opacity:.85;line-height:1.5;max-width:86%}
+.more{margin-top:4px;font-size:max(9px,calc(var(--s)*.04));letter-spacing:.2em;text-transform:uppercase;border:1px solid currentColor;padding:3px 10px;opacity:.85}
+.lf-body{font-size:max(11px,calc(var(--s)*.056));line-height:1.5;color:var(--on-dark-soft)}
+.lf-link{font-size:max(10.5px,calc(var(--s)*.05));color:var(--gold);text-decoration:underline;text-underline-offset:3px;margin-top:2px}
+.tone-mist .front{background:#eef0e2;color:var(--forest)}
+.tone-mist .front .ic,.tone-mist .front .more{color:#7c5a1c}
+.tone-sage .front{background:var(--sage);color:#17281b}
+.tone-moss .front{background:var(--moss);color:var(--on-dark)}
+.tone-forest .front{background:var(--forest);color:var(--on-dark)}
+.tone-forest .front .lf-title{color:#e9cf8f}
+.grove-head{display:none}
 
-@media (max-width:820px){
-  .mosaic-wrap{height:auto;display:block;padding-block:12vw 8vw}
-  .mosaic{transform:none;display:flex;flex-direction:column;align-items:center;gap:0;grid-template-columns:none;grid-template-rows:none}
-  .tile.deco{display:none}
-  .tile.info{width:50vw;max-width:230px;aspect-ratio:1;grid-area:auto!important;transform:rotate(45deg)}
-  .tile.info+.tile.info{margin-top:-7.5vw}
-  .tile.info.side-l{translate:-15vw 0}
-  .tile.info.side-r{translate:15vw 0}
-  .lf .in{width:72%}
-  .lf-title{font-size:1.15rem} .lf-title.sm{font-size:.95rem} .lf-body{font-size:.7rem} .lf-sub{font-size:.56rem} .ic{width:26px;height:26px}
+@media (max-width:1100px){
+  .grove{--s:min(46vw,290px)}
+  .mosaic-wrap{height:auto;margin-top:0;display:block}
+  .mosaic{transform:none;display:flex;flex-direction:column;align-items:center;grid-template-columns:none;grid-template-rows:none;padding:min(12vw,70px) 0 min(16vw,90px)}
+  .scene{position:absolute;left:0;right:0;grid-area:auto!important}
+  .scene-sky{top:15%;height:24%} .scene-hills{top:38%;height:31%} .scene-river{top:68%;height:32%}
+  .scene-in{left:0;top:0;width:100%;height:100%;aspect-ratio:auto;transform:none}
+  .head-tile{background:transparent;color:var(--forest);grid-area:auto!important;width:100%;padding:0 20px 40px}
+  .head-tile .in{transform:none;width:auto;max-width:30em;padding:0}
+  .head-tile .h2{font-size:clamp(2.1rem,7vw,3rem)}
+  .head-tile p{color:#3d4d3a;font-size:.95rem}
+  .head-tile .hint{color:#7c5a1c}
+  .tile.info{width:var(--s);aspect-ratio:1;grid-area:auto!important;transform:rotate(45deg)}
+  .tile.info+.tile.info{margin-top:calc(var(--s)*-.2929)}
+  .tile.info.side-l{translate:calc(var(--s)*-.3536) 0}
+  .tile.info.side-r{translate:calc(var(--s)*.3536) 0}
+  .grove::before{display:none}
 }
 
 /* values */
-.values{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;list-style:none;margin:26px auto 0;padding:0;max-width:880px}
+.values-wrap{padding:clamp(48px,6vw,72px) 20px clamp(72px,9vw,110px);background:var(--bg-a)}
+.values{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;list-style:none;margin:22px auto 0;padding:0;max-width:880px}
 .values li{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;font-size:.86rem;background:var(--pill)}
-.values li::before{content:"";width:8px;height:8px;transform:rotate(45deg);background:var(--g5)}
+.values li::before{content:"";width:8px;height:8px;transform:rotate(45deg);background:var(--moss)}
 
 /* roots: abstract expression */
-.roots{position:relative;overflow:hidden;background:linear-gradient(180deg,#24402c 0%,#15291b 100%);color:var(--on-dark);padding-block:clamp(80px,11vw,130px)}
+.roots{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--forest) 0%,var(--night) 100%);color:var(--on-dark);padding-block:clamp(80px,11vw,130px)}
 .roots .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,80px);align-items:center}
 .roots-art{width:min(100%,400px);height:auto;justify-self:center}
 .roots-art .d1{fill:none;stroke:var(--gold);stroke-width:1;opacity:.5}
-.roots-art .d2{fill:rgba(143,170,121,.12);stroke:var(--gold);stroke-width:1;opacity:.6}
+.roots-art .d2{fill:rgba(159,181,139,.12);stroke:var(--gold);stroke-width:1;opacity:.6}
 .roots-art .sun{fill:rgba(207,162,74,.18);stroke:var(--gold);stroke-width:1}
 .roots-art .bird{fill:none;stroke:var(--on-dark-soft);stroke-width:1.4}
 .roots-art .rv{fill:none;stroke:var(--gold);stroke-width:1.3;opacity:.75}
@@ -150,7 +176,7 @@ p{margin:0}
 .roots .river{opacity:.25}
 
 /* sustain */
-.sustain{background:var(--g3)}
+.sustain{background:var(--bg-b)}
 .quote{font-family:var(--display);font-style:italic;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:1.02;margin-top:12px}
 .quote em{color:var(--gold-text)}
 .flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;list-style:none;padding:0}
@@ -161,26 +187,28 @@ p{margin:0}
 .flow small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);margin-bottom:6px}
 
 /* gathering */
-.gather-sec{background:var(--g2)}
+.gather-sec{background:var(--bg-b);padding-top:0}
 .gather{position:relative;overflow:hidden;padding:clamp(32px,5vw,64px);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:32px 48px;align-items:end;color:var(--on-dark);
-  background:radial-gradient(70% 90% at 90% 0%,rgba(207,162,74,.22),transparent 60%),linear-gradient(150deg,#3d5c3d 0%,#24402c 55%,#15291b 100%);clip-path:polygon(0 0,calc(100% - 40px) 0,100% 40px,100% 100%,40px 100%,0 calc(100% - 40px))}
+  background:radial-gradient(70% 90% at 90% 0%,rgba(207,162,74,.22),transparent 60%),linear-gradient(150deg,var(--moss) 0%,var(--forest) 60%,var(--night) 100%);clip-path:polygon(0 0,calc(100% - 40px) 0,100% 40px,100% 100%,40px 100%,0 calc(100% - 40px))}
 .gather .label{color:#e9cf8f}
 .gather h2{font-size:clamp(2rem,4vw,3.2rem);margin:14px 0 16px}
 .gather p{color:var(--on-dark-soft);max-width:34em}
 .gather .when{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.15}
 .gather .when small{display:block;font-family:var(--body);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:#e9cf8f;margin-bottom:8px}
+.gather .btn-line{color:var(--on-dark)}
 .mail{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:26px}
 .mail code{font-family:var(--body);font-size:.98rem;border-bottom:1px solid var(--gold);padding-bottom:2px;user-select:all;overflow-wrap:anywhere}
 
 /* founders */
-.people-sec{background:var(--g1)}
+.people-sec{background:var(--bg-a)}
 .people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 56px;margin-top:40px}
 .person{border-top:1px solid var(--gold-text);padding-top:22px}
 .person h3{font-size:2rem} .person .label{margin:6px 0 10px} .person p{color:var(--muted);font-size:.98rem}
 
 /* footer */
-footer{position:relative;overflow:hidden;background:#15291b;color:var(--on-dark-soft);padding:110px 0 44px}
+footer{position:relative;overflow:hidden;background:var(--night);color:var(--on-dark-soft);padding:110px 0 44px}
 footer .river{top:0;bottom:auto;height:90px;opacity:.3}
+footer .wm{color:var(--on-dark)}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px}
 .foot .brand{display:flex;align-items:center;gap:14px}
 .foot .flower{width:40px;height:40px}
@@ -188,15 +216,19 @@ footer .river{top:0;bottom:auto;height:90px;opacity:.3}
 .foot .words{display:block;margin-top:10px;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase}
 .foot address{font-style:normal;font-size:.88rem;line-height:1.9;text-align:right}
 
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .emblem{mix-blend-mode:normal;-webkit-mask-image:radial-gradient(closest-side,#000 58%,transparent);mask-image:radial-gradient(closest-side,#000 58%,transparent)}}
+:root[data-theme="dark"] .emblem{mix-blend-mode:normal;-webkit-mask-image:radial-gradient(closest-side,#000 58%,transparent);mask-image:radial-gradient(closest-side,#000 58%,transparent)}
+
 @media (max-width:860px){
   .bar ul{display:none}
   .drasta,.roots .grid,.gather,.people{grid-template-columns:minmax(0,1fr)}
-  .arch{width:min(70%,240px)}
+  .moves{width:min(90%,360px)}
   .roots-art{width:min(80%,300px)}
   .flow{grid-template-columns:minmax(0,1fr);gap:26px}
   .flow li:not(:last-child)::after{content:"↓";right:auto;left:26px;top:auto;bottom:-24px}
   .foot address{text-align:left}
   .birds.b2{display:none}
+  .emblem{height:min(46vh,360px)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lf{transition:none}}
 </style>
@@ -211,19 +243,28 @@ footer .river{top:0;bottom:auto;height:90px;opacity:.3}
   </div></nav>
   <svg class="birds" viewBox="0 0 200 60" aria-hidden="true" focusable="false"><path d="M10 30q10-10 20 0q10-10 20 0"/><path d="M70 14q7-7 14 0q7-7 14 0"/><path d="M120 36q6-6 12 0q6-6 12 0"/><path d="M160 20q5-5 10 0q5-5 10 0"/></svg>
   <svg class="birds b2" viewBox="0 0 200 60" aria-hidden="true" focusable="false"><path d="M10 30q10-10 20 0q10-10 20 0"/><path d="M70 14q7-7 14 0q7-7 14 0"/><path d="M120 36q6-6 12 0q6-6 12 0"/><path d="M160 20q5-5 10 0q5-5 10 0"/></svg>
-  <div>
-    <svg class="flower" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g><g class="stamens"><path d="M60 60L73.0 60.0"/><circle cx="73.0" cy="60.0" r="1.3"/><path d="M60 60L75.1 65.3"/><circle cx="75.1" cy="65.3" r="1.3"/><path d="M60 60L77.1 68.2"/><circle cx="77.1" cy="68.2" r="1.3"/><path d="M60 60L69.2 69.2"/><circle cx="69.2" cy="69.2" r="1.3"/><path d="M60 60L70.0 72.5"/><circle cx="70.0" cy="72.5" r="1.3"/><path d="M60 60L66.3 77.9"/><circle cx="66.3" cy="77.9" r="1.3"/><path d="M60 60L62.9 72.7"/><circle cx="62.9" cy="72.7" r="1.3"/><path d="M60 60L58.2 75.9"/><circle cx="58.2" cy="75.9" r="1.3"/><path d="M60 60L55.8 78.5"/><circle cx="55.8" cy="78.5" r="1.3"/><path d="M60 60L53.1 71.0"/><circle cx="53.1" cy="71.0" r="1.3"/><path d="M60 60L50.0 72.5"/><circle cx="50.0" cy="72.5" r="1.3"/><path d="M60 60L43.9 70.1"/><circle cx="43.9" cy="70.1" r="1.3"/><path d="M60 60L48.3 65.6"/><circle cx="48.3" cy="65.6" r="1.3"/><path d="M60 60L44.1 61.8"/><circle cx="44.1" cy="61.8" r="1.3"/><path d="M60 60L41.0 60.0"/><circle cx="41.0" cy="60.0" r="1.3"/><path d="M60 60L47.7 55.7"/><circle cx="47.7" cy="55.7" r="1.3"/><path d="M60 60L45.6 53.1"/><circle cx="45.6" cy="53.1" r="1.3"/><path d="M60 60L46.5 46.6"/><circle cx="46.5" cy="46.6" r="1.3"/><path d="M60 60L51.9 49.8"/><circle cx="51.9" cy="49.8" r="1.3"/><path d="M60 60L54.7 44.9"/><circle cx="54.7" cy="44.9" r="1.3"/><path d="M60 60L55.8 41.5"/><circle cx="55.8" cy="41.5" r="1.3"/><path d="M60 60L61.4 47.1"/><circle cx="61.4" cy="47.1" r="1.3"/><path d="M60 60L63.6 44.4"/><circle cx="63.6" cy="44.4" r="1.3"/><path d="M60 60L70.1 43.9"/><circle cx="70.1" cy="43.9" r="1.3"/><path d="M60 60L68.1 49.8"/><circle cx="68.1" cy="49.8" r="1.3"/><path d="M60 60L73.5 51.5"/><circle cx="73.5" cy="51.5" r="1.3"/><path d="M60 60L77.1 51.8"/><circle cx="77.1" cy="51.8" r="1.3"/><path d="M60 60L72.9 58.5"/><circle cx="72.9" cy="58.5" r="1.3"/></g><circle class="pistil" cx="60" cy="60" r="4.2"/></svg>
-    <span class="label">Metacognition-led journeys</span>
-    <h1>Learn to witness<br><em>your own mind.</em></h1>
-    <p class="lead">Immersive gatherings and retreats among trees, rivers and silence, where you practise noticing your thoughts and feelings as they arise, and choosing how to respond.</p>
-    <div class="cta"><a class="btn btn-gold" href="#gathering">Join the first gathering</a><a class="btn btn-line" href="#grove">Explore</a></div>
-  </div>
+  <img class="emblem" src="../assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045">
+  <p class="name">DRISHTA</p>
+  <span class="label">Metacognition-led journeys</span>
+  <h1>Learn to witness <em>your own mind.</em></h1>
+  <div class="cta"><a class="btn btn-gold" href="#gathering">Join the first gathering</a><a class="btn btn-line" href="#grove">Explore</a></div>
+  <a href="#drasta" aria-label="Scroll to the next section"><svg class="chev" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2L38 20L20 38L2 20Z"/><path d="M14 17l6 6 6-6"/></svg></a>
   <svg class="river" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 70C180 40 300 100 480 78S780 30 960 58s300 50 480 10"/><path class="r2" d="M0 92C200 66 320 112 520 96S820 58 1000 80s280 34 440 6"/><path class="r3" d="M0 108C220 92 360 118 560 110S860 90 1040 102s260 14 400 0"/></svg>
 </header>
 
 <main>
 <section class="sec drasta-sec" id="drasta"><div class="wrap drasta">
-  <div class="arch"><img src="../assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045"></div>
+  <svg class="moves" viewBox="0 0 520 520" role="img" aria-labelledby="mv-t"><title id="mv-t">The Drishta mark: four petals for four movements, Witness, Reflect, Understand and Grow</title>
+  <path class="m-d" d="M260 16L504 260L260 504L16 260Z"/>
+  <path class="m-d2" d="M260 120L400 260L260 400L120 260Z"/>
+  <path class="m-ax" d="M260 40V150M260 370V480"/><circle class="m-dot" cx="260" cy="40" r="4"/><circle class="m-dot" cx="260" cy="480" r="4"/>
+  <circle class="m-sun" cx="260" cy="64" r="9"/>
+  <g class="fl" transform="translate(260 260) scale(2.05) translate(-60 -60)"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g><g class="stamens"><path d="M60 60L73.0 60.0"/><circle cx="73.0" cy="60.0" r="1.3"/><path d="M60 60L75.1 65.3"/><circle cx="75.1" cy="65.3" r="1.3"/><path d="M60 60L77.1 68.2"/><circle cx="77.1" cy="68.2" r="1.3"/><path d="M60 60L69.2 69.2"/><circle cx="69.2" cy="69.2" r="1.3"/><path d="M60 60L70.0 72.5"/><circle cx="70.0" cy="72.5" r="1.3"/><path d="M60 60L66.3 77.9"/><circle cx="66.3" cy="77.9" r="1.3"/><path d="M60 60L62.9 72.7"/><circle cx="62.9" cy="72.7" r="1.3"/><path d="M60 60L58.2 75.9"/><circle cx="58.2" cy="75.9" r="1.3"/><path d="M60 60L55.8 78.5"/><circle cx="55.8" cy="78.5" r="1.3"/><path d="M60 60L53.1 71.0"/><circle cx="53.1" cy="71.0" r="1.3"/><path d="M60 60L50.0 72.5"/><circle cx="50.0" cy="72.5" r="1.3"/><path d="M60 60L43.9 70.1"/><circle cx="43.9" cy="70.1" r="1.3"/><path d="M60 60L48.3 65.6"/><circle cx="48.3" cy="65.6" r="1.3"/><path d="M60 60L44.1 61.8"/><circle cx="44.1" cy="61.8" r="1.3"/><path d="M60 60L41.0 60.0"/><circle cx="41.0" cy="60.0" r="1.3"/><path d="M60 60L47.7 55.7"/><circle cx="47.7" cy="55.7" r="1.3"/><path d="M60 60L45.6 53.1"/><circle cx="45.6" cy="53.1" r="1.3"/><path d="M60 60L46.5 46.6"/><circle cx="46.5" cy="46.6" r="1.3"/><path d="M60 60L51.9 49.8"/><circle cx="51.9" cy="49.8" r="1.3"/><path d="M60 60L54.7 44.9"/><circle cx="54.7" cy="44.9" r="1.3"/><path d="M60 60L55.8 41.5"/><circle cx="55.8" cy="41.5" r="1.3"/><path d="M60 60L61.4 47.1"/><circle cx="61.4" cy="47.1" r="1.3"/><path d="M60 60L63.6 44.4"/><circle cx="63.6" cy="44.4" r="1.3"/><path d="M60 60L70.1 43.9"/><circle cx="70.1" cy="43.9" r="1.3"/><path d="M60 60L68.1 49.8"/><circle cx="68.1" cy="49.8" r="1.3"/><path d="M60 60L73.5 51.5"/><circle cx="73.5" cy="51.5" r="1.3"/><path d="M60 60L77.1 51.8"/><circle cx="77.1" cy="51.8" r="1.3"/><path d="M60 60L72.9 58.5"/><circle cx="72.9" cy="58.5" r="1.3"/></g><circle class="pistil" cx="60" cy="60" r="4.2"/></g>
+  <text class="m-w" x="260" y="112" text-anchor="middle">Witness</text>
+  <text class="m-w" x="430" y="268" text-anchor="middle">Reflect</text>
+  <text class="m-w" x="260" y="430" text-anchor="middle">Understand</text>
+  <text class="m-w" x="90" y="268" text-anchor="middle">Grow</text>
+</svg>
   <div>
     <span class="label">The name</span>
     <div class="word" lang="sa-Latn">draṣṭā</div>
@@ -231,90 +272,92 @@ footer .river{top:0;bottom:auto;height:90px;opacity:.3}
     <h2>It began with witnessing.</h2>
     <p>Drishta started with a simple practice: watching our own thoughts, analysing them, and slowly realising what they were telling us. Only later did we find the word for it, metacognition, and the science behind it.</p>
     <p>The Sanskrit draṣṭā, the one who witnesses, named what we were already doing. Drishta makes that witnessing a learnable, shared practice.</p>
+    <p class="note">Our mark has four petals, one for each movement we practise: Witness, Reflect, Understand, Grow.</p>
   </div>
 </div></section>
 
 <section class="grove" id="grove">
-  <div class="wrap head">
-    <svg class="dmd" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg>
-    <h2 class="h2">What we do</h2>
-    <p class="intro">Lived experience, community and a little nerdy research, all growing from the same roots.</p>
-    <p class="hint">Tap a tile to turn it over</p>
-  </div>
   <div class="mosaic-wrap">
     <ul class="mosaic">
-<li class="tile info tone-sage side-l" style="grid-area:1/1/span 2/span 2">
-  <button class="lf" type="button" aria-pressed="false" aria-label="Four movements: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Four movements</span><span class="rule"></span><span class="lf-sub">Witness · Reflect · Understand · Grow</span><span class="more">See more</span></span></span>
-    <span class="face back"><span class="in"><span class="lf-title sm">Four movements</span><span class="lf-body">Every Drishta experience follows four movements, practised in order through dialogue, making, time in nature and silence.</span></span></span>
-  </button>
-</li>
-<li class="tile deco" style="grid-area:1/3;--t:0.167" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:1/4;--t:0.250" aria-hidden="true"></li>
-<li class="tile info tone-moss side-r" style="grid-area:1/5/span 2/span 2">
+<li class="tile head-tile" style="grid-area:1/1/span 2/span 2"><div class="in">
+  <svg class="dmd" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg>
+  <h2 class="h2">What we do</h2><span class="rule"></span>
+  <p>Lived experience, community and a little nerdy research, all growing from the same roots.</p>
+  <p class="hint">Tap a tile to turn it over</p></div></li>
+<li class="scene scene-sky" style="grid-area:1/3/span 2/span 3;--w:3;--h:2" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4efda"/><stop offset=".55" stop-color="#dfe7cf"/><stop offset="1" stop-color="#a7bd92"/></linearGradient>
+<radialGradient id="sk-s" cx=".6" cy=".42" r=".38"><stop offset="0" stop-color="#e9c978" stop-opacity=".7"/><stop offset="1" stop-color="#e9c978" stop-opacity="0"/></radialGradient>
+<filter id="sk-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="9"/></filter><filter id="sk-b2" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="3"/></filter></defs>
+<rect width="400" height="400" fill="url(#sk-g)"/><rect width="400" height="400" fill="url(#sk-s)"/>
+<g filter="url(#sk-b)" fill="#fffdf4" opacity=".75"><ellipse cx="150" cy="215" rx="80" ry="16"/><ellipse cx="300" cy="240" rx="95" ry="14"/><ellipse cx="250" cy="112" rx="60" ry="10"/></g>
+<circle cx="240" cy="170" r="28" fill="#e2bd64" opacity=".9" filter="url(#sk-b2)"/>
+<circle cx="240" cy="170" r="74" fill="none" stroke="#b98a32" stroke-width="1" stroke-dasharray="2 6" opacity=".7"/>
+<path d="M60 330C120 290 170 300 220 315S320 300 400 270V400H0V350Z" fill="#8fa97c" opacity=".55" filter="url(#sk-b2)"/>
+<g fill="none" stroke="#23402c" stroke-width="1.6" stroke-linecap="round" opacity=".55"><path d="M290 120q8-8 16 0q8-8 16 0"/><path d="M330 150q6-6 12 0q6-6 12 0"/><path d="M300 175q5-5 10 0q5-5 10 0"/></g></svg></div></li>
+<li class="scene scene-hills" style="grid-area:3/1/span 3/span 2;--w:2;--h:3" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hl-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef0e1"/><stop offset=".5" stop-color="#cfdcbd"/><stop offset="1" stop-color="#7f9a6c"/></linearGradient>
+<filter id="hl-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="4"/></filter><filter id="hl-m" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="12"/></filter></defs>
+<rect width="400" height="400" fill="url(#hl-g)"/>
+<path d="M0 230L70 170L120 200L170 120L235 190L290 160L400 230V400H0Z" fill="#b2c59e" filter="url(#hl-b)"/>
+<ellipse cx="170" cy="225" rx="200" ry="22" fill="#f4f3e6" opacity=".7" filter="url(#hl-m)"/>
+<path d="M0 270C60 230 110 215 160 240S260 230 320 250 400 270 400 270V400H0Z" fill="#7d9a6a" filter="url(#hl-b)" opacity=".95"/>
+<path d="M0 270C60 230 110 215 160 240S260 230 320 250" fill="none" stroke="#c39a45" stroke-width="1.2" opacity=".8"/>
+<path d="M0 320C80 290 150 300 210 315S330 300 400 320V400H0Z" fill="#4c6a45"/>
+<ellipse cx="200" cy="300" rx="220" ry="14" fill="#eef0e1" opacity=".35" filter="url(#hl-m)"/>
+<path d="M0 360C90 345 160 350 240 362S350 360 400 350V400H0Z" fill="#2c4832"/></svg></div></li>
+<li class="scene scene-river" style="grid-area:3/3/span 3/span 3;--w:3;--h:3" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rv-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f8c5f"/><stop offset=".55" stop-color="#3f5f43"/><stop offset="1" stop-color="#22402c"/></linearGradient>
+<radialGradient id="rv-l" cx=".5" cy=".46" r=".4"><stop offset="0" stop-color="#efe0ad" stop-opacity=".35"/><stop offset="1" stop-color="#efe0ad" stop-opacity="0"/></radialGradient>
+<filter id="rv-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="7"/></filter></defs>
+<rect width="400" height="400" fill="url(#rv-g)"/><rect width="400" height="400" fill="url(#rv-l)"/>
+<path d="M-20 300C80 250 140 300 220 260S340 200 420 230V280C340 260 270 320 200 320S70 300 -20 350Z" fill="#a9c095" opacity=".45" filter="url(#rv-b)"/>
+<g fill="none" stroke="#f2f0e4" stroke-width="1.2" opacity=".55"><path d="M0 300C90 262 150 300 220 276S330 228 400 246"/><path d="M0 322C100 292 160 322 230 302S340 262 400 276" opacity=".6"/></g>
+<path d="M0 340C110 312 170 336 240 322S350 290 400 300" fill="none" stroke="#cfa24a" stroke-width="1.1" opacity=".7"/>
+<path d="M70 330C120 280 160 240 200 200S280 130 340 80" fill="none" stroke="#1d3324" stroke-width="3" stroke-linecap="round"/>
+<g fill="#9fb58b" opacity=".9"><path d="M120 278c-18-4-30 2-36 14 16 4 28-2 36-14Z"/><path d="M150 248c2-18 14-26 28-26-2 16-12 24-28 26Z"/><path d="M260 150c-16-6-28-2-34 10 14 6 26 2 34-10Z"/><path d="M296 118c4-16 16-22 30-20-4 14-16 20-30 20Z"/><path d="M180 222c-16-8-30-4-36 8 16 6 28 2 36-8Z"/></g>
+<g class="fl" transform="translate(200 200) scale(.62) translate(-60 -60)"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g><g class="stamens"><path d="M60 60L73.0 60.0"/><circle cx="73.0" cy="60.0" r="1.3"/><path d="M60 60L75.1 65.3"/><circle cx="75.1" cy="65.3" r="1.3"/><path d="M60 60L77.1 68.2"/><circle cx="77.1" cy="68.2" r="1.3"/><path d="M60 60L69.2 69.2"/><circle cx="69.2" cy="69.2" r="1.3"/><path d="M60 60L70.0 72.5"/><circle cx="70.0" cy="72.5" r="1.3"/><path d="M60 60L66.3 77.9"/><circle cx="66.3" cy="77.9" r="1.3"/><path d="M60 60L62.9 72.7"/><circle cx="62.9" cy="72.7" r="1.3"/><path d="M60 60L58.2 75.9"/><circle cx="58.2" cy="75.9" r="1.3"/><path d="M60 60L55.8 78.5"/><circle cx="55.8" cy="78.5" r="1.3"/><path d="M60 60L53.1 71.0"/><circle cx="53.1" cy="71.0" r="1.3"/><path d="M60 60L50.0 72.5"/><circle cx="50.0" cy="72.5" r="1.3"/><path d="M60 60L43.9 70.1"/><circle cx="43.9" cy="70.1" r="1.3"/><path d="M60 60L48.3 65.6"/><circle cx="48.3" cy="65.6" r="1.3"/><path d="M60 60L44.1 61.8"/><circle cx="44.1" cy="61.8" r="1.3"/><path d="M60 60L41.0 60.0"/><circle cx="41.0" cy="60.0" r="1.3"/><path d="M60 60L47.7 55.7"/><circle cx="47.7" cy="55.7" r="1.3"/><path d="M60 60L45.6 53.1"/><circle cx="45.6" cy="53.1" r="1.3"/><path d="M60 60L46.5 46.6"/><circle cx="46.5" cy="46.6" r="1.3"/><path d="M60 60L51.9 49.8"/><circle cx="51.9" cy="49.8" r="1.3"/><path d="M60 60L54.7 44.9"/><circle cx="54.7" cy="44.9" r="1.3"/><path d="M60 60L55.8 41.5"/><circle cx="55.8" cy="41.5" r="1.3"/><path d="M60 60L61.4 47.1"/><circle cx="61.4" cy="47.1" r="1.3"/><path d="M60 60L63.6 44.4"/><circle cx="63.6" cy="44.4" r="1.3"/><path d="M60 60L70.1 43.9"/><circle cx="70.1" cy="43.9" r="1.3"/><path d="M60 60L68.1 49.8"/><circle cx="68.1" cy="49.8" r="1.3"/><path d="M60 60L73.5 51.5"/><circle cx="73.5" cy="51.5" r="1.3"/><path d="M60 60L77.1 51.8"/><circle cx="77.1" cy="51.8" r="1.3"/><path d="M60 60L72.9 58.5"/><circle cx="72.9" cy="58.5" r="1.3"/></g><circle class="pistil" cx="60" cy="60" r="4.2"/></g>
+<g class="fl" transform="translate(278 132) scale(.34) translate(-60 -60)"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g><g class="stamens"><path d="M60 60L73.0 60.0"/><circle cx="73.0" cy="60.0" r="1.3"/><path d="M60 60L75.1 65.3"/><circle cx="75.1" cy="65.3" r="1.3"/><path d="M60 60L77.1 68.2"/><circle cx="77.1" cy="68.2" r="1.3"/><path d="M60 60L69.2 69.2"/><circle cx="69.2" cy="69.2" r="1.3"/><path d="M60 60L70.0 72.5"/><circle cx="70.0" cy="72.5" r="1.3"/><path d="M60 60L66.3 77.9"/><circle cx="66.3" cy="77.9" r="1.3"/><path d="M60 60L62.9 72.7"/><circle cx="62.9" cy="72.7" r="1.3"/><path d="M60 60L58.2 75.9"/><circle cx="58.2" cy="75.9" r="1.3"/><path d="M60 60L55.8 78.5"/><circle cx="55.8" cy="78.5" r="1.3"/><path d="M60 60L53.1 71.0"/><circle cx="53.1" cy="71.0" r="1.3"/><path d="M60 60L50.0 72.5"/><circle cx="50.0" cy="72.5" r="1.3"/><path d="M60 60L43.9 70.1"/><circle cx="43.9" cy="70.1" r="1.3"/><path d="M60 60L48.3 65.6"/><circle cx="48.3" cy="65.6" r="1.3"/><path d="M60 60L44.1 61.8"/><circle cx="44.1" cy="61.8" r="1.3"/><path d="M60 60L41.0 60.0"/><circle cx="41.0" cy="60.0" r="1.3"/><path d="M60 60L47.7 55.7"/><circle cx="47.7" cy="55.7" r="1.3"/><path d="M60 60L45.6 53.1"/><circle cx="45.6" cy="53.1" r="1.3"/><path d="M60 60L46.5 46.6"/><circle cx="46.5" cy="46.6" r="1.3"/><path d="M60 60L51.9 49.8"/><circle cx="51.9" cy="49.8" r="1.3"/><path d="M60 60L54.7 44.9"/><circle cx="54.7" cy="44.9" r="1.3"/><path d="M60 60L55.8 41.5"/><circle cx="55.8" cy="41.5" r="1.3"/><path d="M60 60L61.4 47.1"/><circle cx="61.4" cy="47.1" r="1.3"/><path d="M60 60L63.6 44.4"/><circle cx="63.6" cy="44.4" r="1.3"/><path d="M60 60L70.1 43.9"/><circle cx="70.1" cy="43.9" r="1.3"/><path d="M60 60L68.1 49.8"/><circle cx="68.1" cy="49.8" r="1.3"/><path d="M60 60L73.5 51.5"/><circle cx="73.5" cy="51.5" r="1.3"/><path d="M60 60L77.1 51.8"/><circle cx="77.1" cy="51.8" r="1.3"/><path d="M60 60L72.9 58.5"/><circle cx="72.9" cy="58.5" r="1.3"/></g><circle class="pistil" cx="60" cy="60" r="4.2"/></g>
+<g class="fl" transform="translate(128 262) scale(.3) translate(-60 -60)"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g><g class="stamens"><path d="M60 60L73.0 60.0"/><circle cx="73.0" cy="60.0" r="1.3"/><path d="M60 60L75.1 65.3"/><circle cx="75.1" cy="65.3" r="1.3"/><path d="M60 60L77.1 68.2"/><circle cx="77.1" cy="68.2" r="1.3"/><path d="M60 60L69.2 69.2"/><circle cx="69.2" cy="69.2" r="1.3"/><path d="M60 60L70.0 72.5"/><circle cx="70.0" cy="72.5" r="1.3"/><path d="M60 60L66.3 77.9"/><circle cx="66.3" cy="77.9" r="1.3"/><path d="M60 60L62.9 72.7"/><circle cx="62.9" cy="72.7" r="1.3"/><path d="M60 60L58.2 75.9"/><circle cx="58.2" cy="75.9" r="1.3"/><path d="M60 60L55.8 78.5"/><circle cx="55.8" cy="78.5" r="1.3"/><path d="M60 60L53.1 71.0"/><circle cx="53.1" cy="71.0" r="1.3"/><path d="M60 60L50.0 72.5"/><circle cx="50.0" cy="72.5" r="1.3"/><path d="M60 60L43.9 70.1"/><circle cx="43.9" cy="70.1" r="1.3"/><path d="M60 60L48.3 65.6"/><circle cx="48.3" cy="65.6" r="1.3"/><path d="M60 60L44.1 61.8"/><circle cx="44.1" cy="61.8" r="1.3"/><path d="M60 60L41.0 60.0"/><circle cx="41.0" cy="60.0" r="1.3"/><path d="M60 60L47.7 55.7"/><circle cx="47.7" cy="55.7" r="1.3"/><path d="M60 60L45.6 53.1"/><circle cx="45.6" cy="53.1" r="1.3"/><path d="M60 60L46.5 46.6"/><circle cx="46.5" cy="46.6" r="1.3"/><path d="M60 60L51.9 49.8"/><circle cx="51.9" cy="49.8" r="1.3"/><path d="M60 60L54.7 44.9"/><circle cx="54.7" cy="44.9" r="1.3"/><path d="M60 60L55.8 41.5"/><circle cx="55.8" cy="41.5" r="1.3"/><path d="M60 60L61.4 47.1"/><circle cx="61.4" cy="47.1" r="1.3"/><path d="M60 60L63.6 44.4"/><circle cx="63.6" cy="44.4" r="1.3"/><path d="M60 60L70.1 43.9"/><circle cx="70.1" cy="43.9" r="1.3"/><path d="M60 60L68.1 49.8"/><circle cx="68.1" cy="49.8" r="1.3"/><path d="M60 60L73.5 51.5"/><circle cx="73.5" cy="51.5" r="1.3"/><path d="M60 60L77.1 51.8"/><circle cx="77.1" cy="51.8" r="1.3"/><path d="M60 60L72.9 58.5"/><circle cx="72.9" cy="58.5" r="1.3"/></g><circle class="pistil" cx="60" cy="60" r="4.2"/></g></svg></div></li>
+<li class="tile info tone-sage side-l" style="grid-area:3/2">
   <button class="lf" type="button" aria-pressed="false" aria-label="Gatherings: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Gatherings</span><span class="rule"></span><span class="lf-sub">Lived, immersive experiences</span><span class="more">See more</span></span></span>
-    <span class="face back"><span class="in"><span class="lf-title sm">Gatherings</span><span class="lf-body">Small circles in nature built on lived experience, held with empathy, openness and a sense of brotherhood.</span></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">Gatherings</span><span class="rule"></span><span class="lf-sub">Lived, immersive experiences</span><span class="more">See more</span></span></span>
+    <span class="face back"><span class="in"><span class="lf-title sm">Gatherings</span><span class="lf-body">Small circles in nature, built on lived experience and held with empathy, openness and a sense of brotherhood.</span></span></span>
   </button>
 </li>
-<li class="tile deco" style="grid-area:1/7;--t:0.500" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:2/3;--t:0.250" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:2/4;--t:0.333" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:2/7;--t:0.583" aria-hidden="true"></li>
-<li class="tile info tone-jade side-l" style="grid-area:3/1/span 2/span 2">
+<li class="tile info tone-moss side-r" style="grid-area:2/3">
   <button class="lf" type="button" aria-pressed="false" aria-label="Retreats: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Retreats</span><span class="rule"></span><span class="lf-sub">Trees, mountains, silence</span><span class="more">See more</span></span></span>
-    <span class="face back"><span class="in"><span class="lf-title sm">Retreats</span><span class="lf-body">Residential retreats in quiet natural places where the mind can rest and regenerate. Inaugural retreat in development.</span></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">Retreats</span><span class="rule"></span><span class="lf-sub">Trees, mountains, silence</span><span class="more">See more</span></span></span>
+    <span class="face back"><span class="in"><span class="lf-title sm">Retreats</span><span class="lf-body">Residential retreats where the mind can rest and regenerate. Our inaugural retreat is in development.</span></span></span>
   </button>
 </li>
-<li class="tile info tone-deep side-r" style="grid-area:3/3/span 2/span 2">
+<li class="tile info tone-mist side-l" style="grid-area:3/3">
   <button class="lf" type="button" aria-pressed="false" aria-label="The Human Curriculum: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">The Human Curriculum</span><span class="rule"></span><span class="lf-sub">Our flagship</span><span class="more">See more</span></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">The Human Curriculum</span><span class="rule"></span><span class="lf-sub">Our flagship</span><span class="more">See more</span></span></span>
     <span class="face back"><span class="in"><span class="lf-title sm">The Human Curriculum</span><span class="lf-body">Five experiential modules: To See, To Feel, To Realise, To Connect, To Live. Your own experience is the material.</span></span></span>
   </button>
 </li>
-<li class="tile deco" style="grid-area:3/5;--t:0.500" aria-hidden="true"></li>
-<li class="tile info tone-olive side-l" style="grid-area:3/6/span 2/span 2">
+<li class="tile info tone-moss side-r" style="grid-area:5/3">
   <button class="lf" type="button" aria-pressed="false" aria-label="Drishta Labs: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Drishta Labs</span><span class="rule"></span><span class="lf-sub">The nerdy part</span><span class="more">See more</span></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">Drishta Labs</span><span class="rule"></span><span class="lf-sub">The nerdy part</span><span class="more">See more</span></span></span>
     <span class="face back"><span class="in"><span class="lf-title sm">Drishta Labs</span><span class="lf-body">Research, tech, design and crafts. Home of the EDER framework and the Metacognition Impact Framework.</span></span></span>
   </button>
 </li>
-<li class="tile deco" style="grid-area:4/5;--t:0.583" aria-hidden="true"></li>
-<li class="tile info tone-moss side-r" style="grid-area:5/1/span 2/span 2">
-  <button class="lf" type="button" aria-pressed="false" aria-label="Corporate gatherings: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Corporate gatherings</span><span class="rule"></span><span class="lf-sub">For teams and organisations</span><span class="more">See more</span></span></span>
-    <span class="face back"><span class="in"><span class="lf-title sm">Corporate gatherings</span><span class="lf-body">Gatherings and retreats for teams. They bring metacognition into the workplace and help fund our community work.</span></span></span>
-  </button>
-</li>
-<li class="tile deco" style="grid-area:5/3;--t:0.500" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:5/4;--t:0.583" aria-hidden="true"></li>
-<li class="tile info tone-jade side-l" style="grid-area:5/5/span 2/span 2">
+<li class="tile info tone-sage side-l" style="grid-area:3/5">
   <button class="lf" type="button" aria-pressed="false" aria-label="Think Studio: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Think Studio</span><span class="rule"></span><span class="lf-sub">Design · Systems · Strategy</span><span class="more">See more</span></span></span>
-    <span class="face back"><span class="in"><span class="lf-title sm">Think Studio</span><span class="lf-body">Our consultancy, the engine that sustains Drishta.</span><a class="lf-link" href="https://thinkstudio.unfoldedfuture.com">Visit Think Studio →</a></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">Think Studio</span><span class="rule"></span><span class="lf-sub">Design · Systems · Strategy</span><span class="more">See more</span></span></span>
+    <span class="face back"><span class="in"><span class="lf-title sm">Think Studio</span><span class="lf-body">Our consultancy and corporate gatherings: the engine that sustains Drishta.</span><a class="lf-link" href="https://thinkstudio.unfoldedfuture.com">Visit Think Studio →</a></span></span>
   </button>
 </li>
-<li class="tile deco" style="grid-area:5/7;--t:0.833" aria-hidden="true"></li>
-<li class="tile info tone-sage side-r" style="grid-area:6/3/span 2/span 2">
+<li class="tile info tone-forest side-r" style="grid-area:5/5">
   <button class="lf" type="button" aria-pressed="false" aria-label="Community: turn for details">
-    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 3L37 20L20 37L3 20Z"/><path d="M20 12v16M13 20q7-6 14 0q-7 6-14 0"/></svg><span class="lf-title">Community</span><span class="rule"></span><span class="lf-sub">Social capital is our currency</span><span class="more">See more</span></span></span>
+    <span class="face front"><span class="in"><svg class="ic" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M20 2L38 20L20 38L2 20Z"/><g transform="translate(20 20) scale(.15) translate(-60 -60)" class="ic-fl"><g class="petals"><path d="M60 58C46 52 34 36 40 22c6-12 22-10 28 0 8 14 2 30-8 36Z"/><path d="M62 60c6-14 22-26 36-20 12 6 10 22 0 28-14 8-30 2-36-8Z"/><path d="M60 62c14 6 26 22 20 36-6 12-22 10-28 0-8-14-2-30 8-36Z"/><path d="M58 60c-6 14-22 26-36 20-12-6-10-22 0-28 14-8 30-2 36 8Z"/></g></g></svg><span class="lf-title">Community</span><span class="rule"></span><span class="lf-sub">Social capital is our currency</span><span class="more">See more</span></span></span>
     <span class="face back"><span class="in"><span class="lf-title sm">Community</span><span class="lf-body">Relationships, trust and shared practice, built through value exchange, kindness and civic sense.</span></span></span>
   </button>
 </li>
-<li class="tile deco" style="grid-area:6/7;--t:0.917" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:7/1;--t:0.500" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:7/2;--t:0.583" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:7/5;--t:0.833" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:7/6;--t:0.917" aria-hidden="true"></li>
-<li class="tile deco" style="grid-area:7/7;--t:1.000" aria-hidden="true"></li>
     </ul>
   </div>
-  <div class="wrap center">
-    <p class="intro" style="margin-top:40px">Every gathering is held with these intentions</p>
-    <ul class="values"><li>Kindness</li><li>Empathy</li><li>Openness</li><li>Tolerance</li><li>Love for nature and animals</li><li>Love for our land, culture and history</li><li>Civic sense</li><li>Brotherhood</li></ul>
-  </div>
 </section>
+<div class="values-wrap center">
+  <p class="intro" style="margin-top:0">Every gathering is held with these intentions</p>
+  <ul class="values"><li>Kindness</li><li>Empathy</li><li>Openness</li><li>Tolerance</li><li>Love for nature and animals</li><li>Love for our land, culture and history</li><li>Civic sense</li><li>Brotherhood</li></ul>
+</div>
 
 <section class="roots" id="roots">
   <svg class="river" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 70C180 40 300 100 480 78S780 30 960 58s300 50 480 10"/><path class="r2" d="M0 92C200 66 320 112 520 96S820 58 1000 80s280 34 440 6"/><path class="r3" d="M0 108C220 92 360 118 560 110S860 90 1040 102s260 14 400 0"/></svg>
