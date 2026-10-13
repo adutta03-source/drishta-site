@@ -115,6 +115,16 @@ p{margin:0}
 .lf{all:unset;position:absolute;inset:0;cursor:pointer;transform-style:preserve-3d;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .lf:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
 .lf[aria-pressed="true"]{transform:rotate3d(1,1,0,180deg)}
+/* leaf turn: faces swap at the halfway point, so the flip works even where backface hiding is unreliable */
+.lf .front{visibility:visible;transition:visibility 0s .38s}
+.lf .back{visibility:hidden;transition:visibility 0s .38s}
+.lf[aria-pressed="true"] .front{visibility:hidden}
+.lf[aria-pressed="true"] .back{visibility:visible}
+.lf::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.28),transparent 45%,rgba(0,0,0,.18));opacity:0;transition:opacity .4s}
+.lf.turning::after{opacity:1}
+@media (hover:hover){.tile.info:hover .lf:not([aria-pressed="true"]){transform:rotate3d(1,1,0,14deg)}}
+.tile.info.peek .lf:not([aria-pressed="true"]){animation:peek 1.1s cubic-bezier(.3,.6,.3,1)}
+@keyframes peek{0%,100%{transform:none}40%{transform:rotate3d(1,1,0,38deg)}70%{transform:rotate3d(1,1,0,-8deg)}}
 .lf .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:grid;place-items:center;overflow:hidden}
 .lf .back{transform:rotate3d(1,1,0,180deg);background:var(--night);color:var(--on-dark)}
 .lf .in{transform:rotate(-45deg);width:74%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:calc(var(--s)*.03)}
@@ -228,7 +238,7 @@ footer .wm{color:var(--on-dark)}
   .birds.b2{display:none}
   .emblem-frame{height:min(44vh,340px)}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lf{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lf,.lf .face{transition:none}.tile.info.peek .lf{animation:none}}
 </style>
 
 <div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">view live site</a></div>
@@ -481,7 +491,8 @@ footer .wm{color:var(--on-dark)}
 </footer>
 
 <script>
-document.querySelectorAll('.lf').forEach(function(b){b.addEventListener('click',function(e){if(e.target.closest('a'))return;b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')})});
+document.querySelectorAll('.lf').forEach(function(b){b.addEventListener('click',function(e){if(e.target.closest('a'))return;b.parentNode.classList.remove('peek');b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true');b.classList.add('turning');setTimeout(function(){b.classList.remove('turning')},800)})});
+(function(){var m=document.querySelector('.mosaic');if(!m||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.disconnect();document.querySelectorAll('.tile.info').forEach(function(t,k){setTimeout(function(){t.classList.add('peek');setTimeout(function(){t.classList.remove('peek')},1200)},250+k*180)})})},{threshold:.3});io.observe(m)})();
 (function(){var b=document.getElementById('copy'),a=document.getElementById('addr');if(!b)return;b.addEventListener('click',function(){function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1800)}try{navigator.clipboard.writeText(a.textContent).then(done,done)}catch(e){}})})();
 </script>
 </html>
