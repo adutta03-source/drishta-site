@@ -96,7 +96,7 @@ p{margin:0}
 /* ===== What we do: reference composition =====
    Large painted diamonds (sky, hills, river) sit edge to edge with no gaps;
    small solid diamonds carry the information and turn over on tap. */
-.grove{--s:min(218px,calc(23.5vw - 4px));position:relative;overflow:hidden;background:var(--bg-a)}
+.grove{--s:clamp(170px,calc(100vw/6.6),228px);position:relative;overflow:hidden;background:var(--bg-a)}
 .grove::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;
   background:repeating-linear-gradient(45deg,transparent 0 calc(var(--s)*1.4142 - 1px),var(--line) 0 calc(var(--s)*1.4142)),repeating-linear-gradient(-45deg,transparent 0 calc(var(--s)*1.4142 - 1px),var(--line) 0 calc(var(--s)*1.4142))}
 .mosaic-wrap{position:relative;height:calc(var(--s)*7.0711);margin-top:calc(var(--s)*-.62);display:grid;place-items:center}
@@ -134,30 +134,23 @@ p{margin:0}
 .tone-forest .front .lf-title{color:#e9cf8f}
 .grove-head{display:none}
 
-@media (max-width:700px){
-  .grove-head{display:block;padding:40px 20px 4px;text-align:center}
-  .grove-head .h2{font-size:clamp(2.1rem,8vw,2.8rem)}
-  .grove-head p{color:var(--muted);font-size:.95rem;max-width:26em;margin:10px auto 0}
-  .grove-head .hint{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-top:12px}
-  .mosaic-wrap{margin-top:0}
-  .head-tile .in{padding-top:0;gap:6px}
-  .head-tile p,.head-tile .rule{display:none}
-  .head-tile .h2{font-size:calc(var(--s)*.26)}
-  .lf-sub,.more,.lf .rule{display:none}
-  .lf .in{width:80%;gap:4px}
-  .lf-title{font-size:calc(var(--s)*.15)}
-  .ic{width:calc(var(--s)*.2);height:calc(var(--s)*.2)}
-  .lf[aria-pressed="true"]{transform:none}
-  .lf[aria-pressed="true"] .front{box-shadow:inset 0 0 0 2px var(--gold)}
-}
-.detail{display:none}
-@media (max-width:700px){
-  .detail:not([hidden]){display:block;position:relative;max-width:30em;margin:6px 20px 8px;padding:22px 22px 20px;color:var(--on-dark);background:linear-gradient(150deg,var(--moss),var(--forest));clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,22px 100%,0 calc(100% - 22px))}
-  .detail h3{font-size:1.6rem;color:#e9cf8f}
-  .detail small{display:block;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-soft);margin:4px 0 10px}
-  .detail p{font-size:.95rem;color:var(--on-dark-soft)}
-  .detail a{display:inline-block;margin-top:10px;color:#e9cf8f;font-size:.9rem}
-  .detail .x{all:unset;position:absolute;right:16px;top:12px;cursor:pointer;font-size:1.3rem;color:var(--on-dark-soft);padding:4px 8px}
+@media (max-width:1100px){
+  .grove{--s:min(46vw,290px)}
+  .mosaic-wrap{height:auto;margin-top:0;display:block}
+  .mosaic{transform:none;display:flex;flex-direction:column;align-items:center;grid-template-columns:none;grid-template-rows:none;padding:min(12vw,70px) 0 min(16vw,90px)}
+  .scene{position:absolute;left:0;right:0;grid-area:auto!important}
+  .scene-sky{top:15%;height:24%} .scene-hills{top:38%;height:31%} .scene-river{top:68%;height:32%}
+  .scene-in{left:0;top:0;width:100%;height:100%;aspect-ratio:auto;transform:none}
+  .head-tile{background:transparent;color:var(--forest);grid-area:auto!important;width:100%;padding:0 20px 40px}
+  .head-tile .in{transform:none;width:auto;max-width:30em;padding:0}
+  .head-tile .h2{font-size:clamp(2.1rem,7vw,3rem)}
+  .head-tile p{color:#3d4d3a;font-size:.95rem}
+  .head-tile .hint{color:#7c5a1c}
+  .tile.info{width:var(--s);aspect-ratio:1;grid-area:auto!important;transform:rotate(45deg)}
+  .tile.info+.tile.info{margin-top:calc(var(--s)*-.2929)}
+  .tile.info.side-l{translate:calc(var(--s)*-.3536) 0}
+  .tile.info.side-r{translate:calc(var(--s)*.3536) 0}
+  .grove::before{display:none}
 }
 
 /* values */
@@ -284,7 +277,6 @@ footer .wm{color:var(--on-dark)}
 </div></section>
 
 <section class="grove" id="grove">
-  <div class="grove-head"><p>Lived experience, community and a little nerdy research, all growing from the same roots.</p><p class="hint">Tap a tile to read more</p></div>
   <div class="mosaic-wrap">
     <ul class="mosaic">
 <li class="tile head-tile" style="grid-area:1/1/span 2/span 2"><div class="in">
@@ -416,7 +408,6 @@ footer .wm{color:var(--on-dark)}
 </li>
     </ul>
   </div>
-  <div class="detail" id="detail" hidden aria-live="polite"><button class="x" type="button" aria-label="Close">×</button><h3></h3><small></small><p></p><a hidden></a></div>
 </section>
 <div class="values-wrap center">
   <p class="intro" style="margin-top:0">Every gathering is held with these intentions</p>
@@ -490,17 +481,7 @@ footer .wm{color:var(--on-dark)}
 </footer>
 
 <script>
-(function(){var small=window.matchMedia('(max-width:700px)'),d=document.getElementById('detail'),lfs=document.querySelectorAll('.lf');
-function closeD(){d.hidden=true;lfs.forEach(function(x){x.setAttribute('aria-pressed','false')})}
-d.querySelector('.x').addEventListener('click',closeD);
-lfs.forEach(function(b){b.addEventListener('click',function(e){if(e.target.closest('a'))return;
- if(small.matches){var on=b.getAttribute('aria-pressed')==='true';closeD();if(on)return;b.setAttribute('aria-pressed','true');
-  var t=b.querySelector('.front .lf-title').textContent,s=b.querySelector('.lf-sub').textContent,body=b.querySelector('.lf-body').textContent,l=b.querySelector('.lf-link'),a=d.querySelector('a');
-  d.querySelector('h3').textContent=t;d.querySelector('small').textContent=s;d.querySelector('p').textContent=body;
-  if(l){a.hidden=false;a.href=l.href;a.textContent=l.textContent}else{a.hidden=true}
-  d.hidden=false;d.scrollIntoView({behavior:'smooth',block:'nearest'});return}
- b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')})});
-small.addEventListener('change',closeD)})();
+document.querySelectorAll('.lf').forEach(function(b){b.addEventListener('click',function(e){if(e.target.closest('a'))return;b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true')})});
 (function(){var b=document.getElementById('copy'),a=document.getElementById('addr');if(!b)return;b.addEventListener('click',function(){function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1800)}try{navigator.clipboard.writeText(a.textContent).then(done,done)}catch(e){}})})();
 </script>
 </html>
