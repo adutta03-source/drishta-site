@@ -149,7 +149,9 @@ p{margin:0}
   .mosaic-wrap{height:auto;margin-top:0;display:block}
   .mosaic{transform:none;display:flex;flex-direction:column;align-items:center;grid-template-columns:none;grid-template-rows:none;padding:min(12vw,70px) 0 min(16vw,90px)}
   .scene{position:absolute;left:0;right:0;grid-area:auto!important}
-  .scene-sky{top:15%;height:24%} .scene-hills{top:38%;height:31%} .scene-river{top:68%;height:32%}
+  .scene-sky{top:15%;height:28%} .scene-hills{top:38%;height:34%;-webkit-mask-image:linear-gradient(transparent,#000 14%);mask-image:linear-gradient(transparent,#000 14%)} .scene-river{top:68%;height:32%;-webkit-mask-image:linear-gradient(transparent,#000 10%);mask-image:linear-gradient(transparent,#000 10%)}
+  .head-tile{position:relative;z-index:1;background:var(--bg-a)!important}
+  .head-tile::after{content:"";position:absolute;left:0;right:0;top:100%;height:90px;background:linear-gradient(var(--bg-a),transparent);pointer-events:none}
   .scene-in{left:0;top:0;width:100%;height:100%;aspect-ratio:auto;transform:none}
   .head-tile{background:transparent;color:var(--forest);grid-area:auto!important;width:100%;padding:0 20px 40px}
   .head-tile .in{transform:none;width:auto;max-width:30em;padding:0}
@@ -294,25 +296,8 @@ footer .wm{color:var(--on-dark)}
   <h2 class="h2">What we do</h2><span class="rule"></span>
   <p>Lived experience, community and a little nerdy research, all growing from the same roots.</p>
   <p class="hint">Tap a tile to turn it over</p></div></li>
-<li class="scene scene-sky" style="grid-area:1/3/span 2/span 3;--w:3;--h:2" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4efda"/><stop offset=".55" stop-color="#dfe7cf"/><stop offset="1" stop-color="#a7bd92"/></linearGradient>
-<radialGradient id="sk-s" cx=".6" cy=".42" r=".38"><stop offset="0" stop-color="#e9c978" stop-opacity=".7"/><stop offset="1" stop-color="#e9c978" stop-opacity="0"/></radialGradient>
-<filter id="sk-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="9"/></filter><filter id="sk-b2" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="3"/></filter></defs>
-<rect width="400" height="400" fill="url(#sk-g)"/><rect width="400" height="400" fill="url(#sk-s)"/>
-<g filter="url(#sk-b)" fill="#fffdf4" opacity=".75"><ellipse cx="150" cy="215" rx="80" ry="16"/><ellipse cx="300" cy="240" rx="95" ry="14"/><ellipse cx="250" cy="112" rx="60" ry="10"/></g>
-<circle cx="240" cy="170" r="28" fill="#e2bd64" opacity=".9" filter="url(#sk-b2)"/>
-<circle cx="240" cy="170" r="74" fill="none" stroke="#b98a32" stroke-width="1" stroke-dasharray="2 6" opacity=".7"/>
-<path d="M60 330C120 290 170 300 220 315S320 300 400 270V400H0V350Z" fill="#8fa97c" opacity=".55" filter="url(#sk-b2)"/>
-<g fill="none" stroke="#23402c" stroke-width="1.6" stroke-linecap="round" opacity=".55"><path d="M290 120q8-8 16 0q8-8 16 0"/><path d="M330 150q6-6 12 0q6-6 12 0"/><path d="M300 175q5-5 10 0q5-5 10 0"/></g></svg></div></li>
-<li class="scene scene-hills" style="grid-area:3/1/span 3/span 2;--w:2;--h:3" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="hl-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef0e1"/><stop offset=".5" stop-color="#cfdcbd"/><stop offset="1" stop-color="#7f9a6c"/></linearGradient>
-<filter id="hl-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="4"/></filter><filter id="hl-m" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="12"/></filter></defs>
-<rect width="400" height="400" fill="url(#hl-g)"/>
-<path d="M0 230L70 170L120 200L170 120L235 190L290 160L400 230V400H0Z" fill="#b2c59e" filter="url(#hl-b)"/>
-<ellipse cx="170" cy="225" rx="200" ry="22" fill="#f4f3e6" opacity=".7" filter="url(#hl-m)"/>
-<path d="M0 270C60 230 110 215 160 240S260 230 320 250 400 270 400 270V400H0Z" fill="#7d9a6a" filter="url(#hl-b)" opacity=".95"/>
-<path d="M0 270C60 230 110 215 160 240S260 230 320 250" fill="none" stroke="#c39a45" stroke-width="1.2" opacity=".8"/>
-<path d="M0 320C80 290 150 300 210 315S330 300 400 320V400H0Z" fill="#4c6a45"/>
-<ellipse cx="200" cy="300" rx="220" ry="14" fill="#eef0e1" opacity=".35" filter="url(#hl-m)"/>
-<path d="M0 360C90 345 160 350 240 362S350 360 400 350V400H0Z" fill="#2c4832"/></svg></div></li>
+<li class="scene scene-sky" style="grid-area:1/3/span 2/span 3;--w:3;--h:2" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><image href="img/valley.webp" x="0" y="0" width="400" height="400" preserveAspectRatio="xMidYMid slice"/></svg></div></li>
+<li class="scene scene-hills" style="grid-area:3/1/span 3/span 2;--w:2;--h:3" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><image href="img/peaks.webp" x="-70" y="-30" width="470" height="470" preserveAspectRatio="xMidYMid slice"/></svg></div></li>
 <li class="scene scene-river" style="grid-area:3/3/span 3/span 3;--w:3;--h:3" aria-hidden="true"><div class="scene-in"><svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rv-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6f8c5f"/><stop offset=".55" stop-color="#3f5f43"/><stop offset="1" stop-color="#22402c"/></linearGradient>
 <radialGradient id="rv-l" cx=".5" cy=".46" r=".4"><stop offset="0" stop-color="#efe0ad" stop-opacity=".35"/><stop offset="1" stop-color="#efe0ad" stop-opacity="0"/></radialGradient>
 <filter id="rv-b" x="-.3" y="-.3" width="1.6" height="1.6"><feGaussianBlur stdDeviation="7"/></filter></defs>
