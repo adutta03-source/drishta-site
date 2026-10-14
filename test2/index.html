@@ -25,12 +25,9 @@
 /* Frame 2: eye diagram as its own element, depth wash, legibility */
 #name{position:relative}
 #name::before{content:"";position:absolute;left:0;top:0;bottom:0;width:60%;pointer-events:none;background:radial-gradient(closest-side at 32% 50%,rgba(196,152,82,.09),transparent)}
-.d-eye .faint{opacity:.5}
 .name .word{text-shadow:none}
 #name .lede{color:var(--fg);opacity:.86}
 @media (max-width:860px){#name::before{display:none}}
-@media (prefers-reduced-motion:no-preference){.d-eye .dash{transform-origin:200px 200px;animation:eyespin 60s linear infinite}}
-@keyframes eyespin{to{transform:rotate(360deg)}}
 </style>
 <div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site 2 · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">live site</a> · <a href="https://drishta.unfoldedfuture.com/test/" style="color:inherit">test site 1</a></div>
 
@@ -222,7 +219,7 @@ footer{background:var(--deep-2);color:var(--on-deep-soft);margin-top:0}
 .deco .dash{stroke-dasharray:2 7}
 #name .name{position:relative}
 #name .name>*:not(.deco){position:relative;z-index:1}
-.d-eye{left:-70px;top:-50px;width:360px;opacity:.24}
+.d-eye{left:-70px;top:-50px;width:360px;opacity:.2}
 .d-eye .ln,.d-eye .ring{stroke:var(--gold)}.d-eye .dot,.d-eye .acc{fill:var(--gold)}
 .feature{position:relative;overflow:hidden}
 .feature>*:not(.deco){position:relative;z-index:1}
@@ -237,7 +234,7 @@ footer{position:relative;overflow:hidden}
 .d-foot{position:relative;display:block;width:100%;height:44px;opacity:.45}
 .d-foot .ln,.d-foot .ring{stroke:var(--gold)}.d-foot .dot,.d-foot .acc{fill:var(--gold)}
 @media (max-width:860px){
-  .d-eye{width:260px;left:-50px;top:-36px;opacity:.2}
+  .d-eye{width:260px;left:-50px;top:-36px;opacity:.16}
   .d-arcs{width:300px;right:-90px;top:-50px;opacity:.25}
   .d-stars{width:120%;right:-40%;top:auto;bottom:-30px;opacity:.3}
   .net{display:block;position:absolute;width:60%;right:0;top:auto;bottom:0;opacity:.1}
@@ -287,7 +284,7 @@ footer{position:relative;overflow:hidden}
 
     <section class="sec" id="name">
       <span class="label">Our philosophy</span>
-      <div class="name"><svg class="deco d-eye" viewBox="0 0 400 400"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="ln" cx="200" cy="200" r="150"/><circle class="ln" cx="200" cy="200" r="110"/><circle class="ln" cx="200" cy="200" r="70"/><circle class="ln dash" cx="200" cy="200" r="185"/><path class="ln faint" d="M200 30V370M30 200H370"/><path class="ln" d="M50 200 Q200 90 350 200 Q200 310 50 200Z"/><circle class="ln" cx="200" cy="200" r="22"/><circle class="acc" cx="200" cy="200" r="9"/><circle class="dot" cx="385" cy="200" r="2.5"/><circle class="dot" cx="360.2" cy="292.5" r="2.5"/><circle class="dot" cx="292.5" cy="360.2" r="2.5"/><circle class="dot" cx="200" cy="385" r="2.5"/><circle class="dot" cx="107.5" cy="360.2" r="2.5"/><circle class="dot" cx="39.8" cy="292.5" r="2.5"/><circle class="dot" cx="15" cy="200" r="2.5"/><circle class="dot" cx="39.8" cy="107.5" r="2.5"/><circle class="dot" cx="107.5" cy="39.8" r="2.5"/><circle class="dot" cx="200" cy="15" r="2.5"/><circle class="dot" cx="292.5" cy="39.8" r="2.5"/><circle class="dot" cx="360.2" cy="107.5" r="2.5"/><path class="ln" d="M310 90 l40 -40 M350 50 l-12 0 M350 50 l0 12"/></svg>
+      <div class="name"><svg class="deco d-eye" viewBox="0 0 400 400"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="ln" cx="200" cy="200" r="150"/><circle class="ln" cx="200" cy="200" r="110"/><circle class="ln" cx="200" cy="200" r="70"/><circle class="ln dash" cx="200" cy="200" r="185"/><path class="ln" d="M200 0V400M10 200H390"/><path class="ln" d="M50 200 Q200 90 350 200 Q200 310 50 200Z"/><circle class="acc" cx="200" cy="200" r="10"/><circle class="dot" cx="385" cy="200" r="2.5"/><circle class="dot" cx="360.2" cy="292.5" r="2.5"/><circle class="dot" cx="292.5" cy="360.2" r="2.5"/><circle class="dot" cx="200" cy="385" r="2.5"/><circle class="dot" cx="107.5" cy="360.2" r="2.5"/><circle class="dot" cx="39.8" cy="292.5" r="2.5"/><circle class="dot" cx="15" cy="200" r="2.5"/><circle class="dot" cx="39.8" cy="107.5" r="2.5"/><circle class="dot" cx="107.5" cy="39.8" r="2.5"/><circle class="dot" cx="200" cy="15" r="2.5"/><circle class="dot" cx="292.5" cy="39.8" r="2.5"/><circle class="dot" cx="360.2" cy="107.5" r="2.5"/><path class="ln" d="M310 90 l40 -40 M350 50 l-12 0 M350 50 l0 12"/></svg>
         <div>
           <div class="word">draṣṭā</div>
           <div class="gloss"><span class="say">drush-taa</span>Sanskrit · the seer, the one who witnesses</div>
