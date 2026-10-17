@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Drishta is a practice community for the mind: small groups learning to watch their own thoughts instead of being run by them, through silence, craft, nature and honest circles.">
+<meta name="description" content="Drishta is a metacognition practice community: train to witness your own thinking, rooted in Patañjali, grounded in science, practised together in nature. Founding retreat 13–15 Nov 2026.">
 <meta property="og:title" content="Drishta">
 <meta property="og:description" content="Gatherings and retreats built on metacognition. Witness, Reflect, Understand, Grow.">
 <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
 @media (max-width:860px){#name::before{display:none}}
 @media (min-width:861px){#name .name>div:last-of-type{text-align:center}#name .name>div:last-of-type .lede,#name .name>div:last-of-type .sign{margin-inline:auto}}
 </style>
-<div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site 3 · positioning trial · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">live</a> · <a href="https://drishta.unfoldedfuture.com/test/" style="color:inherit">test 1</a> · <a href="https://drishta.unfoldedfuture.com/test2/" style="color:inherit">test 2</a></div>
+<div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site 3 · following the Foundation doc · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">live</a> · <a href="https://drishta.unfoldedfuture.com/test/" style="color:inherit">test 1</a> · <a href="https://drishta.unfoldedfuture.com/test2/" style="color:inherit">test 2</a></div>
 
 <title>Drishta</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
@@ -253,6 +253,57 @@ footer{position:relative;overflow:hidden}
 .note-line{margin-top:22px;font-size:.88rem;color:var(--muted);max-width:46em}
 .sub-h{margin-top:56px;font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.1rem)}
 @media (max-width:760px){.jobs{grid-template-columns:minmax(0,1fr)}}
+
+/* Foundation-doc build */
+.moments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 40px;margin-top:36px}
+.mgroup h3{font-family:var(--display);font-weight:400;font-size:1.55rem;margin:0 0 6px;padding-top:14px;border-top:1px solid var(--gold)}
+.mgroup h3+ul{margin-bottom:22px}
+.mgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.mgroup li{display:flex;flex-direction:column;padding:10px 0;border-bottom:1px solid var(--line)}
+.mgroup b{font-family:var(--display);font-style:italic;font-weight:400;font-size:1.3rem;line-height:1.25}
+.mgroup span{font-size:.9rem;color:var(--muted)}
+.note-line{margin-top:24px;font-size:.92rem;color:var(--muted);max-width:52em}
+.note-line b{color:var(--fg);font-weight:500}
+.moves.loop{grid-template-columns:repeat(3,minmax(0,1fr))}
+.moves.loop small{display:block;margin-top:10px;font-size:.78rem;letter-spacing:.02em;color:var(--gold-text);line-height:1.5}
+.sub-h{margin-top:56px;font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.1rem)}
+.fields{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin-top:20px}
+.fields div{border-top:1px solid var(--gold);padding-top:12px;display:flex;flex-direction:column;gap:6px}
+.fields b{font-family:var(--display);font-weight:400;font-size:1.4rem}
+.fields span{font-size:.9rem;color:var(--muted);line-height:1.55}
+.flow-line{margin-top:26px;font-size:.98rem;color:var(--muted)}
+.flow-line b{color:var(--fg);font-weight:500}
+.pull{margin-top:56px;padding:28px 30px;background:var(--surface);border-left:2px solid var(--gold);border-radius:3px;max-width:46em}
+.pull-sk{font-family:var(--display);font-size:1.6rem;color:var(--gold-text)}
+.pull-en{margin-top:4px;color:var(--fg)}
+.pull-en span{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.pull-note{margin-top:14px;color:var(--muted)}
+.pull-note b{color:var(--fg);font-weight:500}
+#retreat .feature .d-arcs{opacity:.35}
+#retreat .feature>*:not(.deco){position:relative;z-index:1}
+.modules.days{grid-template-columns:repeat(3,minmax(0,1fr))}
+.modules.days em{display:block;margin-top:8px;font-family:var(--display);font-size:1.05rem;color:var(--fg)}
+.ladder{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ladder li{background:var(--surface);border-radius:3px;padding:22px 22px 24px;display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--gold)}
+.ladder b{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text);font-weight:500}
+.ladder h3{font-family:var(--display);font-weight:400;font-size:1.6rem}
+.ladder p{font-size:.95rem;color:var(--muted)}
+.facts3{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.facts3 li{border-top:1px solid var(--gold);padding-top:14px;display:flex;flex-direction:column;gap:6px}
+.facts3 b{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,3vw,2.6rem);line-height:1}
+.facts3 span{font-size:.95rem;color:var(--muted)}
+.faq{margin-top:30px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-size:1.5rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;color:var(--gold-text)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:10px;color:var(--muted);max-width:44em}
+@media (max-width:860px){
+  .moments,.modules.days,.ladder,.facts3{grid-template-columns:minmax(0,1fr)}
+  .fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .moves.loop{grid-template-columns:minmax(0,1fr)}
+}
 </style>
 
 <header class="top" id="home">
@@ -261,21 +312,21 @@ footer{position:relative;overflow:hidden}
       <a href="#home"><img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131"></a>
       <ul>
         <li><a href="#for-you">Is it for you</a></li>
-        <li><a href="#approach">How it works</a></li>
-        <li><a href="#programmes">Ways to join</a></li>
-        <li><a href="#community">Community</a></li>
+        <li><a href="#approach">The method</a></li>
+        <li><a href="#retreat">Retreat</a></li>
+        <li><a href="#join">Ways to join</a></li>
         <li><a href="#people">People</a></li>
       </ul>
-      <a class="btn btn-line" href="#gathering">Join us</a>
+      <a class="btn btn-line" href="#register">Join us</a>
     </nav>
 
     <div class="hero">
       <div>
-        <span class="label">A practice community for the mind</span>
-        <h1>You are not your overthinking. <em>You’re the one noticing it.</em></h1>
-        <p>Drishta is a small community that practises metacognition: the skill of watching your own mind instead of being run by it. We learn it together through silence, craft, time in nature and honest conversation, in groups of eight to twelve.</p>
+        <span class="label">A metacognition practice community</span>
+        <h1>See your mind. <em>Choose your life.</em></h1>
+        <p>For anyone who senses their mind is running them. Drishta trains you to witness your own thinking: rooted in Patañjali, grounded in science, and practised together in nature. Not a retreat that only rests you, and not an app that soothes you, but the one skill underneath clear thinking, steady emotion and kind relationships.</p>
         <div class="cta">
-          <a class="btn btn-gold" href="#gathering">Join the founding circle</a>
+          <a class="btn btn-gold" href="#retreat">Founding retreat · 13–15 Nov</a>
           <a class="btn btn-line" href="#for-you">Is this for you?</a>
 
         </div>
@@ -283,8 +334,8 @@ footer{position:relative;overflow:hidden}
       <div class="niche-wrap"><svg class="glyph" aria-hidden="true" focusable="false" viewBox="0 0 620 620" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M310 30V590"/><circle class="dot" cx="310" cy="70" r="4"/><circle class="dot" cx="310" cy="150" r="4"/><circle class="dot" cx="310" cy="250" r="3"/><circle class="dot" cx="310" cy="330" r="4"/><circle class="dot" cx="310" cy="410" r="6"/><circle class="dot" cx="310" cy="520" r="3"/><circle class="acc" cx="310" cy="110" r="16"/><circle class="ln" cx="240" cy="250" r="118"/><path class="ln" d="M330 470 A190 190 0 0 0 490 210"/><path class="ln dash" d="M80 380 A230 230 0 0 1 370 90"/><circle class="ln" cx="460" cy="160" r="42"/><circle class="ring" cx="460" cy="160" r="14"/><path class="ln" d="M160 60V150"/><path class="ln" d="M167 60V168"/><path class="ln" d="M174 60V186"/><path class="ln" d="M181 60V204"/><path class="ln" d="M530 300V380"/><path class="ln" d="M537 300V366"/><path class="ln" d="M544 300V352"/><path class="ln" d="M60 420H560"/><circle class="ring" cx="70" cy="440" r="3.5"/><circle class="ring" cx="86" cy="440" r="3.5"/><circle class="ring" cx="102" cy="440" r="3.5"/><circle class="ring" cx="118" cy="440" r="3.5"/><circle class="ring" cx="134" cy="440" r="3.5"/><circle class="ring" cx="150" cy="440" r="3.5"/><circle class="ring" cx="166" cy="440" r="3.5"/><path class="ln" d="M60 452H190"/><path class="ln" d="M110 560V470"/><path class="fill" d="M104 470 L110 458 L116 470 Z"/><path class="ln" d="M430 600V490"/><path class="fill" d="M424 490 L430 478 L436 490 Z"/><path class="ln" d="M540 250V310"/><path class="fill" d="M534 310 L540 322 L546 310 Z"/><path class="ln" d="M50 200 l40 -34 l4 40 Z"/><path class="ln" d="M350 560 l70 -14 v14 Z"/><path class="ln" d="M310 360 q-30 -10 -38 -40 q28 4 38 40 M310 340 q26 -8 32 -34 q-24 4 -32 34"/><circle class="dot" cx="274.2" cy="77.7" r="5"/><circle class="dot" cx="269.2" cy="486.5" r="2.5"/><circle class="dot" cx="380.5" cy="354.8" r="5"/><circle class="dot" cx="356.2" cy="66.8" r="2.5"/><circle class="ring" cx="340.6" cy="111.9" r="2.5"/><circle class="dot" cx="342.5" cy="408.3" r="5"/><circle class="dot" cx="348.5" cy="141.5" r="5"/><path class="ln" d="M416.5 344.8H432.5 M419.5 350.8H429.5"/><path class="ln" d="M440 470H510V540H550"/><circle class="dot" cx="550" cy="540" r="3.5"/></svg><div class="niche"><img src="../assets/emblem.webp" alt="Drishta emblem: a face in profile, eyes closed, with sky, hills, a seedling and roots layered through the mind along a gold axis" width="720" height="1045"></div></div>
     </div>
 
-    <ul class="words" aria-label="Witness, Reflect, Understand, Grow">
-      <li>Witness</li><li>Reflect</li><li>Understand</li><li>Grow</li>
+    <ul class="words" aria-label="The Drishta Loop: Witness, Analyse, Realise">
+      <li>Witness</li><li>Analyse</li><li>Realise</li>
     </ul>
   </div>
 </header>
@@ -294,17 +345,36 @@ footer{position:relative;overflow:hidden}
 
     <section class="sec" id="for-you">
       <span class="label">Is this for you?</span>
-      <h2>Most people find us through one of these.</h2>
-      <ul class="jobs">
-        <li><h3>“My head won’t switch off.”</h3><p>Overthinking, replaying conversations, the 1am loop. You learn to notice a thought early, before it runs the evening.</p></li>
-        <li><h3>“I’m surrounded by people, and still lonely.”</h3><p>Work friends, group chats, networking, and very little honesty. Our circles are small, unhurried and real.</p></li>
-        <li><h3>“I don’t know who I’m becoming.”</h3><p>Choices about work, relationships and direction. Seeing your own patterns clearly makes the next step clearer.</p></li>
-        <li><h3>“I need to get out of the city.”</h3><p>Wherever we can, we gather near trees, hills or water. Nature is where we begin, not the whole point.</p></li>
-      </ul>
-      <p class="note-line">You don’t need any experience of meditation or yoga. Drishta is a practice for everyday life, not therapy. If you’re struggling with your mental health, please also speak to a professional.</p>
+      <h2>People don’t come for “metacognition”. They come at a moment.</h2>
+      <p class="lede">Most people find Drishta when something has started to repeat, or when life is turning. Which of these sounds like you?</p>
+      <div class="moments">
+        <div class="mgroup">
+          <h3>When your mind is running you</h3>
+          <ul>
+            <li><b>“I can’t switch my brain off.”</b><span>The overthinking night.</span></li>
+            <li><b>“Everyone’s ahead of me.”</b><span>The comparison spiral.</span></li>
+            <li><b>“I’m exhausted and don’t care.”</b><span>The burnout edge.</span></li>
+            <li><b>“Why did I say that again?”</b><span>The reaction you regret.</span></li>
+            <li><b>“I absorb everyone’s problems.”</b><span>Caring until you run dry.</span></li>
+          </ul>
+        </div>
+        <div class="mgroup">
+          <h3>When you’re at a turning point</h3>
+          <ul>
+            <li><b>“I don’t know if this is my life.”</b><span>The crossroads.</span></li>
+            <li><b>“New job, new city, new year.”</b><span>The fresh start.</span></li>
+          </ul>
+          <h3>When something is missing</h3>
+          <ul>
+            <li><b>“It’s going well. Why don’t I feel it?”</b><span>Successful, but empty.</span></li>
+            <li><b>“I want to understand my own mind.”</b><span>The seeker.</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note-line"><b>Drishta is not therapy.</b> It is training for everyday life, for people who are not unwell but not quite free. It isn’t right during an acute crisis, an unmanaged serious mental-health condition, or active trauma work; if that’s you, please speak to a professional first, and we can suggest where to start. No meditation or yoga experience needed.</p>
     </section>
 
-    <section class="sec" id="name">
+<section class="sec" id="name">
       <span class="label">Our philosophy</span>
       <div class="name"><svg class="deco d-eye" viewBox="0 0 400 400"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><circle class="ln" cx="200" cy="200" r="150"/><circle class="ln" cx="200" cy="200" r="110"/><circle class="ln" cx="200" cy="200" r="70"/><circle class="ln dash" cx="200" cy="200" r="185"/><path class="ln" d="M200 0V400M10 200H390"/><path class="ln" d="M50 200 Q200 90 350 200 Q200 310 50 200Z"/><circle class="acc" cx="200" cy="200" r="10"/><circle class="dot" cx="385" cy="200" r="2.5"/><circle class="dot" cx="360.2" cy="292.5" r="2.5"/><circle class="dot" cx="292.5" cy="360.2" r="2.5"/><circle class="dot" cx="200" cy="385" r="2.5"/><circle class="dot" cx="107.5" cy="360.2" r="2.5"/><circle class="dot" cx="39.8" cy="292.5" r="2.5"/><circle class="dot" cx="15" cy="200" r="2.5"/><circle class="dot" cx="39.8" cy="107.5" r="2.5"/><circle class="dot" cx="107.5" cy="39.8" r="2.5"/><circle class="dot" cx="200" cy="15" r="2.5"/><circle class="dot" cx="292.5" cy="39.8" r="2.5"/><circle class="dot" cx="360.2" cy="107.5" r="2.5"/><path class="ln" d="M310 90 l40 -40 M350 50 l-12 0 M350 50 l0 12"/></svg>
         <div>
@@ -323,66 +393,90 @@ footer{position:relative;overflow:hidden}
     </section>
 
     <section class="sec" id="approach">
-      <span class="label">How it works</span>
-      <h2>One skill, practised in four movements.</h2>
-      <p class="lede">Metacognition sounds technical. In practice it is simple: noticing what your mind is doing while it is doing it. Every gathering trains it through four movements, using silence, craft, time in nature and honest circles. No lectures, no performance.</p>
-      <ol class="moves">
-        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M6 40Q24 22 42 40Q24 58 6 40Z"/><circle class="g-acc" cx="24" cy="40" r="5"/><circle class="g-o" cx="24" cy="12" r="3"/><path class="g-ln" d="M18 76h12M20 82h8"/></svg><h3>Witness</h3><p>Notice a thought, feeling or urge as it shows up, without acting on it yet.</p></li>
-        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><circle class="g-ln" cx="24" cy="42" r="14"/><path class="g-ln" d="M10 42a14 14 0 0 1 14-14"/><path class="g-f" d="M21 25l6 3-6 3z"/><circle class="g-acc" cx="24" cy="42" r="4"/><circle class="g-o" cx="24" cy="74" r="3"/><circle class="g-o" cx="24" cy="84" r="2"/></svg><h3>Reflect</h3><p>Ask where it came from and what it is trying to tell you.</p></li>
-        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M8 58L24 26L40 58Z"/><circle class="g-dot" cx="8" cy="58" r="2.5"/><circle class="g-dot" cx="40" cy="58" r="2.5"/><circle class="g-acc" cx="24" cy="26" r="4"/><path class="g-ln" d="M14 70H34"/></svg><h3>Understand</h3><p>Spot the patterns: in you, in other people and in the systems around you.</p></li>
-        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M24 52q-14-4-16-18q14 2 16 18M24 44q12-4 14-16q-12 2-14 16"/><path class="g-f" d="M19 10l5-8 5 8z"/><path class="g-ln" d="M14 88q10-8 20 0"/><circle class="g-acc" cx="24" cy="64" r="4"/></svg><h3>Grow</h3><p>Choose your response, and carry it back into work, relationships and ordinary days.</p></li>
+      <span class="label">The method</span>
+      <h2>The Drishta Loop.</h2>
+      <p class="lede">Every Drishta practice runs the same three-stage loop. It starts in the body, the earliest point of awareness, and always ends in Realise, so reflection never turns into rumination.</p>
+      <ol class="moves loop">
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M6 40Q24 22 42 40Q24 58 6 40Z"/><circle class="g-acc" cx="24" cy="40" r="5"/><circle class="g-o" cx="24" cy="12" r="3"/><path class="g-ln" d="M18 76h12M20 82h8"/></svg><h3>Witness</h3><p>Notice what is happening, starting in the body.</p><small>Science: monitoring, meta-awareness, interoception · Patañjali: draṣṭā, the seer</small></li>
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><circle class="g-ln" cx="24" cy="42" r="14"/><path class="g-ln" d="M10 42a14 14 0 0 1 14-14"/><path class="g-f" d="M21 25l6 3-6 3z"/><circle class="g-acc" cx="24" cy="42" r="4"/><circle class="g-o" cx="24" cy="74" r="3"/><circle class="g-o" cx="24" cy="84" r="2"/></svg><h3>Analyse</h3><p>Name it accurately: what, not why.</p><small>Science: affect labelling, decentering · Patañjali: viveka, discernment</small></li>
+        <li><svg class="gl" viewBox="0 0 48 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="g-ln" d="M24 4V92"/><path class="g-ln" d="M24 52q-14-4-16-18q14 2 16 18M24 44q12-4 14-16q-12 2-14 16"/><path class="g-f" d="M19 10l5-8 5 8z"/><path class="g-ln" d="M14 88q10-8 20 0"/><circle class="g-acc" cx="24" cy="64" r="4"/></svg><h3>Realise</h3><p>See clearly, then choose a response.</p><small>Science: reappraisal, reduced reactivity · Patañjali: pratipakṣa-bhāvanam</small></li>
       </ol>
       <div class="score" aria-hidden="true"><svg class="score-svg" aria-hidden="true" focusable="false" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M0 82.5H1200"/><path class="ln" d="M60 96.5H960"/><path class="ln" d="M300 60.5H1140"/><path class="ln thin" d="M296 44V107.7"/><path class="ln thin" d="M720.5 49.1V91.1"/><path class="ln thin" d="M35.3 62.3V101.6"/><path class="ln thin" d="M291.8 72.2V113.1"/><path class="ln thin" d="M990.3 39.8V122.3"/><path class="ln thin" d="M194.7 49.7V134.8"/><path class="ln thin" d="M626.9 56.3V124.1"/><path class="ln thin" d="M94.3 57.4V119.7"/><path class="ln thin" d="M369.5 11.9V134.7"/><path class="ln thin" d="M568.4 54.9V135.4"/><path class="ln thin" d="M848.4 67.6V109"/><path class="ln thin" d="M949.1 37.8V138.5"/><path class="ln thin" d="M1039.5 16.1V94.9"/><path class="ln thin" d="M271.7 70.3V111.3"/><path class="ln thin" d="M746.9 28.8V115.1"/><path class="ln thin" d="M467.6 31.9V119.4"/><path class="ln thin" d="M697.7 66.5V124.7"/><path class="ln thin" d="M1097.6 63.5V141.5"/><path class="ln thin" d="M798.7 20.2V134.4"/><path class="ln thin" d="M1139 66.5V118.5"/><path class="ln thin" d="M848 23.2V132.8"/><path class="ln thin" d="M685.3 27.8V91"/><path class="ln thin" d="M1010.6 71.9V92.3"/><path class="ln thin" d="M948.7 35.7V95.7"/><path class="ln thin" d="M360.9 58V135.1"/><path class="ln thin" d="M71.3 48.4V89.9"/><circle class="fill" cx="163" cy="75.8" r="22"/><circle class="soft" cx="241.4" cy="120.9" r="3.5"/><circle class="dot" cx="269.6" cy="63.8" r="2.5"/><circle class="ring" cx="173.9" cy="40.2" r="7"/><circle class="dot" cx="100" cy="59.9" r="5"/><circle class="acc" cx="105.3" cy="119" r="7"/><circle class="soft" cx="140.5" cy="81.7" r="2.5"/><circle class="soft" cx="178.8" cy="117.5" r="5"/><circle class="acc" cx="446" cy="82" r="30"/><circle class="dot" cx="387" cy="63.1" r="5"/><circle class="acc" cx="461.6" cy="38.5" r="5"/><circle class="ring" cx="334.8" cy="89.8" r="2.5"/><circle class="dot" cx="482" cy="65.8" r="5"/><circle class="acc" cx="476.1" cy="61.2" r="2.5"/><circle class="dot" cx="471.5" cy="118.7" r="5"/><circle class="soft" cx="390.3" cy="76.3" r="5"/><circle class="soft" cx="731" cy="73.5" r="26"/><circle class="dot" cx="811.9" cy="109.2" r="5"/><circle class="dot" cx="819" cy="46.4" r="3.5"/><circle class="dot" cx="704.4" cy="56.4" r="3.5"/><circle class="dot" cx="708.7" cy="95.1" r="2.5"/><circle class="ring" cx="774.2" cy="118.2" r="7"/><circle class="dot" cx="824.3" cy="119.2" r="5"/><circle class="soft" cx="808.1" cy="56" r="7"/><circle class="acc" cx="1036" cy="83.1" r="40"/><circle class="dot" cx="938.1" cy="118.9" r="3.5"/><circle class="dot" cx="1137.3" cy="66.4" r="5"/><circle class="soft" cx="1071.5" cy="73.3" r="5"/><circle class="dot" cx="1041.5" cy="91.4" r="7"/><circle class="acc" cx="1066.4" cy="40.5" r="3.5"/><circle class="soft" cx="977.9" cy="78.1" r="7"/><circle class="ring" cx="1064.1" cy="121.3" r="2.5"/><rect class="fill" x="560" y="79.5" width="90" height="6"/><rect class="fill" x="880" y="79.5" width="140" height="6"/><circle class="ring" cx="40" cy="136" r="3"/><circle class="ring" cx="54" cy="136" r="3"/><circle class="ring" cx="68" cy="136" r="3"/><circle class="ring" cx="82" cy="136" r="3"/><circle class="ring" cx="96" cy="136" r="3"/><circle class="ring" cx="110" cy="136" r="3"/><circle class="ring" cx="124" cy="136" r="3"/><circle class="ring" cx="138" cy="136" r="3"/><circle class="ring" cx="152" cy="136" r="3"/><circle class="ring" cx="166" cy="136" r="3"/><path class="ln" d="M200 82.5 A60 60 0 0 1 260 22.5"/></svg></div>
-          <h3 class="sub-h">How it is different</h3>
-      <div class="rows">
-        <div class="row"><h3>Not a retreat to relax</h3><p>Relaxation wears off by Monday. Drishta teaches a practice that still works on an ordinary Tuesday.</p></div>
-        <div class="row"><h3>Not ten silent days alone</h3><p>Silent retreats train you to sit alone with your mind. Drishta trains you to watch it in the middle of your life, with other people, in a weekend.</p></div>
-        <div class="row"><h3>Not therapy</h3><p>Therapy treats problems. Drishta is for people who are not unwell, but not quite free either: a skill to learn, not a treatment.</p></div>
-        <div class="row"><h3>Not another app</h3><p>Apps keep you alone with a screen. Drishta puts you in a room, or under trees, with real people.</p></div>
-        <div class="row"><h3>Not just a club</h3><p>Most clubs bond over an activity. Drishta bonds over honesty, which is what most of us are actually lonely for.</p></div>
+
+      <h3 class="sub-h">Practised across five fields</h3>
+      <div class="fields">
+        <div><b>Body</b><span>Arrival check-ins, “where is it in the body?”, slow walking.</span></div>
+        <div><b>Emotion</b><span>Naming feelings precisely, feeling waves.</span></div>
+        <div><b>Thought</b><span>Noting, “I’m having the thought that…”, catch counting, “what, not why” journaling.</span></div>
+        <div><b>Relationships</b><span>Third-person self-talk, dyads, compassion practice, sharing circles.</span></div>
+        <div><b>Nature and world</b><span>Attentive walks, awe walks, sitting with trees, small acts of service.</span></div>
+      </div>
+      <p class="flow-line"><b>Every session:</b> Arrive (body) → Practise (one loop, one field) → Reflect (“what” questions) → Share (circle or pair) → Carry (one small practice home).</p>
+
+      <div class="pull">
+        <p class="pull-sk" lang="sa-Latn"><i>heyaṃ duḥkham anāgatam</i></p>
+        <p class="pull-en">“The suffering that has not yet come can be avoided.” <span>Yoga Sūtra 2.16</span></p>
+        <p class="pull-note">That is Drishta’s purpose: training for the suffering that hasn’t come yet. Prevention and growth, not treatment. And one principle for how we hold others: <b>detached from capture, not from care.</b></p>
       </div>
     </section>
 
-    <section class="sec" id="programmes">
+    <section class="sec" id="retreat">
+      <span class="label">The founding retreat</span>
+      <h2>Three days to train the seer.</h2>
+      <p class="lede">Our first signature retreat, at a quiet foothill venue within driving distance of Delhi. A small group, choice at every step, and a practice you carry home.</p>
+      <div class="feature"><svg class="deco d-arcs" viewBox="0 0 440 280"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M90 90 A130 130 0 0 0 350 90"/><path class="ln" d="M130 90 A90 90 0 0 0 310 90"/><path class="ln dash" d="M50 90 A170 170 0 0 0 390 90"/><path class="ln" d="M230 98 l40 60"/><path class="ln" d="M242 98 l36 54"/><path class="ln" d="M254 98 l32 48"/><path class="ln" d="M266 98 l28 42"/><path class="ln" d="M278 98 l24 36"/><path class="ln" d="M290 98 l20 30"/><path class="ln" d="M20 90H420"/><circle class="ring" cx="40" cy="114" r="3"/><circle class="ring" cx="56" cy="114" r="3"/><circle class="ring" cx="72" cy="114" r="3"/><circle class="ring" cx="88" cy="114" r="3"/><circle class="ring" cx="104" cy="114" r="3"/><circle class="ring" cx="120" cy="114" r="3"/><circle class="acc" cx="220" cy="90" r="7"/><path class="ln" d="M220 90V240"/><path class="fill" d="M214 240L220 254L226 240Z"/></svg>
+        <span class="label">Fri 13 – Sun 15 November 2026</span>
+        <h3>The Drishta Retreat</h3>
+        <ul class="modules days">
+          <li><span>Day 1 · Seeing</span><small>Arrival and agreements. Body practices, naming emotions, an evening circle. <em>“I can notice.”</em></small></li>
+          <li><span>Day 2 · Understanding</span><small>Then caring. A half-day of gentle silence with noting and a nature walk. Thought practices, compassion in pairs, making in silence, a fire circle. <em>“I am not my thoughts.”</em></small></li>
+          <li><span>Day 3 · Carrying</span><small>An awe walk, sitting with trees, a small act of service. Design your own daily practice; closing circle and practice buddies. <em>“I can do this at home.”</em></small></li>
+        </ul>
+        <p class="formats"><b>Before:</b> a short screening form, an intention question and one starter practice. <b>After:</b> a week-1 check-in, daily five-minute practices, a practice buddy and the first monthly Circle.</p>
+      </div>
+      <div class="rows">
+        <div class="row"><h3>Who leads it</h3><p>Akanshya Dutta (method, framework, reflection and circles), Dr Partha Pratim Das (creative practices, experience and space design) and a certified breath and body facilitator, with our host venue as a credited collaborator.</p></div>
+        <div class="row"><h3>How we keep it safe</h3><p>Screening before you come, choice at every step (eyes open or closed, sit or walk, join or sit out), grounding always available, and a referral list if anything needs more than we offer.</p></div>
+        <div class="row"><h3>How we know it worked</h3><p>Short, research-based measures before, right after and one month later, so we can show you what changed rather than claim it.</p></div>
+        <div class="row"><h3>Venue and price</h3><p>Shared with everyone on the interest list on 24 October. Shared and private rooms, and a few scholarship seats.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="join">
       <span class="label">Ways to join</span>
       <h2>Start small. Go deeper when you are ready.</h2>
+      <ol class="ladder">
+        <li><b>Free</b><h3>Practices and the survey</h3><p>Short practices on Instagram, and a two-minute survey that helps shape what we build.</p></li>
+        <li><b>Taster</b><h3>Drishta Evening</h3><p>Two to three hours in Delhi. Experience one full loop with a small group.</p></li>
+        <li><b>Step up</b><h3>Drishta Day</h3><p>A full day in a green space near Delhi.</p></li>
+        <li><b>Signature</b><h3>Drishta Retreat</h3><p>Three days in the hills. The founding retreat is 13–15 November.</p></li>
+        <li><b>Continue</b><h3>Circles and online cohort</h3><p>Monthly Drishta Circles, and a six-week online cohort to keep the practice alive.</p></li>
+        <li><b>For organisations</b><h3>Teams and institutions</h3><p>Workshops and retreats for companies, colleges and institutions, built on measurable outcomes.</p></li>
+      </ol>
+    </section>
 
-      <div class="feature"><svg class="deco d-arcs" viewBox="0 0 440 280"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M90 90 A130 130 0 0 0 350 90"/><path class="ln" d="M130 90 A90 90 0 0 0 310 90"/><path class="ln dash" d="M50 90 A170 170 0 0 0 390 90"/><path class="ln" d="M230 98 l40 60"/><path class="ln" d="M242 98 l36 54"/><path class="ln" d="M254 98 l32 48"/><path class="ln" d="M266 98 l28 42"/><path class="ln" d="M278 98 l24 36"/><path class="ln" d="M290 98 l20 30"/><path class="ln" d="M20 90H420"/><circle class="ring" cx="40" cy="114" r="3"/><circle class="ring" cx="56" cy="114" r="3"/><circle class="ring" cx="72" cy="114" r="3"/><circle class="ring" cx="88" cy="114" r="3"/><circle class="ring" cx="104" cy="114" r="3"/><circle class="ring" cx="120" cy="114" r="3"/><circle class="acc" cx="220" cy="90" r="7"/><path class="ln" d="M220 90V240"/><path class="fill" d="M214 240L220 254L226 240Z"/></svg>
-        <span class="label">Where most people begin</span>
-        <h3>The weekend gathering</h3>
-        <p>Two half-days with eight to twelve people. Your own experience is the material: no lectures, no memorising, nothing to perform. Each gathering works through five practices.</p>
-        <ul class="modules">
-          <li><span>To See</span><small>Where your attention goes.</small></li>
-          <li><span>To Feel</span><small>Emotion as information.</small></li>
-          <li><span>To Realise</span><small>The patterns behind your reactions.</small></li>
-          <li><span>To Connect</span><small>Listening, and being heard.</small></li>
-          <li><span>To Live</span><small>One practice to take home.</small></li>
-        </ul>
-        <p class="formats"><b>You leave with</b> one practice that works on an ordinary Tuesday, and people to keep practising with.</p>
-      </div>
-
+    <section class="sec" id="different">
+      <span class="label">Why Drishta</span>
+      <h2>Deeper than an app. Gentler than Vipassana.</h2>
+      <p class="lede">Rooted in Patañjali, checked by science; a community, not a guru; nature and making; prevention and growth.</p>
       <div class="rows">
-        <div class="row"><h3>City circles</h3><p>Short, low-cost evening circles in the city: the easiest way to try the practice and meet the community. Starting after the founding circle.</p></div>
-        <div class="row"><h3>Retreats</h3><p>Three nights with a partner venue in the Himalayas or South India, for going deeper. In development.</p></div>
-        <div class="row"><h3>For organisations</h3><p>Retreats and workshops for teams. Their fees help keep community gatherings affordable.</p></div>
-        <div class="row"><h3>The research behind it</h3><div><p>Every practice is designed and measured. Our framework draws on cognitive science and Indian philosophy, and we track what changes for participants, so we can show results rather than claim them.</p><p class="seed"><b>Where it started</b>A field-immersion assignment in Purani Dilli, where design students learned to read the old city through every sense and notice their own thinking. Published in <cite>Design for All</cite>, Vol 21 No 2 (2026).</p></div></div>
+        <div class="row"><h3>Meditation apps</h3><p>Cheap and convenient, but solitary, and most people stop. Drishta puts you with real people, and keeps you practising together.</p></div>
+        <div class="row"><h3>Ten-day silent retreats</h3><p>Deep, but very intense and hard for working people. Drishta trains the same seeing in a weekend, in the middle of your life.</p></div>
+        <div class="row"><h3>Ashrams and yoga retreats</h3><p>Rich in tradition, often religious or body-only. Drishta is secular and method-first, with the science alongside the tradition.</p></div>
+        <div class="row"><h3>Wellness resorts</h3><p>Rest without insight, and the calm wears off by Monday. Drishta teaches a skill that still works on an ordinary Tuesday.</p></div>
+        <div class="row"><h3>Therapy and coaching</h3><p>For problems, with cost and stigma attached. Drishta is for prevention and growth, and we refer anyone who needs more.</p></div>
       </div>
     </section>
 
-    <section class="sec" id="gathering">
-      <span class="label">Coming up</span>
-      <div class="gather"><svg class="deco d-stars" viewBox="0 0 500 320"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M30.8 264L35.8 80.7"/><path class="ln" d="M35.8 80.7L42.8 150.4"/><path class="ln" d="M236.4 89L269.3 180.7"/><path class="ln" d="M301.7 55.5L304.1 227.7"/><path class="ln" d="M355.6 278.3L366.9 64.7"/><circle class="ring" cx="30.8" cy="264" r="5"/><circle class="dot" cx="30.8" cy="264" r="2.2"/><circle class="dot" cx="35.8" cy="80.7" r="1.6"/><circle class="ring" cx="42.8" cy="150.4" r="5"/><circle class="dot" cx="42.8" cy="150.4" r="2.2"/><circle class="dot" cx="153" cy="276.6" r="3"/><circle class="dot" cx="236.4" cy="89" r="3"/><circle class="dot" cx="269.3" cy="180.7" r="2.2"/><circle class="ring" cx="301.7" cy="55.5" r="5"/><circle class="dot" cx="301.7" cy="55.5" r="2.2"/><circle class="dot" cx="304.1" cy="227.7" r="2.2"/><circle class="dot" cx="355.6" cy="278.3" r="1.6"/><circle class="dot" cx="366.9" cy="64.7" r="3"/><circle class="ring" cx="379.9" cy="283.9" r="5"/><circle class="dot" cx="379.9" cy="283.9" r="2.2"/><circle class="dot" cx="380.7" cy="58.9" r="1.6"/><circle class="dot" cx="426.4" cy="51.7" r="2.2"/><circle class="dot" cx="445.1" cy="201.7" r="1.6"/><circle class="ln dash" cx="360" cy="150" r="110"/><circle class="acc" cx="360" cy="150" r="14"/></svg>
-        <div>
-          <span class="label">The founding circle</span>
-          <h2>We’re starting with twelve people.</h2>
-          <p>The first Drishta gathering takes place in Delhi in late October 2026. It is small on purpose, and the people in it will help shape everything that follows. Write to us for dates, venue and price.</p>
-          <div class="mail">
-            <code id="addr">adutta03@unfoldedfuture.com</code>
-            <button class="btn btn-line" id="copy" type="button">Copy address</button>
-          </div>
-        </div>
-        <div class="when"><small>When</small>Late October 2026<br>Delhi · 12 places</div>
-      </div>
+    <section class="sec" id="science">
+      <span class="label">Grounded in research</span>
+      <h2>What the science says.</h2>
+      <ul class="facts3">
+        <li><b>Almost half</b><span>of waking time, minds wander, and people are less happy while they do (Killingsworth and Gilbert, 2010).</span></li>
+        <li><b>Naming calms</b><span>Putting a feeling into words reduced activity in the brain’s alarm centre (Lieberman et al., 2007).</span></li>
+        <li><b>90 minutes</b><span>of walking in nature reduced rumination, compared with an urban walk (Bratman et al., 2015).</span></li>
+      </ul>
+      <p class="note-line">We say train, practise, notice, clearer and steadier. We never promise to heal, cure or rewire you. Effects of practices like these are real but modest, and they last only with practice, which is why Drishta is a community, not a one-off.</p>
     </section>
 
     <section class="sec" id="community">
@@ -392,16 +486,16 @@ footer{position:relative;overflow:hidden}
       <div class="two">
         <div>
           <h3>Social capital first</h3>
-          <p>Drishta grows the way a good friendship does: by people showing up, again and again. We measure value in trust, relationships and practice that lasts.</p>
+          <p>Drishta grows by people showing up, again and again, and practising together. Research backs this: pairs who share how confident they are decide better than either alone.</p>
         </div>
         <div>
           <h3>Companies pay full price</h3>
-          <p>Team retreats, and design work for organisations through our sister studio, fund the community. Companies pay full price so the community doesn’t have to.</p>
+          <p>Corporate workshops and retreats, and our sister studio’s design work, fund scholarship seats. Companies pay full price so the community doesn’t have to.</p>
         </div>
       </div>
     </section>
 
-    <section class="sec" id="people">
+<section class="sec" id="people">
       <span class="label">People</span>
       <h2>Who’s behind it.</h2>
       <p class="lede">Two designers and researchers who started by watching their own minds, then spent years studying how people think, learn and change.</p>
@@ -423,6 +517,34 @@ footer{position:relative;overflow:hidden}
       </div>
     </section>
 
+    <section class="sec" id="faq">
+      <span class="label">Questions people ask</span>
+      <h2>Before you decide.</h2>
+      <div class="faq">
+        <details><summary>Is this spiritual or religious?</summary><p>No. Drishta draws on Patañjali’s Yoga Sūtra as a map of the mind, and on cognitive science as a map of how it works. There are no rituals, beliefs or chanting.</p></details>
+        <details><summary>Is there a guru?</summary><p>No. Facilitators guide the practice; the community and your own experience do the rest. You can opt out of anything, at any time.</p></details>
+        <details><summary>Is this therapy?</summary><p>No. It is training for everyday life. If you are going through something serious, please speak to a professional; we can suggest where to start.</p></details>
+        <details><summary>I’ve never meditated. Can I come?</summary><p>Yes. Practices start short and in the body, and every one has an easier option.</p></details>
+        <details><summary>What if I can’t afford it?</summary><p>Start with the free practices or a Drishta Evening. Each retreat also holds a few scholarship seats, funded by our corporate work.</p></details>
+      </div>
+    </section>
+
+    <section class="sec" id="register">
+      <span class="label">Coming up</span>
+      <div class="gather"><svg class="deco d-stars" viewBox="0 0 500 320"  aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M30.8 264L35.8 80.7"/><path class="ln" d="M35.8 80.7L42.8 150.4"/><path class="ln" d="M236.4 89L269.3 180.7"/><path class="ln" d="M301.7 55.5L304.1 227.7"/><path class="ln" d="M355.6 278.3L366.9 64.7"/><circle class="ring" cx="30.8" cy="264" r="5"/><circle class="dot" cx="30.8" cy="264" r="2.2"/><circle class="dot" cx="35.8" cy="80.7" r="1.6"/><circle class="ring" cx="42.8" cy="150.4" r="5"/><circle class="dot" cx="42.8" cy="150.4" r="2.2"/><circle class="dot" cx="153" cy="276.6" r="3"/><circle class="dot" cx="236.4" cy="89" r="3"/><circle class="dot" cx="269.3" cy="180.7" r="2.2"/><circle class="ring" cx="301.7" cy="55.5" r="5"/><circle class="dot" cx="301.7" cy="55.5" r="2.2"/><circle class="dot" cx="304.1" cy="227.7" r="2.2"/><circle class="dot" cx="355.6" cy="278.3" r="1.6"/><circle class="dot" cx="366.9" cy="64.7" r="3"/><circle class="ring" cx="379.9" cy="283.9" r="5"/><circle class="dot" cx="379.9" cy="283.9" r="2.2"/><circle class="dot" cx="380.7" cy="58.9" r="1.6"/><circle class="dot" cx="426.4" cy="51.7" r="2.2"/><circle class="dot" cx="445.1" cy="201.7" r="1.6"/><circle class="ln dash" cx="360" cy="150" r="110"/><circle class="acc" cx="360" cy="150" r="14"/></svg>
+        <div>
+          <span class="label">The founding retreat · 13–15 Nov 2026</span>
+          <h2>Join the interest list.</h2>
+          <p>Venue, price and booking open on 24 October. Write to us to be first to hear, or to ask anything before you decide.</p>
+          <div class="mail">
+            <code id="addr">adutta03@unfoldedfuture.com</code>
+            <button class="btn btn-line" id="copy" type="button">Copy address</button>
+          </div>
+        </div>
+        <div class="when"><small>When</small>13–15 Nov 2026<br><small>Foothills near Delhi</small></div>
+      </div>
+    </section>
+
   </div>
 </main>
 
@@ -431,7 +553,7 @@ footer{position:relative;overflow:hidden}
   <div class="wrap foot">
     <div>
       <img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131">
-      <span class="label">A practice community for the mind</span>
+      <span class="label">Witness · Analyse · Realise</span>
     </div>
     <address>
       An Unfolded Future initiative<br>
