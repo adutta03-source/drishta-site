@@ -30,7 +30,7 @@
 @media (max-width:860px){#name::before{display:none}}
 @media (min-width:861px){#name .name>div:last-of-type{text-align:center}#name .name>div:last-of-type .lede,#name .name>div:last-of-type .sign{margin-inline:auto}}
 </style>
-<div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site 4 · pastel parrot green · not live · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">live</a> · <a href="https://drishta.unfoldedfuture.com/test/" style="color:inherit">test 1</a> · <a href="https://drishta.unfoldedfuture.com/test2/" style="color:inherit">test 2</a> · <a href="https://drishta.unfoldedfuture.com/test3/" style="color:inherit">test 3</a></div>
+<div style="position:sticky;top:0;z-index:100;background:#c49852;color:#1e2a20;font:600 12px/1.4 Poppins,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:7px 12px">Test site 4 · pastel olive-parrot green · not live · <a href="https://drishta.unfoldedfuture.com/test3/" style="color:inherit">test 3</a> · <a href="https://drishta.unfoldedfuture.com/" style="color:inherit">live</a> · <a href="https://drishta.unfoldedfuture.com/test/" style="color:inherit">test 1</a> · <a href="https://drishta.unfoldedfuture.com/test2/" style="color:inherit">test 2</a></div>
 
 <title>Drishta</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Poppins:wght@300;400;500&display=swap">
@@ -311,30 +311,27 @@ footer{position:relative;overflow:hidden}
 .who p{color:var(--muted);max-width:30em}
 @media (max-width:860px){.who{grid-template-columns:minmax(0,1fr)}}
 
-/* ===== Test 4: pastel parrot green ===== */
-:root{
-  --deep:#cdeca9; --deep-2:#b2df86; --on-deep:#1c2d15; --on-deep-soft:#3a4f2f;
-  --bg:#f5f8ec; --surface:#e7f2d5; --fg:#1b2a16; --muted:#3e4d36; --line:#cfdfb7; --niche:#fdfdf6;
-  --gold:#c49852; --gold-text:#6f5118;
+/* ===== Test 4: pastel parrot green, leaning olive (light theme only) ===== */
+:root:not([data-theme="dark"]){
+  --deep:#cfdca6; --deep-2:#b9cb86; --on-deep:#1f2a17; --on-deep-soft:#3e4a2c; --pg-accent:#6f5418;
 }
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --deep:#36562a; --deep-2:#1a2a13; --on-deep:#f3f6ea; --on-deep-soft:#c8d8b6;
-  --bg:#151d11; --surface:#203019; --fg:#eef3e3; --muted:#bfcdb0; --line:#33482a; --gold-text:#d3ad6c; --niche:#fdfcf7}}
-:root[data-theme="dark"]{
-  --deep:#36562a; --deep-2:#1a2a13; --on-deep:#f3f6ea; --on-deep-soft:#c8d8b6;
-  --bg:#151d11; --surface:#203019; --fg:#eef3e3; --muted:#bfcdb0; --line:#33482a; --gold-text:#d3ad6c; --niche:#fdfcf7}
-:root:not([data-theme="dark"]) .top .label,:root:not([data-theme="dark"]) .gather .label,:root:not([data-theme="dark"]) .gather small,:root:not([data-theme="dark"]) .hero h1 em{color:#7e5a17}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .top .label,:root:not([data-theme="light"]) .gather .label,:root:not([data-theme="light"]) .gather small,:root:not([data-theme="light"]) .hero h1 em{color:var(--gold)}}
-
-.wm-light{display:none!important}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .wm-light{display:block!important}:root:not([data-theme="light"]) .wm-forest{display:none!important}}
-:root[data-theme="dark"] .wm-light{display:block!important}:root[data-theme="dark"] .wm-forest{display:none!important}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pg-accent:var(--gold)}}
+:root[data-theme="dark"]{--pg-accent:var(--gold)}
+@media (prefers-color-scheme:light){
+  .hero .label,.hero h1 em,.gather .label,.when small{color:var(--pg-accent)}
+  .top .nav img,footer .foot img{filter:brightness(.2) sepia(.5) hue-rotate(40deg)}
+  .btn-gold:hover,.btn-line{color:var(--on-deep)}
+  .btn-line{border-color:#8a6a2a}
+  .glyph{opacity:.55}
+  .glyph .ln,.glyph .ring{stroke:#8f7a3e}
+  .words{border-top-color:rgba(80,90,40,.25)}
+}
 </style>
 
 <header class="top" id="home">
   <div class="wrap">
     <nav class="nav" aria-label="Main">
-      <a href="#home"><img class="wm-light" src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131"><img class="wm-forest" src="wordmark-forest.png" alt="Drishta" width="831" height="131"></a>
+      <a href="#home"><img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131"></a>
       <ul>
         <li><a href="#for-you">Who it’s for</a></li>
         <li><a href="#approach">Approach</a></li>
@@ -559,7 +556,7 @@ footer{position:relative;overflow:hidden}
   <svg class="deco d-foot" viewBox="0 0 1200 60" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path class="ln" d="M0 30H1200"/><circle class="dot" cx="556.3" cy="21.3" r="3.2"/><circle class="dot" cx="17.6" cy="39.6" r="1.8"/><circle class="ring" cx="404.1" cy="30" r="4"/><path class="ln" d="M869.3 23.2V51.2"/><path class="ln" d="M508.7 10.7V38.1"/><circle class="ring" cx="1038.6" cy="30" r="4"/><circle class="dot" cx="923.6" cy="35.9" r="1.8"/><path class="ln" d="M1094.4 13.1V48.7"/><circle class="ring" cx="1059.7" cy="30" r="4"/><path class="ln" d="M477.9 10.6V47.3"/><circle class="dot" cx="16.2" cy="39.5" r="2.5"/><path class="ln" d="M174.2 20.3V49.6"/><path class="ln" d="M1147.5 20.7V39.2"/><path class="ln" d="M1015.6 22.5V38.1"/><circle class="dot" cx="1092.8" cy="31.8" r="3.2"/><circle class="dot" cx="1096.7" cy="27.6" r="3.2"/><circle class="ring" cx="912.6" cy="30" r="4"/><circle class="dot" cx="213.6" cy="41" r="1.8"/><circle class="dot" cx="328.6" cy="38.4" r="3.2"/><circle class="ring" cx="326.6" cy="30" r="4"/><circle class="ring" cx="153.2" cy="30" r="4"/><circle class="dot" cx="200.9" cy="35.7" r="3.2"/><circle class="dot" cx="626" cy="34.5" r="2.5"/><circle class="ring" cx="139.8" cy="30" r="6"/><circle class="dot" cx="542.5" cy="41.7" r="3.2"/><circle class="dot" cx="889.9" cy="32.6" r="1.8"/><path class="ln" d="M521.6 16.2V41.2"/><circle class="dot" cx="114.8" cy="20.5" r="1.8"/><circle class="ring" cx="40" cy="30" r="6"/><circle class="ring" cx="596.9" cy="30" r="4"/><path class="ln" d="M677.9 19.1V37.5"/><circle class="dot" cx="907.7" cy="40.9" r="3.2"/><circle class="dot" cx="445.8" cy="22.1" r="2.5"/><circle class="ring" cx="44.7" cy="30" r="4"/><path class="ln" d="M320.3 11.7V38.4"/><circle class="dot" cx="67.6" cy="36.9" r="2.5"/><circle class="ring" cx="731.6" cy="30" r="6"/><circle class="dot" cx="346.3" cy="24.7" r="1.8"/><path class="ln" d="M892 11.7V42.7"/><circle class="dot" cx="178.2" cy="37.1" r="3.2"/><circle class="acc" cx="300" cy="30" r="9"/><circle class="acc" cx="820" cy="30" r="9"/></svg>
   <div class="wrap foot">
     <div>
-      <img class="wm-light" src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131"><img class="wm-forest" src="wordmark-forest.png" alt="Drishta" width="831" height="131">
+      <img src="../assets/wordmark-light.png" alt="Drishta" width="831" height="131">
       <span class="label">Witness · Analyse · Realise</span>
     </div>
     <address>
